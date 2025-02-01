@@ -1,0 +1,17 @@
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey background */
+  border-top: 8px solid #3498db; /* Blue spinner */
+  border-radius: 50%; /* Make it round */
+  width: 60px; /* Width of the spinner */
+  height: 60px; /* Height of the spinner */
+  animation: spin 1s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
