@@ -1,14 +1,14 @@
 "use client";
 import Screen from "@/components/screen/screen";
-import SubStack from "./substack";
+import PublicCalendar from "./calender";
 
-export default function Blog() {
+export default function Events() {
   return (
     <>
       <div>
         <Screen>
           <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
-            <SubStack />
+            <PublicCalendar />
           </div>
         </Screen>
       </div>

@@ -1,15 +1,15 @@
 "use client";
 import Screen from "@/components/screen/screen";
-import DonationBody from "@/components/donation";
-import OrgContentBody from "@/components/about-body";
-import { useState, useEffect } from "react";
 
-export default function Posts({ children }: { children: React.ReactNode }) {
+export default function Posts() {
   return (
     <>
       <div>
         <Screen>
-          <h1>Posts</h1>
+          <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
+            Please mind our dust as we are currently reconstructing Active
+            Inland Empire
+          </div>
         </Screen>
       </div>
     </>

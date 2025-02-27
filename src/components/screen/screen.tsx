@@ -5,17 +5,15 @@ import DisclosureBar from "@/components/disclosure";
 export default function Screen({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <header>
+        <Navbar />
+      </header>
       <div>
-        <main>
-          <div>
-            <Navbar />
-          </div>
-          {children}
-        </main>
+        <main>{children}</main>
       </div>
-      <div className="geist-wrapper">
+      <footer className="geist-wrapper">
         <DisclosureBar />
-      </div>
+      </footer>
     </>
   );
 }

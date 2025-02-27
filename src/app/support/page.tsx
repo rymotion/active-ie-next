@@ -1,10 +1,8 @@
 "use client";
 import Screen from "@/components/screen/screen";
 import DonationBody from "@/components/donation";
-import OrgContentBody from "@/components/about-body";
-import { useState, useEffect } from "react";
 
-export default function Project({ children }: { children: React.ReactNode }) {
+export default function Project() {
   return (
     <>
       <div>
