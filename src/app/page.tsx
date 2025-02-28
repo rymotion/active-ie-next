@@ -13,7 +13,19 @@ export default function Home() {
             <OrgContentBody />
           </div>
           <div>
+            <div className="flex flex-col items-center px-4">
+              <h1>Pardon Our Dust</h1>
+              <p className="max-w-xl text-center">
+                We are continually improving Active Inland Empire to better
+                serve the people in the Inland Empire this includes the ongoing
+                effort to rebuild our website.
+              </p>
+            </div>
+          </div>
+          <div>
             <DonationBody />
+          </div>
+          <div>
             <GofundmeWidget />
           </div>
         </Screen>

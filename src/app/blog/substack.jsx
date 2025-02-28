@@ -1,7 +1,7 @@
 export default function SubStack() {
   return (
     <div>
-      <div class="substack-post-embed">
+      <div className="substack-post-embed">
         <p lang="en">
           Active Inland Empire: An Introduction by Active: Inland Empire
         </p>

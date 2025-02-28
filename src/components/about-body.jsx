@@ -3,7 +3,7 @@ const OrgContentBody = () => {
     <>
       <div className="relative flex w-full w-flex flex-col items-center overflow-hidden py-12 md:py-32">
         <div className="flex flex-col items-center px-4">
-          <h1 className="mb-4">Our Mission</h1>
+          <h1>Our Mission</h1>
           <p className="max-w-xl text-center">
             To build community by creating, cultivating, and promoting health
             and wellness programs with a low financial barrier of entry in the

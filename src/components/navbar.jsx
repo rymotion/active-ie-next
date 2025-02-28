@@ -24,21 +24,21 @@ const Navbar = () => {
             <Link href="/events">
               <li className="ml-10 uppercase hover:border-b text-xl">Events</li>
             </Link>
-            <Link href="/projects">
+            {/* <Link href="/projects">
               <li className="ml-10 uppercase hover:border-b text-xl">
                 Projects
               </li>
-            </Link>
+            </Link> */}
             <Link href="https://activeie.myshopify.com">
               <li className="ml-10 uppercase hover:border-b text-xl">
                 Products
               </li>
             </Link>
-            <Link href="/contact">
+            {/* <Link href="/contact">
               <li className="ml-10 uppercase hover:border-b text-xl">
                 Contact Us
               </li>
-            </Link>
+            </Link> */}
             <Link href="/support">
               <li className="mx-10 uppercase hover:border-b text-xl">
                 Support Us
