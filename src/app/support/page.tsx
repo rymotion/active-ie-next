@@ -2,6 +2,8 @@
 import Screen from "@/components/screen/screen";
 import DonationBody from "@/components/donation/donation";
 
+import { Analytics } from "@vercel/analytics/react";
+
 export default function Project() {
   return (
     <>
@@ -22,6 +24,7 @@ export default function Project() {
               </script>
             </div> */}
           </div>
+          <Analytics />
         </Screen>
       </div>
     </>

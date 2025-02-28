@@ -3,6 +3,7 @@ import Screen from "@/components/screen/screen";
 import DonationBody from "@/components/donation/donation";
 import OrgContentBody from "@/components/about-body";
 import GofundmeWidget from "@/components/gofundme";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
           <div>
             <GofundmeWidget />
           </div>
+          <Analytics />
         </Screen>
       </div>
     </>
