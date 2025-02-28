@@ -1,5 +1,5 @@
 "useClient";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import style from "./modal.module.css";
 
 export const Modal = ({
