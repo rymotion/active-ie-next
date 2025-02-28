@@ -1,6 +1,6 @@
 "use client";
 import Screen from "@/components/screen/screen";
-import DonationBody from "@/components/donation";
+import DonationBody from "@/components/donation/donation";
 
 export default function Project() {
   return (

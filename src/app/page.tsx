@@ -1,6 +1,6 @@
 "use client";
 import Screen from "@/components/screen/screen";
-import DonationBody from "@/components/donation";
+import DonationBody from "@/components/donation/donation";
 import OrgContentBody from "@/components/about-body";
 import GofundmeWidget from "@/components/gofundme";
 
