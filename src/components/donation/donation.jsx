@@ -1,10 +1,7 @@
-"useClient";
-import style from "./donation.module.css";
-
 const DonationBody = () => {
   return (
     <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
-      <div className="flex flex-col items-center py-20 p-20">
+      <div className="flex flex-col items-center px-4 p-20">
         <h1>Your Proceeds</h1>
         <p className="py-20">
           While we continue our capacity and program building for our
