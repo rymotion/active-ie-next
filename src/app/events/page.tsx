@@ -9,6 +9,7 @@ export default function Events() {
     <>
       <div>
         <Screen>
+          <div></div>
           <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
             <PublicCalendar />
           </div>
