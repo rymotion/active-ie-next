@@ -14,23 +14,23 @@
   }
 }
 
-body {
+.body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
+.html {
   font-family: var(--font-beba);
   font-size: large;
 }
 
-h1 {
+.h1 {
   font-family: var(--font-beba);
   font-size: xx-large;
 }
 
-nav {
+.nav {
   text-align: center;
   position: fixed;
   float: left;
@@ -41,4 +41,20 @@ nav {
   list-style-type: none;
   background-color: #ffffff;
   z-index: 999;
+}
+
+.contnr {
+  height: 400px;
+  background-color: black;
+  font-family: var(--font-beba);
+  color: white;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 4px;
+}
+
+.link {
+  color: white;
 }

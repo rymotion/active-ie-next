@@ -7,3 +7,17 @@
 .li {
   list-style-type: circle;
 }
+
+.contnr {
+  background-color: black;
+  font-family: var(--font-beba);
+  font-style: normal;
+  color: white;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}

@@ -3,7 +3,7 @@ import style from "@/components/donation/donation.module.css";
 
 const DonationBody = () => {
   return (
-    <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
+    <div className="contnr">
       <div className="flex flex-col items-center px-4 p-20">
         <h1>Your Proceeds</h1>
         <p className="py-10">
@@ -23,7 +23,7 @@ const DonationBody = () => {
           Additional Benefits to Setting up Monthly, Quarterly, or Annual
           Contributions
         </h2>
-        <table className={style.li}>
+        {/* <table className={style.li}>
           <ul>
             <li>Monthly Giveaway for Merch Drops</li>
           </ul>
@@ -33,8 +33,8 @@ const DonationBody = () => {
           <ul>
             <li>First Access to Test Events</li>
           </ul>
-        </table>
-        <div className="py-10">
+        </table> */}
+        <div className="py-10 px-10">
           <script
             async
             src="https://widgets.givebutter.com/latest.umd.cjs?acct=ZJkY9KxBnEd5eqgh&p=other"

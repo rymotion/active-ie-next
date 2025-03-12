@@ -24,6 +24,14 @@ export default function Events() {
           <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
             <PublicCalendar />
           </div>
+          <div>
+            <h1>Active Inland Empire Transparency Commitment</h1>
+            <p className="max-w-xl text-center">
+              Active Inland Empire will always provide full funding and
+              sponsorship transparency for all our events outside of our
+              required reporting in accordance to regulations.
+            </p>
+          </div>
           <Analytics />
         </Screen>
       </div>

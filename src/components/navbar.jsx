@@ -11,9 +11,15 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-black">
-      <nav className="fixed w-full h-24 shadow-xl bg-black">
-        <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16 bg-black">
+    <header className="text-white bg-black">
+      <nav
+        className="fixed justify-center
+  items-center w-full h-500 shadow-xl bg-black"
+      >
+        <div>
+          <h1>ACTIVE INLAND EMPIRE</h1>
+        </div>
+        <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16 bg-black text-white">
           <Link href="/">
             <Image
               src={Logo}

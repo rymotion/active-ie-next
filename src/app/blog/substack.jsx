@@ -16,11 +16,7 @@ export default function SubStack() {
           Read on Substack
         </a>
       </div>
-      <script
-        async
-        src="https://substack.com/embedjs/embed.js"
-        charset="utf-8"
-      ></script>
+      <script async src="https://substack.com/embedjs/embed.js"></script>
     </div>
   );
 }

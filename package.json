@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
+    "parcel-bundler": "^1.6.1",
     "embla-carousel-react": "^8.5.2",
-    "keen-slider": "^6.8.6",
+    "embla-carousel": "8.5.2",
+    "embla-carousel-autoplay": "8.5.2",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
