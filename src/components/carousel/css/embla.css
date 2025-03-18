@@ -1,6 +1,7 @@
 .embla {
-  max-width: 48rem;
+  height: fit-content;
   margin: auto;
+  align-items: center;
   --slide-height: 19rem;
   --slide-spacing: 1rem;
   --slide-size: 100%;
@@ -10,6 +11,7 @@
 }
 .embla__container {
   display: flex;
+  height: 1000px;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
 }
@@ -17,6 +19,8 @@
   transform: translate3d(0, 0, 0);
   flex: 0 0 var(--slide-size);
   min-width: 0;
+  padding: 20px;
+  align-items: center;
   padding-left: var(--slide-spacing);
 }
 .embla__slide__number {
@@ -76,6 +80,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  color: black;
   align-items: center;
   margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
 }

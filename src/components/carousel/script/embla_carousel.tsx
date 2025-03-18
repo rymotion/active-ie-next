@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
 import { DotButton, useDotButton } from "./embla_dot_button";
 import {
@@ -8,9 +8,10 @@ import {
 } from "./embla_arrow_buttons";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
+import EventInformation from "@/data/events";
 
 type PropType = {
-  slides: number[];
+  slides: React.ReactNode[];
   options?: EmblaOptionsType;
 };
 
@@ -35,6 +36,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNavButtonClick
   );
 
+  const [setSelectedIndex] = useState(0);
+
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -42,13 +45,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi, onNavButtonClick);
 
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    onDotButtonClick(emblaApi.selectedScrollSnap());
+  }, [emblaApi, setSelectedIndex]);
+
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">Slide {index + 1}</div>
+          {props.slides.map((x, _) => (
+            <div className="embla__slide" key={x?.toLocaleString.name}>
+              {/* What gets sent up to be rendered on website */}
+              <div className="embla__slide__number">{x}</div>
             </div>
           ))}
         </div>

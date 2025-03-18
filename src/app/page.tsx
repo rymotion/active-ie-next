@@ -4,7 +4,8 @@ import OrgContentBody from "@/components/about-body";
 import GofundmeWidget from "@/components/gofundme";
 import { Analytics } from "@vercel/analytics/react";
 import BMXJam from "../assets/events/8B731E4D-00A5-4211-B4E6-33A9902F0EC9.jpeg";
-import Sweatpals from "../assets/events/1452E6AA-867D-4D63-95DB-15597572C6E5.jpeg";
+import SH from "../assets/events/street-hockey.png";
+import Breathe from "../assets/events/breathe-ig.png";
 import Image from "next/image";
 import React from "react";
 import ScrollableScreen from "@/components/screen/scrollable_screen";
@@ -20,23 +21,31 @@ export default function Home() {
             <OrgContentBody />
           </div>
 
-          <ReEmblaCarousel>
-            <GofundmeWidget />
-            <Image
-              src={Sweatpals}
-              alt="BMX Bike Jam"
-              width="400"
-              height="400"
-              priority
-            ></Image>
-            <Image
-              src={BMXJam}
-              alt="BMX Bike Jam"
-              width="400"
-              height="400"
-              priority
-            ></Image>
-          </ReEmblaCarousel>
+          <ReEmblaCarousel
+            data={[
+              <Image
+                src={SH}
+                alt="Sweatpals events"
+                width="400"
+                height="400"
+                priority
+              ></Image>,
+              <Image
+                src={Breathe}
+                alt="Sweatpals events"
+                width="400"
+                height="400"
+                priority
+              ></Image>,
+              <Image
+                src={BMXJam}
+                alt="BMX Bike Jam"
+                width="400"
+                height="400"
+                priority
+              ></Image>,
+            ]}
+          />
 
           <div className="contnr">
             <h1>Our Long-Term Goal</h1>
