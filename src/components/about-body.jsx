@@ -20,7 +20,7 @@ const OrgContentBody = () => {
         </div>
 
         <div className="flex flex-col items-center px-4">
-          <h1>What We Do</h1>
+          <h2>What We Do</h2>
           <p className="max-w-xl text-center">
             We aim to craft programs and help support and raise funds for
             efforts that engage with the community and introduce people to

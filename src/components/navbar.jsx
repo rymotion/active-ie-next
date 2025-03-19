@@ -63,6 +63,7 @@ const Navbar = () => {
             <AiOutlineMenu size={25} />
           </div>
         </div>
+        {/* <NavMenu /> */}
         <div
           className={
             menuOpen
