@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-black">
+    <header className="bg-black text-white">
       <nav className="fixed w-full h-24 shadow-xl bg-black">
         <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16 bg-black">
           <Link href="/">
