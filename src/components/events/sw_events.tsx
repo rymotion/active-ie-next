@@ -2,6 +2,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import StreetHockeyPoster from "@/assets/events/street-hockey.png";
 import BreathePoster from "@/assets/events/breathe-ig.png";
+import SweatPalsLogo from "@/assets/vendors/sweatpals-logo.svg";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -9,8 +10,17 @@ import Link from "next/link";
 export default function SweatpalEvents() {
   return (
     <>
-      <div className="flex flex-col items-center padding-10">
-        <h1>Events hosted on Sweatpals</h1>
+      <div className="flex flex-col items-center px-20">
+        <h1>Our Programs</h1>
+        <div className="bg-black">
+          <Image
+            src={SweatPalsLogo}
+            alt="SweatPals"
+            width="800"
+            height="400"
+            priority
+          ></Image>
+        </div>
         <p>
           Click on the marquee to go directly to the event page and get more
           information
@@ -27,7 +37,6 @@ export default function SweatpalEvents() {
             ></Image>
           </Link>
           <Link href="https://www.sweatpals.com/event/active-nights-street-hockey/">
-            {" "}
             <Image
               src={StreetHockeyPoster}
               alt="Active Nights"

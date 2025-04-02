@@ -8,7 +8,7 @@ export default function CollaborationEvents() {
   return (
     <>
       <div className="flex flex-col items-center padding-10">
-        <h1>Events we are Collaborating with</h1>
+        <h1>Our Collaborations</h1>
 
         {/* standard vertical widget */}
         <div className="sm:hidden">

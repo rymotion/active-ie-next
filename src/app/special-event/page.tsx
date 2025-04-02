@@ -9,17 +9,21 @@ export default function SpecialEvent() {
     <>
       <Analytics />
       <Screen>
-        <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
-          <div className="flex flex-col items-center px-4 max-w-xl">
-            <h1>Thank You for your Support</h1>
-            <main>
-              <p>Your purchase has helped make a healthier Inland Empire.</p>
-            </main>
-            <div>
-              <SweatpalEvents />
-              <CollaborationEvents />
-            </div>
+        <div className="flex flex-col min-h-screen justify-center items-center h-full w-full px-20">
+          <div
+            className="relative flex w-full w-flex h-full h-flex
+      flex-col items-center overflow-hidden py-20 md:py-32"
+          >
+            <h1>Thank you for your support!</h1>
+            <p>
+              A part of your purchase has gone back towards investing in our
+              programs and efforts throughout the Inland Empire. We invite you
+              to join us at our official Active Inland Empire events or the
+              events we will be helping support in the next few months.
+            </p>
           </div>
+          <SweatpalEvents />
+          <CollaborationEvents />
         </div>
       </Screen>
     </>
