@@ -3,6 +3,11 @@ import Screen from "@/components/screen/screen";
 import { Analytics } from "@vercel/analytics/react";
 import SweatpalEvents from "@/components/events/sw_events";
 import CollaborationEvents from "@/components/events/collab_events";
+import AxelBikeRamp from "@/assets/event-photos/Eagle-scout-poster.png";
+import Image from "next/image";
+import Link from "next/link";
+import PublicCalendar from "../events/calender";
+import NewsletterWidget from "../contact/newsletter_subscribe";
 
 export default function SpecialEvent() {
   return (
@@ -21,9 +26,50 @@ export default function SpecialEvent() {
               to join us at our official Active Inland Empire events or the
               events we will be helping support in the next few months.
             </p>
+
+            {/* standard vertical widget */}
+            <div className="sm:hidden">
+              <Link href="https://gofund.me/af39d7ad">
+                <Image
+                  src={AxelBikeRamp}
+                  alt="SweatPals"
+                  width="800"
+                  height="400"
+                  priority
+                ></Image>
+              </Link>
+            </div>
+            {/* standard widescreen  marquee widget */}
+            <div
+              className={"flex flex-row items-center padding-10 hidden sm:flex"}
+            >
+              {/* TODO: Add programs and efforts components */}
+
+              <Link href="https://gofund.me/af39d7ad">
+                <Image
+                  src={AxelBikeRamp}
+                  alt="SweatPals"
+                  width="800"
+                  height="400"
+                  priority
+                ></Image>
+              </Link>
+            </div>
           </div>
           <SweatpalEvents />
           <CollaborationEvents />
+          <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
+            <div>
+              <p>Our Event Calendar</p>
+            </div>
+            <PublicCalendar />
+          </div>
+          <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
+            <div>
+              <p>Stay in Touch</p>
+            </div>
+            <NewsletterWidget />
+          </div>
         </div>
       </Screen>
     </>
