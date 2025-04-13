@@ -13,13 +13,15 @@ export default function SweatpalEvents() {
       <div className="flex flex-col items-center px-20">
         <h1>Our Programs</h1>
         <div className="bg-black">
-          <Image
-            src={SweatPalsLogo}
-            alt="SweatPals"
-            width="800"
-            height="400"
-            priority
-          ></Image>
+          <Link href="https://www.sweatpals.com/host/actv_ie">
+            <Image
+              src={SweatPalsLogo}
+              alt="SweatPals"
+              width="800"
+              height="400"
+              priority
+            ></Image>
+          </Link>
         </div>
         <p>
           Click on the marquee to go directly to the event page and get more
@@ -36,7 +38,7 @@ export default function SweatpalEvents() {
               priority
             ></Image>
           </Link>
-          <Link href="https://www.sweatpals.com/event/active-nights-street-hockey/">
+          <Link href="https://www.sweatpals.com/host/actv_ie">
             <Image
               src={StreetHockeyPoster}
               alt="Active Nights"
@@ -59,7 +61,7 @@ export default function SweatpalEvents() {
               priority
             ></Image>
           </Link>
-          <Link href="https://www.sweatpals.com/event/active-nights-street-hockey/">
+          <Link href="https://www.sweatpals.com/host/actv_ie">
             {" "}
             <Image
               src={StreetHockeyPoster}
