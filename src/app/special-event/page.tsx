@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
+import InstaWidget from "@/app/contact/instagram_gallery";
 
 export default function SpecialEvent() {
   return (
@@ -26,6 +27,8 @@ export default function SpecialEvent() {
               to join us at our official Active Inland Empire events or the
               events we will be helping support in the next few months.
             </p>
+
+            <InstaWidget />
 
             {/* standard vertical widget */}
             <div className="sm:hidden">
@@ -62,7 +65,7 @@ export default function SpecialEvent() {
             <div>
               <p>Our Event Calendar</p>
             </div>
-            <script src="https://www.sweatpals.com/static/embed/community/calendar/events/script.js?communityUsername=actv_ie&primaryColorHex=F13939&popupBackgroundColorHex=FFFFFF&headerFontColorHex=ffffff&fontFamily=Poppins"></script>
+            <PublicCalendar />
           </div>
           <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
             <div>
