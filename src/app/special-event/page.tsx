@@ -62,7 +62,7 @@ export default function SpecialEvent() {
             <div>
               <p>Our Event Calendar</p>
             </div>
-            <PublicCalendar />
+            <script src="https://www.sweatpals.com/static/embed/community/calendar/events/script.js?communityUsername=actv_ie&primaryColorHex=F13939&popupBackgroundColorHex=FFFFFF&headerFontColorHex=ffffff&fontFamily=Poppins"></script>
           </div>
           <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
             <div>
