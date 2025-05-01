@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
 import React from "react";
 import BMXJam from "@/assets/events/8B731E4D-00A5-4211-B4E6-33A9902F0EC9.jpeg";
+import RiseUpRunners from "@/assets/events/IMG_0063.jpg";
 
 export default function CollaborationEvents() {
   return (
@@ -19,6 +20,13 @@ export default function CollaborationEvents() {
             height="400"
             priority
           ></Image>
+          <Image
+            src={RiseUpRunners}
+            alt="Rise Up Runners"
+            width="400"
+            height="400"
+            priority
+          ></Image>
         </div>
         {/* standard widescreen  marquee widget */}
         <div className={"flex flex-row items-center padding-10 hidden sm:flex"}>
@@ -27,6 +35,13 @@ export default function CollaborationEvents() {
           <Image
             src={BMXJam}
             alt="BMX Bike Jam"
+            width="400"
+            height="400"
+            priority
+          ></Image>
+          <Image
+            src={RiseUpRunners}
+            alt="Rise Up Runners"
             width="400"
             height="400"
             priority

@@ -7,6 +7,7 @@ const OrgContentBody = () => {
       >
         <div className="flex flex-row items-center px-4 py-10">
           <div className="flex flex-col items-center px-4 py-10">
+            <h1>Welcome to Active Inland Empire</h1>
             <h1>Our Mission</h1>
             <p className="max-w-xl text-center">
               To build community by creating, cultivating, and promoting health

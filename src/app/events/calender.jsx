@@ -7,6 +7,7 @@ export default function PublicCalendar() {
         height="600"
         frameBorder="0"
         scrolling="no"
+        color="white"
       ></iframe>
     </div>
   );
