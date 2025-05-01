@@ -7,6 +7,7 @@ import SweatpalEvents from "@/components/events/sw_events";
 import CollaborationEvents from "@/components/events/collab_events";
 import React from "react";
 import GofundmeWidget from "@/components/gofundme";
+import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col items-center px-4 max-w-xl">
+            <AltGFMPoster />
             <GofundmeWidget />
             <DonationBody />
           </div>
