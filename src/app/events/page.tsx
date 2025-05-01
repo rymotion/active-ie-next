@@ -1,6 +1,7 @@
 "use client";
 import Screen from "@/components/screen/screen";
 import PublicCalendar from "./calender";
+import ScheduleSurvey from "./suvey";
 
 import { Analytics } from "@vercel/analytics/react";
 
@@ -17,9 +18,10 @@ export default function Events() {
               have some cool giveaways for you.
             </p>
             <p className="max-w-xl text-center">
-              We will regularly update this calendar so subscribe and meet us at
-              any of the events we are going to show up at.
+              We want to hear from you, the community, on how we can best serve
+              you and have our in-person events. Fill out the survey below.
             </p>
+            <ScheduleSurvey />
           </div>
           <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
             <PublicCalendar />
