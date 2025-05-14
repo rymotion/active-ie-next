@@ -27,8 +27,8 @@ export default function SweatpalEvents() {
   const [isPaused, setIsPaused] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const animationFrameRef = useRef<number>(0);
-  const lastTimestampRef = useRef<number>(0);
+  // const animationFrameRef = useRef<number>(0);
+  // const lastTimestampRef = useRef<number>(0);
   const scrollSpeed = 50; // pixels per second
 
   // Auto-scroll effect
@@ -152,14 +152,4 @@ export default function SweatpalEvents() {
       <Analytics />
     </>
   );
-}
-
-{
-  /*<Image
-    src={BMXJam}
-    alt="BMX Bike Jam"
-    width="400"
-    height="400"
-    priority
-    ></Image> */
 }
