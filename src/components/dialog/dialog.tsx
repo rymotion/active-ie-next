@@ -1,3 +1,5 @@
+import { Modal } from "../modal/modal";
+
 export default function ACTVDialog({
   open,
   setOpen,
@@ -8,5 +10,5 @@ export default function ACTVDialog({
   children: React.ReactNode;
 }) {
   console.log(setOpen);
-  return <dialog open={open}>{open && children}</dialog>;
+  return <Modal isOpen={open} children={children} onClose={() => {}}></Modal>;
 }
