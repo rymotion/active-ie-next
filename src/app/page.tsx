@@ -5,7 +5,6 @@ import OrgContentBody from "@/components/about-body";
 import { Analytics } from "@vercel/analytics/react";
 import SweatpalEvents from "@/components/events/sw_events";
 import CollaborationEvents from "@/components/events/collab_events";
-import React from "react";
 import GofundmeWidget from "@/components/gofundme";
 import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 

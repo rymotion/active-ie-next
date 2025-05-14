@@ -7,6 +7,7 @@ import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
 import InstaWidget from "@/app/contact/instagram_gallery";
+import LogoComponent from "@/components/logo";
 
 export default function SpecialEvent() {
   return (
@@ -18,8 +19,8 @@ export default function SpecialEvent() {
             className="relative flex w-full w-flex h-full h-flex
       flex-col items-center overflow-hidden py-20 md:py-32"
           >
-            <h1>Thank you for your support!</h1>
-            <p>
+            <LogoComponent />
+            <p className="max-w-xl text-center">
               A part of your purchase has gone back towards investing in our
               programs and efforts throughout the Inland Empire. We invite you
               to join us at our official Active Inland Empire events or the

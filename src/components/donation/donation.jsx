@@ -24,7 +24,7 @@ const DonationBody = () => {
           Contributions
         </h2>
         <table className={style.li}>
-          <ul>
+          {/* <ul>
             <li>Monthly Giveaway for Merch Drops</li>
           </ul>
           <ul>
@@ -32,7 +32,7 @@ const DonationBody = () => {
           </ul>
           <ul>
             <li>First Access to Test Events</li>
-          </ul>
+          </ul> */}
         </table>
         <div className="py-10">
           <script

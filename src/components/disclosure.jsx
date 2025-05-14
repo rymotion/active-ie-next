@@ -1,7 +1,7 @@
 export default function DisclosureBar() {
   return (
     <div>
-      <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
+      <div className="flex justify-between items-center h-full w-full px-20 2xl:px-16">
         <div>
           <p className="pre-wrap">
             Active: Inland Empire Inc is a 501(c)(3) non-profit organization
