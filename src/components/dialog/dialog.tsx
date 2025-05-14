@@ -10,5 +10,9 @@ export default function ACTVDialog({
   children: React.ReactNode;
 }) {
   console.log(setOpen);
-  return <Modal isOpen={open} children={children} onClose={() => {}}></Modal>;
+  return (
+    <Modal isOpen={open} onClose={() => {}}>
+      {children}
+    </Modal>
+  );
 }
