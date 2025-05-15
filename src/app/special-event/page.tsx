@@ -7,19 +7,16 @@ import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
 import InstaWidget from "@/app/contact/instagram_gallery";
-import LogoComponent from "@/components/logo";
+import LogoComponent, { logoStyle } from "@/components/logo";
 
 export default function SpecialEvent() {
   return (
     <>
       <Analytics />
       <Screen>
-        <div className="flex flex-col min-h-screen justify-center items-center h-full w-full px-20">
-          <div
-            className="relative flex w-full w-flex h-full h-flex
-      flex-col items-center overflow-hidden py-20 md:py-32"
-          >
-            <LogoComponent />
+        <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
+          <div className=" flex flex-col items-center justify-center px-20 max-w-xl">
+            <LogoComponent styles={logoStyle.standard} />
             <p className="max-w-xl text-center">
               A part of your purchase has gone back towards investing in our
               programs and efforts throughout the Inland Empire. We invite you

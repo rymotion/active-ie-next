@@ -7,6 +7,7 @@ import SweatpalEvents from "@/components/events/sw_events";
 import CollaborationEvents from "@/components/events/collab_events";
 import GofundmeWidget from "@/components/gofundme";
 import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
+import LogoComponent, { logoStyle } from "@/components/logo";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
       <Analytics />
       <Screen>
         <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
+          <div className="flex flex-col items-center justify-center px-20 max-w-xl">
+            <LogoComponent styles={logoStyle.standard} />
+          </div>
           <div className="flex flex-col items-center px-4 max-w-xl">
             <OrgContentBody />
           </div>
