@@ -1,5 +1,4 @@
 import Logo from "../assets/logo.png";
-import Background from "../assets/background.png";
 import Image from "next/image";
 import { motion, useTransform, useScroll } from "framer-motion";
 

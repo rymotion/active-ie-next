@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 // This creates a custom headlining widget that will have a slight animation on user interaction
 export default function CustomHeadlineWidget({
@@ -8,9 +8,19 @@ export default function CustomHeadlineWidget({
   bodyStyle,
 }: {
   headline: string;
-  headlineStyle: {};
+  headlineStyle: {
+    minHeight: string;
+    display: string;
+    justifyContent: string;
+    alignItems: string;
+  };
   body: React.ReactNode;
-  bodyStyle: {};
+  bodyStyle: {
+    minHeight: string;
+    display: string;
+    justifyContent: string;
+    alignItems: string;
+  };
 }) {
   // const { scrollYProgress } = useScroll();
   // const scaleValue = useTransform(scrollYProgress, [0, 0.5, 1], [1, 2, 1]);

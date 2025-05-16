@@ -25,6 +25,7 @@ export default function MarqueeWidget({
   const scrollSpeed = 50; // pixels per second
 
   useEffect(() => {
+    console.log("scrollPosition", scrollPosition);
     if (!carouselRef.current || !containerRef.current) return;
 
     const carousel = carouselRef.current;
