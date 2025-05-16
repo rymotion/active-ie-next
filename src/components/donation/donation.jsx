@@ -45,9 +45,6 @@ const DonationBody = () => {
           If you are looking to make a direct impact with a specific effort we
           are supporting here are the projects we are assisting with.
         </p>
-        <div className="flex flex-col items-center padding-10">
-          <GofundmeWidget />
-        </div>
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ const events = [
 
 export default function SweatpalEvents() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   // const animationFrameRef = useRef<number>(0);
@@ -36,6 +36,7 @@ export default function SweatpalEvents() {
 
   // Auto-scroll effect
   useEffect(() => {
+    console.log("scrollPosition", scrollPosition);
     if (!carouselRef.current || !containerRef.current) return;
 
     const carousel = carouselRef.current;
@@ -82,7 +83,7 @@ export default function SweatpalEvents() {
           ></Image>
         </Link>
         {events.map((event, index) => (
-          <div className="bg-black">
+          <div key={index} className="bg-black">
             <MarqueeWidget
               marquee={
                 <Image

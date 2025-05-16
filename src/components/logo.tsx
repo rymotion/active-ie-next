@@ -1,10 +1,20 @@
 import Logo from "../assets/logo.png";
+import Background from "../assets/background.png";
 import Image from "next/image";
 import { motion, useTransform, useScroll } from "framer-motion";
 
-export default function LogoComponent({ styles }: { styles: {} }) {
+export default function LogoComponent({
+  styles,
+}: {
+  styles: {
+    minHeight: string;
+    display: string;
+    justifyContent: string;
+    alignItems: string;
+  };
+}) {
   const { scrollYProgress } = useScroll();
-  const scaleValue = useTransform(scrollYProgress, [0, 0.5, 1], [1, 2, 1]);
+  const scaleValue = useTransform(scrollYProgress, [0, 1, 1], [1, 2, 1]);
 
   return (
     <div
@@ -39,7 +49,7 @@ export const logoStyle = {
     alignItems: "center",
   },
   standard: {
-    minHeight: "100vh",
+    minHeight: "50vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
