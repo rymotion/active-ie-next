@@ -18,9 +18,9 @@ export default function Events() {
           <div
             className="flex flex-col min-h-screen
           
-          justify-center p-20 min-h-screen h-full"
+          justify-center items-center w-full min-h-screen h-full"
           >
-            <p className="max-w-xl text-center">
+            <p className="max-w-xl text-center px-4">
               We want to hear from you, the community, on how we can best serve
               you and have our in-person events. By Filling out the survey
               below, we can learn how to better serve you to support you on your
@@ -30,7 +30,7 @@ export default function Events() {
           <div className="flex justify-center">
             <button
               onClick={() => setOpen(true)}
-              className="text-2xl font-bold bg-black text-color:white hover:text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+              className="text-2xl font-bold bg-white text-color:black hover:text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
             >
               Take the Program Schedule Survey
             </button>
