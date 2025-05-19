@@ -42,11 +42,11 @@ const Navbar = () => {
                 Projects
               </li>
             </Link> */}
-              <Link href="https://activeie.myshopify.com">
+              {/* <Link href="/products">
                 <li className="ml-10 uppercase hover:border-b text-xl">
                   Products
                 </li>
-              </Link>
+              </Link> */}
               <Link href="/contact">
                 <li className="ml-10 uppercase hover:border-b text-xl">
                   Contact Us
@@ -107,14 +107,14 @@ const Navbar = () => {
                 Projects
               </li>
             </Link> */}
-              <Link href="https://activeie.myshopify.com">
+              {/* <Link href="/products">
                 <li
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
                   Products
                 </li>
-              </Link>
+              </Link> */}
               <Link href="/contact">
                 <li
                   className="py-4 cursor-pointer"
