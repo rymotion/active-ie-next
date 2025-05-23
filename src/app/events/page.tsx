@@ -30,7 +30,7 @@ export default function Events() {
           <div className="flex justify-center">
             <button
               onClick={() => setOpen(true)}
-              className="text-2xl font-bold bg-white text-color:black hover:text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+              className="text-2xl font-bold bg-black text-white hover:text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
             >
               Take the Program Schedule Survey
             </button>

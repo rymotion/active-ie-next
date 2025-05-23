@@ -73,7 +73,11 @@ export default function SweatpalEvents() {
     <>
       <div className="flex flex-col items-center px-20">
         <h2>Our Programs</h2>
-        <Link href="https://www.sweatpals.com/host/actv_ie">
+        <p>Click the link below to access our calendar of events.</p>
+        <Link
+          href="https://www.sweatpals.com/host/actv_ie"
+          className="hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+        >
           <Image
             src={SweatPalsLogo}
             alt="SweatPals"
