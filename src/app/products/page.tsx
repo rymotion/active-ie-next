@@ -3,7 +3,7 @@ import Screen from "@/components/screen/screen";
 import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import ProductCarousel from "@/components/products/carousel";
-import { CartProvider, useCart } from "@/contexts/cart-context";
+import { useCart } from "@/contexts/cart-context";
 import { ShopifyService, Product } from "@/services/shopify";
 
 export default function Products() {

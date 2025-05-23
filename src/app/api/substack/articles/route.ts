@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { SubstackResponse } from "@/types/substack";
 
 export async function fetchArticles() {
   try {

@@ -6,7 +6,6 @@
 // import Image from "next/image";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Analytics } from "@vercel/analytics/react";
 // import Link from "next/link";
 // import { useRouter } from "next/router";
 
@@ -60,18 +59,24 @@ export default function MarqueeWidget({
 
   return (
     <>
-      <Analytics />
-
       {/* standard vertical widget */}
       <div className="sm:hidden">
         <div>{marquee}</div>
-        <div className="flex flex-col items-center ">{information}</div>
+        <div className="flex flex-wrap items-start padding-20px">
+          {information}
+        </div>
       </div>
       {/* standard widescreen  marquee widget */}
-      <div className={"flex flex-row items-center padding-10 hidden sm:flex"}>
+      <div
+        className={
+          "flex flex-row items-center padding-20px hidden  sp:even sm:flex"
+        }
+      >
         {/* TODO: Add programs and efforts components */}
-        <div>{marquee}</div>
-        <div className="flex flex-col items-center ">{information}</div>
+        <div className="flex flex-wrap items-start padding-20">{marquee}</div>
+        <div className="flex flex-wrap items-start padding-20">
+          {information}
+        </div>
       </div>
     </>
   );

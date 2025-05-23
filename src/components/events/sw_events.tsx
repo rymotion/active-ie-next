@@ -2,18 +2,39 @@
 import { Analytics } from "@vercel/analytics/react";
 import StreetHockeyPoster from "@/assets/events/street-hockey.png";
 import BreathePoster from "@/assets/events/breathe-ig.png";
+import NightMoshPoster from "@/assets/events/poster-v1.jpg";
 import SweatPalsLogo from "@/assets/vendors/sweatpals-logo.svg";
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import MarqueeWidget from "../custom-widget/marquee";
+import { motion } from "framer-motion";
+import { textBoxStyle } from "../animated/container/text/custom-headline-text";
 
 const events = [
+  {
+    image: NightMoshPoster,
+    alt: "Active Nights Night Mosh",
+    href: "https://www.sweatpals.com/event/active-nights-night-mosh/",
+    headline: "A community bike ride for the community",
+  },
   {
     image: BreathePoster,
     alt: "Active Nights Breathe",
     href: "https://www.sweatpals.com/event/active-nights-breath/",
-    headline: "Join a breathwork, meditation, and flow session",
+    headline:
+      "Ease into a guided session to better center yourself in a stressful world.",
+    video: (
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/D8WMMNWKyOw?si=ZP3dUC8-TmPf-ZM0"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    ),
   },
   {
     image: StreetHockeyPoster,
@@ -72,16 +93,37 @@ export default function SweatpalEvents() {
   return (
     <>
       <div className="flex flex-col items-center px-20">
-        <h2>Our Programs</h2>
+        <div style={textBoxStyle.standard}>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            Our Programs
+          </motion.h1>
+        </div>
         <p>Click the link below to access our calendar of events.</p>
         <Link
           href="https://www.sweatpals.com/host/actv_ie"
-          className="hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+          className="hover:bg-red-500 transition-all duration-300 transform hover:scale-105 hidden sm:flex"
         >
           <Image
             src={SweatPalsLogo}
             alt="SweatPals"
             width="800"
+            height="400"
+            priority
+          ></Image>
+        </Link>
+
+        <Link
+          href="https://www.sweatpals.com/host/actv_ie"
+          className="hover:bg-red-500 transition-all duration-300 transform hover:scale-105 sm:hidden"
+        >
+          <Image
+            src={SweatPalsLogo}
+            alt="SweatPals"
+            width="500"
             height="400"
             priority
           ></Image>
@@ -93,15 +135,30 @@ export default function SweatpalEvents() {
                 <Image
                   src={event.image}
                   alt={event.alt}
-                  width="200"
-                  height="400"
+                  width="300"
+                  height="500"
                   priority
                 />
               }
-              information={<p>{event.headline}</p>}
+              information={
+                <div>
+                  <p>{event.headline}</p>
+                  {event.video}
+                </div>
+              }
             />
           </div>
         ))}
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          style={{ width: "600px", height: "300px" }}
+          className="hover:bg-red-500 transition-all duration-300 transform hover:scale-105 bg-color-orange"
+          onClick={() => window.open("https://www.sweatpals.com/host/actv_ie")}
+        >
+          <p className="text-center text-5xl">View all events</p>
+        </motion.button>
       </div>
       <Analytics />
     </>

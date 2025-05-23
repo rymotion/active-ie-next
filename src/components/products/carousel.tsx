@@ -1,14 +1,17 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { Product } from '@/types/shopify';
+import React, { useState, useEffect } from "react";
+import { Product } from "@/services/shopify";
 
 interface ProductCarouselProps {
   products: Product[];
   onAddToCart: (product: Product) => void;
 }
 
-export default function ProductCarousel({ products, onAddToCart }: ProductCarouselProps) {
+export default function ProductCarousel({
+  products,
+  onAddToCart,
+}: ProductCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -35,7 +38,7 @@ export default function ProductCarousel({ products, onAddToCart }: ProductCarous
       >
         <div className="relative w-full h-full">
           <img
-            src={products[currentIndex].images[0]?.src || '/placeholder.jpg'}
+            src={products[currentIndex].images[0]?.src || "/placeholder.jpg"}
             alt={products[currentIndex].title}
             className="w-full h-full object-cover"
           />
@@ -65,7 +68,7 @@ export default function ProductCarousel({ products, onAddToCart }: ProductCarous
           <div
             key={index}
             className={`w-3 h-3 rounded-full cursor-pointer ${
-              index === currentIndex ? 'bg-white' : 'bg-gray-400'
+              index === currentIndex ? "bg-white" : "bg-gray-400"
             }`}
             onClick={() => setCurrentIndex(index)}
           />
