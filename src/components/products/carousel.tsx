@@ -30,7 +30,10 @@ export default function ProductCarousel({
   };
 
   return (
+    // product card
     <div className="relative w-full h-[600px]">
+      {/* product image */}
+
       <div
         className="absolute inset-0"
         onMouseEnter={() => setIsHovered(true)}
@@ -47,11 +50,11 @@ export default function ProductCarousel({
               {products[currentIndex].title}
             </h2>
             <p className="text-lg text-white mb-4">
-              {products[currentIndex].description}
+              {/* {products[currentIndex].description} */}
             </p>
             <div className="flex items-center mb-8">
               <span className="text-2xl font-bold text-white mr-4">
-                ${products[currentIndex].price}
+                ${Number(products[currentIndex].price).toFixed(2)}
               </span>
               <button
                 onClick={() => handleAddToCart(products[currentIndex])}
@@ -63,6 +66,7 @@ export default function ProductCarousel({
           </div>
         </div>
       </div>
+      {/* carousel indicators */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {products.map((_, index) => (
           <div

@@ -9,8 +9,10 @@ export default function Screen({ children }: { children: React.ReactNode }) {
       <Navbar />
       <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full bg-black">
         <ScrollArrow />
+        {/* item checkout overlay */}
         <main>{children}</main>
       </div>
+
       <footer className="geist-wrapper flex justify-center items-center h-full w-full">
         <DisclosureBar />
       </footer>

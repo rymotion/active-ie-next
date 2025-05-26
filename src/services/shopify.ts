@@ -5,6 +5,8 @@ export interface Product {
   images: { src: string }[];
   price: string;
   available: boolean;
+  tags: string[];
+  url: string;
 }
 
 interface ShopifyResponse {
@@ -28,6 +30,8 @@ interface ShopifyResponse {
             };
           };
           availableForSale: boolean;
+          tags: string[];
+          url: string;
         };
       }>;
     };
@@ -37,7 +41,8 @@ interface ShopifyResponse {
 export class ShopifyService {
   private static instance: ShopifyService;
   private shopifyStorefrontUrl = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_URL;
-  private shopifyStorefrontToken = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_KEY;
+  private shopifyStorefrontToken =
+    process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_KEY;
 
   private constructor() {}
 
@@ -109,6 +114,8 @@ export class ShopifyService {
       images: edge.node.images.edges.map((img) => ({ src: img.node.src })),
       price: edge.node.priceRange.minVariantPrice.amount,
       available: edge.node.availableForSale,
+      tags: edge.node.tags,
+      url: edge.node.url,
     }));
   }
 }
