@@ -9,6 +9,71 @@ import MarqueeWidget from "../custom-widget/marquee";
 import { motion } from "framer-motion";
 import { textBoxStyle } from "../animated/container/text/custom-headline-text";
 import { fetchEventsFromGoogleSheets } from "@/lib/googleSheets";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
+// Helper function to handle Google Drive URLs
+const getDirectImageUrl = (url: string) => {
+  if (!url) return null;
+  // For Google Drive shareable links
+  if (url.includes("drive.google.com")) {
+    const fileId =
+      url.match(/\/file\/d\/([^\/]+)/)?.[1] || url.match(/id=([^&]+)/)?.[1];
+    return fileId
+      ? `https://drive.google.com/uc?export=view&id=${fileId}`
+      : url;
+  }
+  return url;
+};
+
+// Image component with loading and error states
+const EventImage = ({
+  src,
+  alt,
+  className = "",
+  fallbackSrc = "/images/fallback-event.jpg",
+}: {
+  src: string | StaticImport;
+  alt: string;
+  className?: string;
+  fallbackSrc?: string;
+}) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  const [imageSrc, setImageSrc] = useState<string | StaticImport>(() => {
+    if (typeof src === "string") {
+      return getDirectImageUrl(src) || "";
+    }
+    return src;
+  });
+
+  return (
+    <div className={`relative ${className}`}>
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg" />
+      )}
+      <Image
+        src={hasError ? fallbackSrc : imageSrc}
+        alt={alt}
+        fill
+        className={`object-cover transition-opacity duration-300 ${
+          isLoading ? "opacity-0" : "opacity-100"
+        }`}
+        onLoad={() => setIsLoading(false)}
+        onError={() => {
+          setHasError(true);
+          setIsLoading(false);
+        }}
+        priority={false}
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
+      {hasError && !isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <span className="text-gray-500">Image not available</span>
+        </div>
+      )}
+    </div>
+  );
+};
 
 // Fallback events in case Google Sheets fails
 const fallbackEvents = [
@@ -39,6 +104,8 @@ export default function SweatpalEvents() {
       headline?: string;
       imageUrl?: string;
       videoEmbed?: string;
+      posterUrl?: string;
+      videoPosterUrl?: string;
     }>
   >([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -170,71 +237,67 @@ export default function SweatpalEvents() {
             </Link>
 
             <div className="w-full max-w-6xl">
-              {events.map((event, index) => (
-                <div
-                  key={`${event.name}-${index}`}
-                  className="mb-12 bg-gray-900 rounded-lg overflow-hidden shadow-xl"
-                >
-                  <MarqueeWidget
-                    marquee={
-                      event.imageUrl ? (
-                        <div className="relative w-full h-64 md:h-96">
-                          <Image
-                            src={event.imageUrl}
-                            alt={event.name}
-                            fill
-                            className="object-cover"
-                            priority
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-full h-64 md:h-96 bg-gray-800 flex items-center justify-center">
-                          <span className="text-gray-500">
-                            <Image
-                              src={StreetHockeyPoster}
+              {events.map((event, index) => {
+                console.log(event.posterUrl);
+                console.log(event.videoEmbed);
+                return (
+                  <div
+                    key={`${event.name}-${index}`}
+                    className="mb-12 bg-gray-900 rounded-lg overflow-hidden shadow-xl"
+                  >
+                    <MarqueeWidget
+                      marquee={
+                        event.posterUrl ? (
+                          <div className="relative w-full h-64 md:h-96">
+                            <EventImage
+                              src={event.posterUrl}
                               alt={event.name}
-                              fill
-                              className="object-cover"
-                              priority
+                              className="rounded-lg"
                             />
-                          </span>
-                        </div>
-                      )
-                    }
-                    information={
-                      <div className="p-6">
-                        <h2 className="text-2xl font-bold text-white mb-4">
-                          {event.name}
-                        </h2>
-                        {event.headline && (
-                          <p className="text-gray-300 mb-4">{event.headline}</p>
-                        )}
-                        {event.videoEmbed && (
-                          <div className="aspect-w-16 aspect-h-9 mt-4">
-                            <iframe
-                              src={event.videoEmbed}
-                              title={event.name}
-                              className="w-full h-64 md:h-96"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                            ></iframe>
                           </div>
-                        )}
-                        {event.eventLink && (
-                          <a
-                            href={event.eventLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block mt-4 px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
-                          >
-                            Learn More
-                          </a>
-                        )}
-                      </div>
-                    }
-                  />
-                </div>
-              ))}
+                        ) : (
+                          <div className="w-full h-64 md:h-96 bg-gray-800 flex items-center justify-center">
+                            <span className="text-gray-500"></span>
+                          </div>
+                        )
+                      }
+                      information={
+                        <div className="p-6">
+                          <h2 className="text-2xl font-bold text-white mb-4">
+                            {event.name}
+                          </h2>
+                          {event.headline && (
+                            <p className="text-gray-300 mb-4">
+                              {event.headline}
+                            </p>
+                          )}
+                          {event.videoEmbed && (
+                            <div className="aspect-w-16 aspect-h-9 mt-4">
+                              <iframe
+                                src={event.videoEmbed}
+                                title={event.name}
+                                className="w-full h-64 md:h-96"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              ></iframe>
+                            </div>
+                          )}
+                          {event.eventLink && (
+                            <a
+                              href={event.eventLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block mt-4 px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+                            >
+                              Learn More
+                            </a>
+                          )}
+                        </div>
+                      }
+                    />
+                  </div>
+                );
+              })}
             </div>
 
             <motion.button
