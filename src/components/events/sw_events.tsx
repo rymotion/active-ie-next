@@ -28,7 +28,7 @@ const events = [
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/D8WMMNWKyOw?si=ZP3dUC8-TmPf-ZM0"
+        src="https://www.youtube.com/embed/ZiAxgxoJ2js?si=tEdeb9omiu9WLfE9"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
