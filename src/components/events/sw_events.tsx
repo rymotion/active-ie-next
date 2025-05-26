@@ -39,7 +39,7 @@ const EventImage = ({
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [imageSrc, setImageSrc] = useState<string | StaticImport>(() => {
+  const [imageSrc] = useState<string | StaticImport>(() => {
     if (typeof src === "string") {
       return getDirectImageUrl(src) || "";
     }
