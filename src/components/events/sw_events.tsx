@@ -1,6 +1,5 @@
 "use client";
 import { Analytics } from "@vercel/analytics/react";
-import StreetHockeyPoster from "@/assets/events/street-hockey-v1.png";
 import SweatPalsLogo from "@/assets/vendors/sweatpals-logo.svg";
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
