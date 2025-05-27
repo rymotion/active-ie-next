@@ -28,7 +28,7 @@ export async function fetchEventsFromGoogleSheets(
     // Assuming first row is header, skip it
     const rows = data.values.slice(1);
 
-    return rows.map((row: any[]) => {
+    return rows.map((row: string[]) => {
       // Adjust the indices based on your Google Sheets columns
       // Assuming columns are: Name, Event Link, Headline, Image URL, Video Embed
       return {
