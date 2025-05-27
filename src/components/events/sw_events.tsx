@@ -45,7 +45,8 @@ const EventImage = ({
     }
     return src;
   });
-
+  console.log("image src %s", imageSrc);
+  console.log("has error %s", hasError);
   return (
     <div className={`relative ${className}`}>
       {isLoading && (
