@@ -29,14 +29,14 @@ export default function DisclosureBar() {
   }, []);
 
   return (
-    <div className="w-full bg-gray-50 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
+    <div className="w-full bg-black border-b border-gray-200 text-white">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-2 md:py-3 md:justify-start md:space-x-10">
           <div className="md:hidden">
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -74,7 +74,7 @@ export default function DisclosureBar() {
           </div>
 
           <div className="hidden md:flex-1 md:flex md:items-center md:justify-between">
-            <div className="text-sm text-gray-700">
+            <div className="text-xs sm:text-sm text-gray-300">
               <p>
                 Active: Inland Empire Inc is a 501(c)(3) non-profit organization
               </p>
@@ -84,7 +84,7 @@ export default function DisclosureBar() {
                 opening an inquiry at{" "}
                 <a
                   href="mailto:organization@activeie.org"
-                  className="text-indigo-600 hover:text-indigo-500"
+                  className="text-blue-400 hover:text-blue-300"
                 >
                   organization@activeie.org
                 </a>
@@ -111,9 +111,9 @@ export default function DisclosureBar() {
       </div>
 
       {/* Mobile menu, show/hide based on mobile menu state */}
-      <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
-        <div className="pt-2 pb-3 space-y-1">
-          <div className="px-4 py-2 text-sm text-gray-700">
+      <div className={`${isOpen ? "block" : "hidden"} md:hidden bg-gray-900`}>
+        <div className="pt-2 pb-4 space-y-2">
+          <div className="px-4 py-2 text-sm text-gray-300">
             <p>
               Active: Inland Empire Inc is a 501(c)(3) non-profit organization
             </p>
@@ -124,7 +124,7 @@ export default function DisclosureBar() {
               an inquiry at{" "}
               <a
                 href="mailto:organization@activeie.org"
-                className="text-indigo-600 hover:text-indigo-500"
+                className="text-blue-400 hover:text-blue-300"
               >
                 organization@activeie.org
               </a>

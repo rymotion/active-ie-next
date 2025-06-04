@@ -10,14 +10,22 @@ export default function Contact() {
     <>
       <div>
         <Screen>
-          <div className="display: flex; flex-direction: column; align-items: center">
-            <NewsletterWidget />
-            <InstaWidget />
+          <div className="hidden lg:block">
+            <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
+              <NewsletterWidget />
+              <InstaWidget />
+            </div>
           </div>
-          <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
-            <h2>Inquries:</h2>
 
-            <p>organization@activeie.org</p>
+          <div className="flex flex-col min-h-screen min-w-screen justify-center items-center h-full w-full">
+            <h2 className="text-2xl font-bold text-center mb-4">Inquries:</h2>
+
+            <a
+              href="mailto:organization@activeie.org"
+              className="text-blue-400 hover:text-blue-300"
+            >
+              organization@activeie.org
+            </a>
           </div>
           <Analytics />
         </Screen>

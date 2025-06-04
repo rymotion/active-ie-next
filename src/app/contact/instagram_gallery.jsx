@@ -26,9 +26,9 @@ const InstaWidget = () => {
             background-color: #f4f4f4;
             border-radius: 50%;
             flex-grow: 0;
-            height: 40px;
+            height: 400px;
             margin-right: 14px;
-            width: 40px;
+            width: 400px;
           "
               ></div>
               <div
