@@ -78,20 +78,33 @@ const EventImage = ({
 // Fallback events in case Google Sheets fails
 const fallbackEvents = [
   {
+    name: "Summer Plunge",
+    imageUrl:
+      "https://drive.google.com/file/d/1fDrW39udqwoCHbFHF-XrZoVxC6_w1gVg/view?usp=drive_link",
+    eventLink: "https://www.sweatpals.com/event/chill-vibe",
+    headline: "Join the community; take the plunge.",
+  },
+  {
     name: "Active Nights Night Mosh",
-    eventLink: "https://www.sweatpals.com/event/active-nights-night-mosh/",
+    imageUrl:
+      "https://drive.google.com/file/d/1GP368tTYpxdjO6IFwVRFxXKbO9fYaH_w/view?usp=share_link",
+    eventLink: "https://www.sweatpals.com/event/night-mosh",
     headline: "A community bike ride for the community",
   },
   {
     name: "Active Nights Breathe",
-    eventLink: "https://www.sweatpals.com/event/active-nights-breath/",
+    imageUrl:
+      "https://drive.google.com/file/d/17fNV4EPe_aXym34k0Xl2xFTdGLeorZiE/view?usp=share_link",
+    eventLink: "https://www.sweatpals.com/event/active-nights-breath",
     headline:
       "Ease into a guided session to better center yourself in a stressful world.",
     videoEmbed: "https://www.youtube.com/embed/ZiAxgxoJ2js",
   },
   {
     name: "Street Hockey",
-    eventLink: "https://www.sweatpals.com/host/actv_ie",
+    imageUrl:
+      "https://drive.google.com/file/d/17fNV4EPe_aXym34k0Xl2xFTdGLeorZiE/view?usp=share_link",
+    eventLink: "https://www.sweatpals.com/event/active-nights-street-hockey",
     headline: "Play competitively in a pickup street hockey game.",
   },
 ];
@@ -116,11 +129,39 @@ export default function SweatpalEvents() {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollSpeed = 50; // pixels per second
 
+  // Helper function to handle caching with expiration
+  const getCachedEvents = () => {
+    const cachedData = localStorage.getItem("cachedEvents");
+    if (!cachedData) return null;
+
+    try {
+      const { data, timestamp } = JSON.parse(cachedData);
+      const now = new Date().getTime();
+      const oneDayInMs = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+      // Return cached data if it's less than 24 hours old
+      if (now - timestamp < oneDayInMs) {
+        return data;
+      }
+    } catch (err) {
+      console.error("Error reading cached events:", err);
+    }
+    return null;
+  };
+
   // Fetch events from Google Sheets on component mount
   useEffect(() => {
     const loadEvents = async () => {
       try {
-        // Replace with your Google Sheet ID and sheet name
+        // Check for cached events first
+        const cachedEvents = getCachedEvents();
+        if (cachedEvents) {
+          setEvents(cachedEvents);
+          setIsLoading(false);
+          return;
+        }
+
+        // If no valid cache, fetch from Google Sheets
         const sheetId = "1YUiVTKoPOdC6a_muaHwyhsj6QqlRMeTSYXcCi9_9i90";
         const sheetName = "Sheet1";
 
@@ -129,8 +170,20 @@ export default function SweatpalEvents() {
           sheetName
         );
 
-        // If we got events from Google Sheets, use them, otherwise fall back to default
-        setEvents(fetchedEvents.length > 0 ? fetchedEvents : fallbackEvents);
+        // Use fetched events if available, otherwise fall back to defaults
+        const eventsToUse =
+          fetchedEvents.length > 0 ? fetchedEvents : fallbackEvents;
+
+        // Cache the events with a timestamp
+        if (eventsToUse.length > 0) {
+          const cacheData = {
+            data: eventsToUse,
+            timestamp: new Date().getTime(),
+          };
+          localStorage.setItem("cachedEvents", JSON.stringify(cacheData));
+        }
+
+        setEvents(eventsToUse);
       } catch (err) {
         console.error("Failed to load events:", err);
         setError("Failed to load events. Using default events instead.");
@@ -252,6 +305,7 @@ export default function SweatpalEvents() {
                             <EventImage
                               src={event.posterUrl}
                               alt={event.name}
+                              fallbackSrc={event.imageUrl}
                               className="rounded-lg"
                             />
                           </div>
