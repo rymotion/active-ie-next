@@ -9,6 +9,7 @@ import NewsletterWidget from "../contact/newsletter_subscribe";
 import InstaWidget from "@/app/contact/instagram_gallery";
 import LogoComponent, { logoStyle } from "@/components/logo";
 import React, { useState } from "react";
+import OrgContentBody from "@/components/about-body";
 import ACTVDialog from "@/components/dialog/dialog";
 
 export default function SpecialEvent() {
@@ -20,18 +21,14 @@ export default function SpecialEvent() {
         <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
           <div className=" flex flex-col items-center justify-center px-20 max-w-xl">
             <LogoComponent styles={logoStyle.standard} />
-            <p className="max-w-xl text-center">
-              A part of your purchase has gone back towards investing in our
-              programs and efforts throughout the Inland Empire. We invite you
-              to join us at our official Active Inland Empire events or the
-              events we will be helping support in the next few months.
-            </p>
-
-            <InstaWidget />
-
-            <AltGFMPoster />
+          </div>
+          <div className="flex flex-col items-center px-4 max-w-xl">
+            <OrgContentBody />
           </div>
           <SweatpalEvents />
+          <InstaWidget />
+
+          <AltGFMPoster />
           <CollaborationEvents />
           <div className="flex justify-center">
             <button
