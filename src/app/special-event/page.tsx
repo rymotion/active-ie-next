@@ -22,7 +22,7 @@ export default function SpecialEvent() {
           <div className=" flex flex-col items-center justify-center px-20 max-w-xl">
             <LogoComponent styles={logoStyle.standard} />
           </div>
-          <div className="flex flex-col items-center px-4 max-w-xl">
+          <div className="flex flex-col items-center max-w-xl">
             <OrgContentBody />
           </div>
           <SweatpalEvents />
