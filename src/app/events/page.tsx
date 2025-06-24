@@ -18,19 +18,19 @@ export default function Events() {
           <div
             className="flex flex-col min-h-screen
           
-          justify-center items-center w-full min-h-screen h-full"
+          justify-center items-center w-full "
           >
             <p className="max-w-xl text-center px-4">
               We want to hear from you, the community, on how we can best serve
-              you and have our in-person events. By Filling out the survey
-              below, we can learn how to better serve you to support you on your
-              health journey.
+              you and have our in-person events. By clicking the button below,
+              we can learn how to better serve you to support you on your health
+              journey.
             </p>
           </div>
           <div className="flex justify-center">
             <button
               onClick={() => setOpen(true)}
-              className="text-2xl font-bold bg-black text-white hover:text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+              className="inline-block mt-4 px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-color"
             >
               Take the Program Schedule Survey
             </button>

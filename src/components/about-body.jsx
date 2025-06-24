@@ -8,7 +8,7 @@ const OrgContentBody = () => {
     <>
       <div
         className="relative flex w-full w-flex h-full h-flex
-      flex-col items-center overflow-hidden py-20 md:py-32"
+      flex-col items-center overflow-hidden  "
       >
         <CustomHeadlineWidget
           headline="Our Mission"
