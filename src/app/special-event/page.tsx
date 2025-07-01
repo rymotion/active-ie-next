@@ -1,7 +1,6 @@
 "use client";
 import Screen from "@/components/screen/screen";
 import { Analytics } from "@vercel/analytics/react";
-import SweatpalEvents from "@/components/events/sw_events";
 import CollaborationEvents from "@/components/events/collab_events";
 import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 import PublicCalendar from "../events/calender";
