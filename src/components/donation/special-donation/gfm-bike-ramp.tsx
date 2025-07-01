@@ -11,8 +11,8 @@ export default function AltGFMPoster() {
           <Image
             src={AxelBikeRamp}
             alt="SweatPals"
-            width="800"
-            height="400"
+            width="300"
+            height="150"
             priority
           ></Image>
         </Link>

@@ -7,10 +7,11 @@ import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
 import InstaWidget from "@/app/contact/instagram_gallery";
-import LogoComponent, { logoStyle } from "@/components/logo";
 import React, { useState } from "react";
-import OrgContentBody from "@/components/about-body";
 import ACTVDialog from "@/components/dialog/dialog";
+import Image from "next/image";
+import SocialPlunge from "@/assets/events/plunge.jpg";
+import { motion } from "framer-motion";
 
 export default function SpecialEvent() {
   const [open, setOpen] = useState(false);
@@ -19,13 +20,33 @@ export default function SpecialEvent() {
       <Analytics />
       <Screen>
         <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
-          <div className=" flex flex-col items-center justify-center px-20 max-w-xl">
-            <LogoComponent styles={logoStyle.standard} />
-          </div>
-          <div className="flex flex-col items-center max-w-xl">
-            <OrgContentBody />
-          </div>
-          <SweatpalEvents />
+          <div className="flex flex-col items-center justify-center px-20 max-w-xl"></div>
+
+          <Image
+            src={SocialPlunge}
+            alt="Event Widget"
+            width={200}
+            height={200}
+            className=" py-20"
+          />
+          <p className="text-center">
+            Join us for the Social Plunge on July 5, 2025
+          </p>
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.3 }}
+            className="mt-8 px-8 py-4 bg-red-600 text-white text-xl font-bold rounded-lg hover:bg-red-700 transition-colors shadow-lg"
+            onClick={() =>
+              window.open(
+                "https://www.sweatpals.com/event/chill-vibe/2025-07-05"
+              )
+            }
+          >
+            Get the details!
+          </motion.button>
           <InstaWidget />
 
           <AltGFMPoster />
