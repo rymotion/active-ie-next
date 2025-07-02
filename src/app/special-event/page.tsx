@@ -2,7 +2,6 @@
 import Screen from "@/components/screen/screen";
 import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import CollaborationEvents from "@/components/events/collab_events";
 import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
@@ -61,7 +60,6 @@ export default function SpecialEvent() {
             <InstaWidget />
 
             <AltGFMPoster />
-            <CollaborationEvents />
             <div className="flex justify-center">
               <button
                 onClick={() => setOpen(true)}

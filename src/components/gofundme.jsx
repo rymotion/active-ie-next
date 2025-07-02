@@ -1,26 +1,37 @@
-import { Suspense } from "react";
+"use client";
+import React, { useRef, useEffect } from "react";
 
 const GofundmeWidget = () => {
-  return (
-    <Suspense fallback={<LoadingGFW></LoadingGFW>}>
-      <button>
-        <div
-          className="gfm-embed"
-          data-url="https://www.gofundme.com/f/axels-eagle-project-bike-ramps-for-rancho-cucamonga/widget/large?sharesheet=manage hero&attribution_id=sl:36c9bb55-d95a-46ce-a8fa-197a857f6dcf"
-        ></div>
-        <script
-          defer
-          src="https://www.gofundme.com/static/js/embed.js"
-        ></script>
-      </button>
-    </Suspense>
-  );
-};
+  const containerRef = useRef(null);
 
-const LoadingGFW = () => {
-  return <LoadingSkeleton></LoadingSkeleton>;
+  useEffect(() => {
+    const container = document.createElement("div");
+    container.id = "gfm-embed";
+    container.style.justifyContent = "center";
+    container.style.display = "flex";
+    container.style.alignItems = "center";
+    container.style.width = "100%";
+    container.style.height = "100%";
+    container.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    const marquee = document.getElementById("gfm-embed");
+
+    if (marquee) {
+      marquee.appendChild(container);
+      const script = document.createElement("script");
+      script.src = "https://www.gofundme.com/static/js/embed.js";
+      script.async = true;
+
+      container.appendChild(script);
+    }
+
+    return () => {
+      if (marquee?.contains(container)) {
+        marquee.removeChild(container);
+      }
+    };
+  }, []);
+
+  return <div ref={containerRef}></div>;
 };
 
 export default GofundmeWidget;
-
-// look at accessibility on lightmode

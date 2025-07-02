@@ -4,7 +4,6 @@ import DonationBody from "@/components/donation/donation";
 import OrgContentBody from "@/components/about-body";
 import { Analytics } from "@vercel/analytics/react";
 import SweatpalEvents from "@/components/events/sw_events";
-import CollaborationEvents from "@/components/events/collab_events";
 import GofundmeWidget from "@/components/gofundme";
 import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 import LogoComponent, { logoStyle } from "@/components/logo";
@@ -19,15 +18,14 @@ export default function Home() {
       <Analytics />
       <Screen>
         <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
-          <div className="flex flex-col items-center justify-center px-20 max-w-xl">
+          <div className="flex flex-col items-center justify-center px-20 ">
             <LogoComponent styles={logoStyle.welcome} />
           </div>
-          <div className="flex flex-col items-center px-4 max-w-xl">
+          <div className="flex flex-col items-center justify-center px-4 ">
             <OrgContentBody />
+            <SweatpalEvents />
           </div>
-          <SweatpalEvents />
-          <CollaborationEvents />
-          <div className="flex flex-col items-center px-4 ptop-20">
+          <div className="flex flex-col flex-row items-center justify-center px-4">
             <CustomHeadlineWidget
               headline="Our Long-Term Goal"
               headlineStyle={textBoxStyle.standard}
