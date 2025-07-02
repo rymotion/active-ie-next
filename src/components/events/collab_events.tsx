@@ -92,17 +92,10 @@ export default function CollaborationEvents() {
   >([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [scrollPosition] = useState(0);
-  const [isPaused] = useState(false);
-  // const carouselRef = useRef<HTMLDivElement>(null);
-  // const containerRef = useRef<HTMLDivElement>(null);
-  const scrollSpeed = 50; // pixels per second
 
   useEffect(() => {
     const loadCollabEvents = async () => {
       try {
-        const sheetId = "1YUiVTKoPOdC6a_muaHwyhsj6QqlRMeTSYXcCi9_9i90";
-        const sheetName = "Sheet2";
       } catch (err) {
         console.error("Failed to load events:", err);
         setError("Failed to load events. Using default events instead.");
