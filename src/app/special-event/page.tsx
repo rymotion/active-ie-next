@@ -35,13 +35,6 @@ export default function SpecialEvent() {
       document.body.appendChild(container);
     }
 
-    const handleSPEvent = (event: CustomEvent) => {
-      console.log("sweatpals:event", event.detail);
-      if (event.detail.type === "close") {
-        console.log("Sweatpals event widget closed");
-      }
-    };
-
     return () => {
       document.body.removeChild(container);
     };
