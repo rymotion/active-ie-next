@@ -44,58 +44,77 @@ export default function SpecialEvent() {
       <Analytics />
       <Screen>
         <main>
-          <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
-            <div
-              className="flex flex-col items-center justify-center px-20 max-w-xl"
-              id="application-head"
-            ></div>
+          <div
+            className="sm:hidden md:hidden lg:flex flex-row justify-center px-20 w-full h-full"
+            id="application-head"
+          >
             <Image
               src={SocialPlunge}
               alt="Event Widget"
-              width={200}
-              height={200}
-              className=" py-20"
+              objectFit="aspectFill"
+              width={500}
+              className="w-full h-full"
             />
-            <div id="sweatpals-container"></div>
-            <InstaWidget />
+            <div
+              id="sweatpals-container"
+              className="w-full h-full bg-black/50 justify-center items-center px-20"
+            ></div>
+          </div>
 
-            <AltGFMPoster />
-            <div className="flex justify-center">
-              <button
-                onClick={() => setOpen(true)}
-                className="text-2xl font-bold bg-black text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
-              >
-                Newsletter Subscribe
-              </button>
-            </div>
-            <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
-              <div>
-                <p>Our Event Calendar</p>
-              </div>
-              <PublicCalendar />
-            </div>
+          <div
+            className="hidden lg:hidden md:hidden flex flex-col justify-center px-20 w-full h-full"
+            id="application-head"
+          >
+            <Image
+              src={SocialPlunge}
+              alt="Event Widget"
+              objectFit="contain"
+              width={200}
+            />
+            <div
+              id="sweatpals-container"
+              className="w-full h-full bg-black/50 justify-center items-center px-20"
+            ></div>
+          </div>
 
-            {/* Modal Dialog */}
-            <ACTVDialog open={open} setOpen={setOpen}>
-              <div className=" inset-0 z-50 items-center justify-center bg-black p-20">
-                <div className="w-full flex-col min-h-screen flex items-center justify-center">
-                  <button
-                    className="text-2xl font-bold text-gray-400 hover:text-white bg-black hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
-                    onClick={() => setOpen(false)}
-                    aria-label="Close"
-                  >
-                    {"Close"}
-                  </button>
-                  <div className="relative bg-black rounded-lg shadow-lg w-[95vw] max-w-4xl max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
-                    <h2 className="text-lg md:text-2xl font-semibold mb-4 text-center">
-                      Newsletter Subscribe
-                    </h2>
-                    <NewsletterWidget />
-                  </div>
+          <InstaWidget />
+
+          <AltGFMPoster />
+          <div className="flex justify-center">
+            <button
+              onClick={() => setOpen(true)}
+              className="text-2xl font-bold bg-black text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+            >
+              Newsletter Subscribe
+            </button>
+          </div>
+          <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
+            <div>
+              <p>Our Event Calendar</p>
+            </div>
+            <PublicCalendar />
+          </div>
+
+          {/* Modal Dialog */}
+          <ACTVDialog open={open} setOpen={setOpen}>
+            <div className=" inset-0 z-50 items-center justify-center bg-black p-20">
+              <div className="w-full flex-col min-h-screen flex items-center justify-center">
+                <button
+                  className="text-2xl font-bold text-gray-400 hover:text-white bg-black hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close"
+                >
+                  {"Close"}
+                </button>
+                <div className="relative bg-black rounded-lg shadow-lg w-[95vw] max-w-4xl max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
+                  <h2 className="text-lg md:text-2xl font-semibold mb-4 text-center">
+                    Newsletter Subscribe
+                  </h2>
+                  <NewsletterWidget />
                 </div>
               </div>
-            </ACTVDialog>
-          </div>
+            </div>
+          </ACTVDialog>
         </main>
       </Screen>
     </>
