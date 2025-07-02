@@ -15,18 +15,31 @@ export default function SpecialEvent() {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     const container = document.createElement("div");
+    window.addEventListener("resize", () => {
+      document.body.removeChild(container);
+      console.log(window.innerWidth);
+      container.style.width = "auto";
+      container.style.maxWidth = "100vw";
+      container.style.minWidth = "20vw";
+      container.style.height = "auto";
+      container.style.minHeight = "300px";
+      if (marquee) {
+        marquee.appendChild(script);
+        document.body.appendChild(container);
+      }
+    });
+
     container.id = "sweatpals-container";
     container.style.justifyContent = "center";
     container.style.display = "flex";
     container.style.alignItems = "center";
-    container.style.width = "100%";
-    container.style.height = "100%";
+
     container.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     const marquee = document.getElementById("sweatpals-container");
 
     const script = document.createElement("script");
     script.src =
-      "https://www.sweatpals.com/static/embed/event/checkout/script.js?priceMode=several&enableAutoEmbed=true&eventAlias=chill-vibe&shortLocalInstance=2025-07-05&size=lg&colorHex=ffffff&backgroundHex=000000&buttonColorHex=ffffff&fontFamily=Poppins&priceTiersJson=%5B%22169a1714-23b1-4957-91a5-5f965c61d182%22%2C%22d578a184-89f8-4d8b-b00e-a8602815beb9%22%2C%2226b2f832-5cd4-463a-961a-14529531e191%22%5D";
+      "https://www.sweatpals.com/static/embed/event/checkout/script.js?enableAutoEmbed=true&eventAlias=chill-vibe&shortLocalInstance=2025-07-05&colorHex=ffffff&backgroundHex=000000&fontFamily=Poppins&priceTierId=169a1714-23b1-4957-91a5-5f965c61d182";
     script.async = true;
 
     if (marquee) {
@@ -45,7 +58,7 @@ export default function SpecialEvent() {
       <Screen>
         <main>
           <div
-            className="sm:hidden md:hidden lg:flex flex-row justify-center px-20 w-full h-full"
+            className="flex flex-col justify-center px-5 w-full h-full"
             id="application-head"
           >
             <Image
@@ -55,14 +68,11 @@ export default function SpecialEvent() {
               width={500}
               className="w-full h-full"
             />
-            <div
-              id="sweatpals-container"
-              className="w-full h-full bg-black/50 justify-center items-center px-20"
-            ></div>
+            <div id="sweatpals-container"></div>
           </div>
 
-          <div
-            className="hidden lg:hidden md:hidden flex flex-col justify-center px-20 w-full h-full"
+          {/* <div
+            className="hidden lg:hidden md:hidden flex flex-col justify-center px-10 w-full h-full"
             id="application-head"
           >
             <Image
@@ -71,11 +81,8 @@ export default function SpecialEvent() {
               objectFit="contain"
               width={200}
             />
-            <div
-              id="sweatpals-container"
-              className="w-full h-full bg-black/50 justify-center items-center px-20"
-            ></div>
-          </div>
+            <div id="sweatpals-container"></div>
+          </div> */}
 
           <InstaWidget />
 

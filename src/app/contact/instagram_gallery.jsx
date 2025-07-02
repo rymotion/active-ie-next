@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const InstaWidget = () => {
   // Load Instagram embed script
   useEffect(() => {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.async = true;
-    script.src = '//www.instagram.com/embed.js';
+    script.src = "//www.instagram.com/embed.js";
     document.body.appendChild(script);
 
     return () => {
@@ -15,7 +15,7 @@ const InstaWidget = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
+    <div className="w-full h-full max-w-4xl mx-auto py-40">
       {/* Desktop version - larger embed */}
       <div className="hidden md:block">
         <div className="flex justify-center">
