@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import MarqueeWidget from "../custom-widget/marquee";
 import { motion } from "framer-motion";
-import { fetchEventsFromGoogleSheets } from "@/lib/googleSheets";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 // Helper function to handle Google Drive URLs
@@ -104,13 +103,6 @@ export default function CollaborationEvents() {
       try {
         const sheetId = "1YUiVTKoPOdC6a_muaHwyhsj6QqlRMeTSYXcCi9_9i90";
         const sheetName = "Sheet2";
-
-        const fetchedEvents = await fetchEventsFromGoogleSheets(
-          sheetId,
-          sheetName
-        );
-
-        setEvents(fetchedEvents);
       } catch (err) {
         console.error("Failed to load events:", err);
         setError("Failed to load events. Using default events instead.");
@@ -122,10 +114,6 @@ export default function CollaborationEvents() {
 
     loadCollabEvents();
   });
-
-  useEffect(() => {
-    console.log("scrollPosition", scrollPosition);
-  }, [isPaused, scrollSpeed]);
 
   return (
     <>

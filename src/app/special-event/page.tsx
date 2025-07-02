@@ -1,5 +1,6 @@
 "use client";
 import Screen from "@/components/screen/screen";
+import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import CollaborationEvents from "@/components/events/collab_events";
 import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
@@ -10,82 +11,101 @@ import React, { useState } from "react";
 import ACTVDialog from "@/components/dialog/dialog";
 import Image from "next/image";
 import SocialPlunge from "@/assets/events/plunge.jpg";
-import { motion } from "framer-motion";
 
 export default function SpecialEvent() {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const container = document.createElement("div");
+    container.id = "sweatpals-container";
+    container.style.justifyContent = "center";
+    container.style.display = "flex";
+    container.style.alignItems = "center";
+    container.style.width = "100%";
+    container.style.height = "100%";
+    container.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    const marquee = document.getElementById("sweatpals-container");
+
+    const script = document.createElement("script");
+    script.src =
+      "https://www.sweatpals.com/static/embed/event/checkout/script.js?priceMode=several&enableAutoEmbed=true&eventAlias=chill-vibe&shortLocalInstance=2025-07-05&size=lg&colorHex=ffffff&backgroundHex=000000&buttonColorHex=ffffff&fontFamily=Poppins&priceTiersJson=%5B%22169a1714-23b1-4957-91a5-5f965c61d182%22%2C%22d578a184-89f8-4d8b-b00e-a8602815beb9%22%2C%2226b2f832-5cd4-463a-961a-14529531e191%22%5D";
+    script.async = true;
+
+    if (marquee) {
+      marquee.appendChild(script);
+      document.body.appendChild(container);
+    }
+
+    const handleSPEvent = (event: CustomEvent) => {
+      console.log("sweatpals:event", event.detail);
+      if (event.detail.type === "close") {
+        console.log("Sweatpals event widget closed");
+      }
+    };
+
+    return () => {
+      document.body.removeChild(container);
+    };
+  }, []);
+
   return (
     <>
       <Analytics />
       <Screen>
-        <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
-          <div className="flex flex-col items-center justify-center px-20 max-w-xl"></div>
+        <main>
+          <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
+            <div
+              className="flex flex-col items-center justify-center px-20 max-w-xl"
+              id="application-head"
+            ></div>
+            <Image
+              src={SocialPlunge}
+              alt="Event Widget"
+              width={200}
+              height={200}
+              className=" py-20"
+            />
+            <div id="sweatpals-container"></div>
+            <InstaWidget />
 
-          <Image
-            src={SocialPlunge}
-            alt="Event Widget"
-            width={200}
-            height={200}
-            className=" py-20"
-          />
-          <p className="text-center">
-            Join us for the Social Plunge on July 5, 2025
-          </p>
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3 }}
-            className="mt-8 px-8 py-4 bg-red-600 text-white text-xl font-bold rounded-lg hover:bg-red-700 transition-colors shadow-lg"
-            onClick={() =>
-              window.open(
-                "https://www.sweatpals.com/event/chill-vibe/2025-07-05?aff=postcard"
-              )
-            }
-          >
-            Get the details!
-          </motion.button>
-          <InstaWidget />
-
-          <AltGFMPoster />
-          <CollaborationEvents />
-          <div className="flex justify-center">
-            <button
-              onClick={() => setOpen(true)}
-              className="text-2xl font-bold bg-black text-color:white hover:text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
-            >
-              Newsletter Subscribe
-            </button>
-          </div>
-          <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
-            <div>
-              <p>Our Event Calendar</p>
+            <AltGFMPoster />
+            <CollaborationEvents />
+            <div className="flex justify-center">
+              <button
+                onClick={() => setOpen(true)}
+                className="text-2xl font-bold bg-black text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+              >
+                Newsletter Subscribe
+              </button>
             </div>
-            <PublicCalendar />
-          </div>
+            <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
+              <div>
+                <p>Our Event Calendar</p>
+              </div>
+              <PublicCalendar />
+            </div>
 
-          {/* Modal Dialog */}
-          <ACTVDialog open={open} setOpen={setOpen}>
-            <div className=" inset-0 z-50 items-center justify-center bg-black p-20">
-              <div className="w-full flex-col min-h-screen flex items-center justify-center">
-                <button
-                  className="text-2xl font-bold text-gray-400 hover:text-white bg-black hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
-                  onClick={() => setOpen(false)}
-                  aria-label="Close"
-                >
-                  {"Close"}
-                </button>
-                <div className="relative bg-black rounded-lg shadow-lg w-[95vw] max-w-4xl max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
-                  <h2 className="text-lg md:text-2xl font-semibold mb-4 text-center">
-                    Newsletter Subscribe
-                  </h2>
-                  <NewsletterWidget />
+            {/* Modal Dialog */}
+            <ACTVDialog open={open} setOpen={setOpen}>
+              <div className=" inset-0 z-50 items-center justify-center bg-black p-20">
+                <div className="w-full flex-col min-h-screen flex items-center justify-center">
+                  <button
+                    className="text-2xl font-bold text-gray-400 hover:text-white bg-black hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+                    onClick={() => setOpen(false)}
+                    aria-label="Close"
+                  >
+                    {"Close"}
+                  </button>
+                  <div className="relative bg-black rounded-lg shadow-lg w-[95vw] max-w-4xl max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
+                    <h2 className="text-lg md:text-2xl font-semibold mb-4 text-center">
+                      Newsletter Subscribe
+                    </h2>
+                    <NewsletterWidget />
+                  </div>
                 </div>
               </div>
-            </div>
-          </ACTVDialog>
-        </div>
+            </ACTVDialog>
+          </div>
+        </main>
       </Screen>
     </>
   );
