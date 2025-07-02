@@ -40,7 +40,7 @@ export default function SpecialEvent() {
             className="mt-8 px-8 py-4 bg-red-600 text-white text-xl font-bold rounded-lg hover:bg-red-700 transition-colors shadow-lg"
             onClick={() =>
               window.open(
-                "https://www.sweatpals.com/event/chill-vibe/2025-07-05"
+                "https://www.sweatpals.com/event/chill-vibe/2025-07-05?aff=postcard"
               )
             }
           >
