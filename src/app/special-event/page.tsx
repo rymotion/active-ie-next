@@ -68,7 +68,7 @@ export default function SpecialEvent() {
               width={500}
               className="w-full h-full"
             />
-            <div id="sweatpals-container"></div>
+            <div id="sweatpals-container h-full"></div>
           </div>
 
           {/* <div

@@ -21,10 +21,8 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center px-20 ">
             <LogoComponent styles={logoStyle.welcome} />
           </div>
-          <div className="flex flex-col items-center justify-center px-4 ">
-            <OrgContentBody />
-            <SweatpalEvents />
-          </div>
+          <OrgContentBody />
+          <SweatpalEvents />
           <div className="flex flex-col flex-row items-center justify-center px-4">
             <CustomHeadlineWidget
               headline="Our Long-Term Goal"

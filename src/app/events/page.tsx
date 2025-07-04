@@ -4,7 +4,7 @@ import PublicCalendar from "./calender";
 import ScheduleSurvey from "./suvey";
 import { Analytics } from "@vercel/analytics/react";
 import ACTVDialog from "@/components/dialog/dialog";
-
+import SweatpalEvents from "@/components/events/sw_events";
 import React, { useState } from "react";
 
 export default function Events() {
@@ -14,11 +14,8 @@ export default function Events() {
     <>
       <Analytics />
       <Screen>
-        <div
-          className="flex flex-col min-h-screen
-          
-          justify-center items-center w-full "
-        >
+        <div className="flex flex-col min-h-screen justify-center items-center w-full h-full">
+          <SweatpalEvents />
           <p className="max-w-xl text-center px-4">
             We want to hear from you, the community, on how we can best serve
             you and have our in-person events. By clicking the button below, we
