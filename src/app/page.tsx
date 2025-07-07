@@ -11,6 +11,7 @@ import CustomHeadlineWidget, {
   textBoxStyle,
 } from "@/components/animated/container/text/custom-headline-text";
 import { motion } from "framer-motion";
+import VolunteerInterestWidget from "./volunteer/volunteer_interest";
 
 export default function Home() {
   return (
@@ -49,6 +50,13 @@ export default function Home() {
                 </motion.div>
               }
             />
+          </div>
+          <div className="flex sm:flex-col md:flex-col lg:flex-row min-h-screen min-w-screen justify-center items-center h-full w-full px-20">
+            <p className="text-2xl font-bold">
+              Want to work our events or be a part of our organization? Fill out
+              the form below to express your interest.
+            </p>
+            <VolunteerInterestWidget />
           </div>
 
           <motion.div
