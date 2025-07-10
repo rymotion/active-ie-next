@@ -8,8 +8,8 @@ import NewsletterWidget from "../contact/newsletter_subscribe";
 import InstaWidget from "@/app/contact/instagram_gallery";
 import React, { useState } from "react";
 import ACTVDialog from "@/components/dialog/dialog";
-import Image from "next/image";
-import SocialPlunge from "@/assets/events/plunge.jpg";
+import InstagramPost from "@/app/contact/instagram_post";
+import SweatpalEvents from "@/components/events/sw_events";
 
 export default function SpecialEvent() {
   const [open, setOpen] = useState(false);
@@ -61,14 +61,8 @@ export default function SpecialEvent() {
             className="flex flex-col justify-center px-5 w-full h-full"
             id="application-head"
           >
-            <Image
-              src={SocialPlunge}
-              alt="Event Widget"
-              objectFit="aspectFill"
-              width={500}
-              className="w-full h-full"
-            />
-            <div id="sweatpals-container h-full"></div>
+            <SweatpalEvents />
+            <InstagramPost />
           </div>
 
           {/* <div
