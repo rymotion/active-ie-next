@@ -23,7 +23,9 @@ export default function Home() {
             <LogoComponent styles={logoStyle.welcome} />
           </div>
           <OrgContentBody />
-          <SweatpalEvents />
+          <div className="flex flex-col min-h-screen justify-center items-center w-full h-full">
+            <SweatpalEvents />
+          </div>
           <div className="flex flex-col flex-row items-center justify-center px-4">
             <CustomHeadlineWidget
               headline="Our Long-Term Goal"

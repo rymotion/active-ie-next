@@ -14,7 +14,8 @@ export default function SweatpalEvents() {
     container.style.justifyContent = "center";
     container.style.alignItems = "center";
     container.style.display = "flex";
-    container.style.width = "100%";
+    container.style.flexDirection = "column";
+    container.style.width = "50%";
     container.style.height = "50%";
     container.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
@@ -42,7 +43,7 @@ export default function SweatpalEvents() {
     <>
       <Analytics />
 
-      <div className="justify-center w-full h-full items-center px-4 sm:px-8 lg:px-20 sm:py40 lg:py-20">
+      <div className="flex flex-col justify-center w-full h-full items-center px-4 sm:px-8 lg:px-20 sm:py40 lg:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +61,7 @@ export default function SweatpalEvents() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
         id="sweatpal-calendar"
-        className="w-full justify-center items-center px-4"
+        className="w-full h-full justify-center items-center"
       ></motion.div>
     </>
   );
