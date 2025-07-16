@@ -37,11 +37,11 @@ const Navbar = () => {
                   Events
                 </li>
               </Link>
-              {/* <Link href="/projects">
-              <li className="ml-10 uppercase hover:border-b text-xl">
-                Projects
-              </li>
-            </Link> */}
+              <Link href="/projects">
+                <li className="ml-10 uppercase hover:border-b text-xl">
+                  Projects
+                </li>
+              </Link>
               {/* <Link href="/products">
                 <li className="ml-10 uppercase hover:border-b text-xl">
                   Products
@@ -102,11 +102,14 @@ const Navbar = () => {
                   Events
                 </li>
               </Link>
-              {/* <Link href="/projects">
-              <li className="py-4 cursor-pointer" onClick={() => setMenuOpen(false)}>
-                Projects
-              </li>
-            </Link> */}
+              <Link href="/projects">
+                <li
+                  className="py-4 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Projects
+                </li>
+              </Link>
               {/* <Link href="/products">
                 <li
                   className="py-4 cursor-pointer"

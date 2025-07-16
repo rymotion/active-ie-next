@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function SubStack() {
   const [articles, setArticles] = useState([]);
@@ -28,7 +29,12 @@ export default function SubStack() {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto py-8 px-4">
+    <motion.div
+      className="max-w-4xl mx-auto py-8 px-4"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.2 }}
+    >
       {feed && (
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-4">{feed.title}</h1>
@@ -69,6 +75,6 @@ export default function SubStack() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
