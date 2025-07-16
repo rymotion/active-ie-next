@@ -1,4 +1,3 @@
-import GofundmeWidget from "../gofundme";
 import style from "@/components/donation/donation.module.css";
 
 const DonationBody = () => {

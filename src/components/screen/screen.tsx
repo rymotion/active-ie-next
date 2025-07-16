@@ -2,8 +2,28 @@
 import Navbar from "@/components/navbar";
 import DisclosureBar from "@/components/disclosure";
 import { ScrollArrow } from "../scroll-arrow";
+import { useState, useEffect } from "react";
 
 export default function Screen({ children }: { children: React.ReactNode }) {
+  const [scaler, setScaler] = useState("compact");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setScaler("compact");
+      } else {
+        setScaler("full");
+      }
+    };
+
+    handleResize();
+    window.addEventListener(`resized for ${scaler}`, handleResize);
+
+    return () => {
+      window.removeEventListener(`resized for ${scaler}`, handleResize);
+    };
+  }, [scaler]);
+
   return (
     <>
       <Navbar />

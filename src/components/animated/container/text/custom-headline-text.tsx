@@ -22,12 +22,9 @@ export default function CustomHeadlineWidget({
     alignItems: string;
   };
 }) {
-  // const { scrollYProgress } = useScroll();
-  // const scaleValue = useTransform(scrollYProgress, [0, 0.5, 1], [1, 2, 1]);
-
   return (
     <>
-      <div className="flex flex-col full-width min-h-screen">
+      <div className="flex flex-col full-width">
         <div style={headlineStyle}>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
