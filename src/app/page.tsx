@@ -23,9 +23,7 @@ export default function Home() {
             <LogoComponent styles={logoStyle.welcome} />
           </div>
           <OrgContentBody />
-          <div className="flex flex-col min-h-screen justify-center items-center w-full h-full">
-            <SweatpalEvents />
-          </div>
+          <SweatpalEvents />
           <div className="flex flex-col flex-row items-center justify-center px-4">
             <CustomHeadlineWidget
               headline="Our Long-Term Goal"
@@ -67,6 +65,8 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="flex flex-col items-center px-4 max-w-xl"
           >
+            <p className="text-2xl font-bold">Active Inland Empire Shop</p>
+
             <GofundmeWidget />
             <DonationBody />
           </motion.div>
