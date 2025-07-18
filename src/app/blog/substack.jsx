@@ -107,19 +107,17 @@ export function SubStackNibble() {
 
   return (
     <motion.div
-      className="max-w-4xl mx-auto py-8 px-4 sm:px-20 sm:flex-col sm:items-center sm:justify-center"
+      className="flex flex-col min-h-screen min-w-screen justify-center items-center h-full w-full px-20 max-w-4xl mx-auto py-8 px-4 sm:px-20 sm:flex-col sm:items-center sm:justify-center"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.2 }}
     >
-      <h1 className="text-3xl font-bold mb-4 sm:text-center md:text-left lg:text-left sm:items-center md:items-start">
-        Our Blog
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
+      <h1 className="text-3xl font-bold mb-4">Our Blog</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((article) => (
           <div
             key={article.guid}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 sm:w-1/2"
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-2">
@@ -135,7 +133,7 @@ export function SubStackNibble() {
               <p className="text-gray-600 mb-4 line-clamp-2">
                 {article.description}
               </p>
-              <div className="flex items-center justify-between text-sm text-gray-500">
+              <div className="flex flex-col items-start justify-between text-sm text-gray-500">
                 <span>{new Date(article.pubDate).toLocaleDateString()}</span>
                 <span>{article.author}</span>
               </div>
