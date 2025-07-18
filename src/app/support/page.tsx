@@ -33,7 +33,7 @@ export default function Project() {
             <h1 className="text-2xl font-bold">Interested in Sponsorship?</h1>
             <p>
               In the health and wellness space and looking to grow your brand?
-              Expand your brand's reach with us!
+              Expand with us!
             </p>
             <motion.button
               initial={{ opacity: 0, y: 20 }}

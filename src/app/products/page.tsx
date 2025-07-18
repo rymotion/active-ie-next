@@ -44,7 +44,7 @@ export default function Products() {
     fetchProducts(false);
   }, []);
 
-  const { addToCart } = useCart();
+  // const { addToCart } = useCart();
 
   if (loading && products.length === 0) {
     return (
