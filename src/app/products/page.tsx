@@ -2,7 +2,6 @@
 import Screen from "@/components/screen/screen";
 import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
-import { useCart } from "@/contexts/cart-context";
 import { ShopifyService, Product } from "@/services/shopify";
 import ProductListing from "@/components/products/listing";
 import Link from "next/link";
