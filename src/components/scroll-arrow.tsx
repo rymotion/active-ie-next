@@ -65,7 +65,7 @@ export const ScrollArrow: React.FC<ScrollArrowProps> = ({
 
   return (
     <>
-      <div className="flex flex-row flex-col items-center">
+      <div className="flex flex-row flex-col items-center justify-center">
         <motion.div
           className="scroll-arrow cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export const ScrollArrow: React.FC<ScrollArrowProps> = ({
           style={{
             position: "fixed",
             bottom: "20px",
-            left: "50%",
+            left: "center",
             transform: "translateX(-50%)",
             zIndex: 1000,
             cursor: "pointer",

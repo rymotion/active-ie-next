@@ -12,6 +12,7 @@ import CustomHeadlineWidget, {
 } from "@/components/animated/container/text/custom-headline-text";
 import { motion } from "framer-motion";
 import VolunteerInterestWidget from "./volunteer/volunteer_interest";
+import { SubStackNibble } from "@/app/blog/substack";
 
 export default function Home() {
   return (
@@ -51,6 +52,7 @@ export default function Home() {
               }
             />
           </div>
+          <SubStackNibble />
           <div className="flex sm:flex-col md:flex-col lg:flex-row min-h-screen min-w-screen justify-center items-center h-full w-full px-20">
             <p className="text-2xl font-bold">
               Want to work our events or be a part of our organization? Fill out
@@ -65,8 +67,6 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="flex flex-col items-center px-4 max-w-xl"
           >
-            <p className="text-2xl font-bold">Active Inland Empire Shop</p>
-
             <GofundmeWidget />
             <DonationBody />
           </motion.div>

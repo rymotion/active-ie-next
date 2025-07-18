@@ -2,12 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "../assets/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { MdShoppingBag } from "react-icons/md";
 import { useState } from "react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNav = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
+
+  const handleCheckoutOpen = () => {
+    setCheckoutOpen(!checkoutOpen);
+  };
+
+  const handleCheckoutClose = () => {
+    setCheckoutOpen(!checkoutOpen);
   };
 
   return (
@@ -42,11 +53,6 @@ const Navbar = () => {
                   Projects
                 </li>
               </Link>
-              {/* <Link href="/products">
-                <li className="ml-10 uppercase hover:border-b text-xl">
-                  Products
-                </li>
-              </Link> */}
               <Link href="/contact">
                 <li className="ml-10 uppercase hover:border-b text-xl">
                   Contact Us
@@ -56,6 +62,22 @@ const Navbar = () => {
                 <li className="mx-10 uppercase hover:border-b text-xl">
                   Support Us
                 </li>
+              </Link>
+              <Link href="/products">
+                <li className="mx-10 uppercase hover:border-b text-xl">
+                  <MdShoppingBag />
+                </li>
+                {/* <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
+                  <button
+                    className="mx-10 uppercase hover:border-b text-xl hidden:checkoutOpen"
+                    onClick={handleCheckoutOpen}
+                  >
+                    Checkout
+                  </button>
+                  {checkoutOpen && (
+                    <button onClick={handleCheckoutClose}>Close</button>
+                  )}
+                </div> */}
               </Link>
             </ul>
           </div>
