@@ -112,9 +112,9 @@ export default function Products() {
           <>
             <ProductListing
               products={products}
-              onAddToCart={addToCart}
-              onRemoveFromCart={() => {}}
-              updateQuantity={() => {}}
+              // onAddToCart={addToCart}
+              // onRemoveFromCart={() => {}}
+              // updateQuantity={() => {}}
             />
 
             {pageInfo.hasNextPage && (
