@@ -113,8 +113,7 @@ export default function Products() {
             <ProductListing
               products={products}
               onAddToCart={addToCart}
-              onRemoveFromCart={removeFromCart}
-              // updateQuantity={updateQuantity}
+              onRemoveFromCart={() => {}}
               updateQuantity={() => {}}
             />
 
