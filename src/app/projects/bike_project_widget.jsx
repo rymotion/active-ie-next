@@ -1,4 +1,4 @@
-export default function ProjectWidget() {
+export default function ProjectFundingWidget() {
   return (
     <div className="py-10">
       <script
