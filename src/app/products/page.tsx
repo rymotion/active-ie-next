@@ -29,7 +29,8 @@ export default function Products() {
       setProducts((prev) =>
         loadMore ? [...prev, ...fetchedProducts] : fetchedProducts
       );
-      setPageInfo(fetchedPageInfo);
+      // setPageInfo( );
+      setPageInfo;
       setError(null);
     } catch (error) {
       console.error("Error fetching products:", error);
