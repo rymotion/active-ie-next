@@ -198,10 +198,12 @@ export class ShopifyService {
 
   private constructor() {
     const url = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_URL;
-    const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN;
+    const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_KEY;
 
     if (!url || !token) {
-      throw new Error('Missing Shopify environment variables. Please check your .env file.');
+      throw new Error(
+        "Missing Shopify environment variables. Please check your .env file."
+      );
     }
 
     this.shopifyStorefrontUrl = url;
@@ -227,10 +229,10 @@ export class ShopifyService {
   ): Promise<T> {
     try {
       const response = await fetch(this.shopifyStorefrontUrl, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'X-Shopify-Storefront-Access-Token': this.shopifyStorefrontToken,
+          "Content-Type": "application/json",
+          "X-Shopify-Storefront-Access-Token": this.shopifyStorefrontToken,
         },
         body: JSON.stringify({
           query,
@@ -242,16 +244,16 @@ export class ShopifyService {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const result = await response.json() as ShopifyResponse<T>;
+      const result = (await response.json()) as ShopifyResponse<T>;
 
       if (result.errors?.length) {
-        const errorMessages = result.errors.map(e => e.message).join('\n');
+        const errorMessages = result.errors.map((e) => e.message).join("\n");
         throw new Error(`GraphQL Error: ${errorMessages}`);
       }
 
       return result.data as T;
     } catch (error) {
-      console.error('Shopify API request failed:', error);
+      console.error("Shopify API request failed:", error);
       throw error;
     }
   }
@@ -262,8 +264,8 @@ export class ShopifyService {
    * @returns The price as a string
    */
   private getPrice(price: string | ProductPrice): string {
-    if (typeof price === 'string') return price;
-    return price?.amount || '0';
+    if (typeof price === "string") return price;
+    return price?.amount || "0";
   }
 
   /**
@@ -273,48 +275,50 @@ export class ShopifyService {
    */
   private transformProduct(productNode: ProductNode): Product {
     // Handle featured image
-    const featuredImage = productNode.featuredImage || 
-      (productNode.images?.edges?.[0]?.node || null);
+    const featuredImage =
+      productNode.featuredImage || productNode.images?.edges?.[0]?.node || null;
 
     // Process images
-    const images = (productNode.images?.edges || []).map(edge => ({
+    const images = (productNode.images?.edges || []).map((edge) => ({
       id: edge.node.id,
-      src: edge.node.src || edge.node.url || '',
+      src: edge.node.src || edge.node.url || "",
       altText: edge.node.altText || productNode.title,
       width: edge.node.width || 0,
-      height: edge.node.height || 0
+      height: edge.node.height || 0,
     }));
 
     // Process variants
-    const variants = (productNode.variants?.edges || []).map(edge => {
+    const variants = (productNode.variants?.edges || []).map((edge) => {
       const variant = edge.node;
       const variantImage = variant.image || featuredImage;
-      
+
       return {
         id: variant.id,
         title: variant.title,
         price: this.getPrice(variant.price),
         available: variant.availableForSale,
-        image: variantImage ? {
-          id: variantImage.id,
-          src: variantImage.src || variantImage.url || '',
-          altText: variantImage.altText || productNode.title,
-          width: variantImage.width || 0,
-          height: variantImage.height || 0
-        } : undefined,
-        selectedOptions: variant.selectedOptions || []
+        image: variantImage
+          ? {
+              id: variantImage.id,
+              src: variantImage.src || variantImage.url || "",
+              altText: variantImage.altText || productNode.title,
+              width: variantImage.width || 0,
+              height: variantImage.height || 0,
+            }
+          : undefined,
+        selectedOptions: variant.selectedOptions || [],
       };
     });
 
     // Process collections
-    const collections = (productNode.collections?.edges || []).map(edge => ({
+    const collections = (productNode.collections?.edges || []).map((edge) => ({
       id: edge.node.id,
       title: edge.node.title,
-      handle: edge.node.handle
+      handle: edge.node.handle,
     }));
 
     // Get the first available price or default to 0
-    const price = variants.length > 0 ? variants[0].price : '0';
+    const price = variants.length > 0 ? variants[0].price : "0";
 
     // Create the final product object
     return {
@@ -328,15 +332,21 @@ export class ShopifyService {
       price,
       available: productNode.availableForSale,
       tags: productNode.tags || [],
-      url: productNode.onlineStoreUrl || `https://${this.shopifyStorefrontUrl.split('/')[2]}/products/${productNode.handle}`,
+      url:
+        productNode.onlineStoreUrl ||
+        `https://${this.shopifyStorefrontUrl.split("/")[2]}/products/${
+          productNode.handle
+        }`,
       collections,
-      featuredImage: featuredImage ? {
-        id: featuredImage.id,
-        src: featuredImage.src || featuredImage.url || '',
-        altText: featuredImage.altText || productNode.title,
-        width: featuredImage.width || 0,
-        height: featuredImage.height || 0
-      } : undefined
+      featuredImage: featuredImage
+        ? {
+            id: featuredImage.id,
+            src: featuredImage.src || featuredImage.url || "",
+            altText: featuredImage.altText || productNode.title,
+            width: featuredImage.width || 0,
+            height: featuredImage.height || 0,
+          }
+        : undefined,
     };
   }
 
@@ -441,16 +451,16 @@ export class ShopifyService {
         { first, after }
       );
 
-      const products = data.products.edges.map(edge => 
+      const products = data.products.edges.map((edge) =>
         this.transformProduct(edge.node)
       );
 
       return {
         products,
-        pageInfo: data.products.pageInfo
+        pageInfo: data.products.pageInfo,
       };
     } catch (error) {
-      console.error('Error fetching products:', error);
+      console.error("Error fetching products:", error);
       return { products: [], pageInfo: { hasNextPage: false } };
     }
   }
@@ -536,14 +546,15 @@ export class ShopifyService {
     `;
 
     try {
-      const data = await this.shopifyRequest<{ productByHandle: ProductNode | null }>(
-        query,
-        { handle }
-      );
+      const data = await this.shopifyRequest<{
+        productByHandle: ProductNode | null;
+      }>(query, { handle });
 
-      return data.productByHandle ? this.transformProduct(data.productByHandle) : null;
+      return data.productByHandle
+        ? this.transformProduct(data.productByHandle)
+        : null;
     } catch (error) {
-      console.error('Error fetching product by handle:', error);
+      console.error("Error fetching product by handle:", error);
       return null;
     }
   }
@@ -612,42 +623,47 @@ export class ShopifyService {
     `;
 
     try {
-      const data = await this.shopifyRequest<{ collectionByHandle: CollectionResponse | null }>(
-        query,
-        { handle, first, after }
-      );
+      const data = await this.shopifyRequest<{
+        collectionByHandle: CollectionResponse | null;
+      }>(query, { handle, first, after });
 
       if (!data.collectionByHandle) {
         return null;
       }
 
       const collection = data.collectionByHandle;
-      
+
       // Transform the products in the collection
-      const products = collection.products.edges.map(edge => {
+      const products = collection.products.edges.map((edge) => {
         const productNode = edge.node;
         const image = productNode.images?.edges?.[0]?.node;
-        
+
         return {
           id: productNode.id,
           title: productNode.title,
           handle: productNode.handle,
           available: productNode.availableForSale,
           price: productNode.priceRange.minVariantPrice.amount,
-          images: image ? [{
-            id: image.id,
-            src: image.src || '',
-            altText: image.altText || productNode.title,
-            width: image.width || 0,
-            height: image.height || 0
-          }] : [],
+          images: image
+            ? [
+                {
+                  id: image.id,
+                  src: image.src || "",
+                  altText: image.altText || productNode.title,
+                  width: image.width || 0,
+                  height: image.height || 0,
+                },
+              ]
+            : [],
           // Add minimal required fields
-          description: '',
-          descriptionHtml: '',
+          description: "",
+          descriptionHtml: "",
           variants: [],
           tags: [],
-          url: `https://${this.shopifyStorefrontUrl.split('/')[2]}/products/${productNode.handle}`,
-          collections: []
+          url: `https://${this.shopifyStorefrontUrl.split("/")[2]}/products/${
+            productNode.handle
+          }`,
+          collections: [],
         };
       });
 
@@ -657,15 +673,17 @@ export class ShopifyService {
         handle: collection.handle,
         description: collection.description,
         descriptionHtml: collection.descriptionHtml,
-        image: collection.image ? {
-          src: collection.image.src,
-          altText: collection.image.altText || ''
-        } : undefined,
+        image: collection.image
+          ? {
+              src: collection.image.src,
+              altText: collection.image.altText || "",
+            }
+          : undefined,
         products,
-        pageInfo: collection.products.pageInfo
+        pageInfo: collection.products.pageInfo,
       };
     } catch (error) {
-      console.error('Error fetching collection by handle:', error);
+      console.error("Error fetching collection by handle:", error);
       return null;
     }
   }

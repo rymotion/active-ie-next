@@ -20,9 +20,7 @@ export default function Home() {
       <Analytics />
       <Screen>
         <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
-          <div className="flex flex-col items-center justify-center px-20 ">
-            <LogoComponent styles={logoStyle.welcome} />
-          </div>
+          <LogoComponent styles={logoStyle.welcome} />
           <OrgContentBody />
           <SweatpalEvents />
           <div className="flex flex-col flex-row items-center justify-center px-4">

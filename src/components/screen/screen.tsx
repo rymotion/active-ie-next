@@ -2,10 +2,11 @@
 import Navbar from "@/components/navbar";
 import DisclosureBar from "@/components/disclosure";
 import { ScrollArrow } from "../scroll-arrow";
-import { useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 
 export default function Screen({ children }: { children: React.ReactNode }) {
   const [scaler, setScaler] = useState("compact");
+  const [screen, setScreen] = useState(useContext.name);
 
   useEffect(() => {
     const handleResize = () => {
@@ -16,8 +17,17 @@ export default function Screen({ children }: { children: React.ReactNode }) {
       }
     };
 
+    const handleScreenChange = () => {
+      console.log(`handle screen change: ${useContext.name}`);
+      setScreen(useContext.name);
+    };
+
     handleResize();
     window.addEventListener(`resized for ${scaler}`, handleResize);
+    window.addEventListener(
+      `screen change for ${useContext.name}`,
+      handleScreenChange
+    );
 
     return () => {
       window.removeEventListener(`resized for ${scaler}`, handleResize);
