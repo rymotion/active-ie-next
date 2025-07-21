@@ -6,7 +6,7 @@ import { useContext, useState, useEffect } from "react";
 
 export default function Screen({ children }: { children: React.ReactNode }) {
   const [scaler, setScaler] = useState("compact");
-  const [screen, setScreen] = useState(useContext.name);
+  // const [screen, setScreen] = useState(useContext.name);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,7 +19,7 @@ export default function Screen({ children }: { children: React.ReactNode }) {
 
     const handleScreenChange = () => {
       console.log(`handle screen change: ${useContext.name}`);
-      setScreen(useContext.name);
+      // setScreen(useContext.name);
     };
 
     handleResize();

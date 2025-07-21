@@ -1,6 +1,5 @@
 "use client";
 import Screen from "@/components/screen/screen";
-import DonationBody from "@/components/donation/donation";
 
 import { Analytics } from "@vercel/analytics/react";
 import { motion } from "framer-motion";
