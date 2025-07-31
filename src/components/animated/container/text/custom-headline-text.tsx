@@ -23,24 +23,22 @@ export default function CustomHeadlineWidget({
   };
 }) {
   return (
-    <>
-      <div className="flex flex-col full-width">
-        <div style={headlineStyle}>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            {headline}
-          </motion.h1>
-        </div>
-        <div style={bodyStyle}>
-          <div className="flex flex-col items-center justify-center sm:px-60 md:px-40 lg:px-20">
-            {body}
-          </div>
+    <section>
+      <div style={headlineStyle}>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          {headline}
+        </motion.h1>
+      </div>
+      <div style={bodyStyle}>
+        <div className="flex flex-col items-center justify-center sm:px-60 md:px-40 lg:px-20">
+          {body}
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

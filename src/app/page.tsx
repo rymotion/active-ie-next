@@ -13,23 +13,24 @@ import CustomHeadlineWidget, {
 import { motion } from "framer-motion";
 import VolunteerInterestWidget from "./volunteer/volunteer_interest";
 import { SubStackNibble } from "@/app/blog/substack";
+import { InstaWidgetD2D } from "@/app/contact/instagram_gallery";
 
 export default function Home() {
   return (
     <>
       <Analytics />
       <Screen>
-        <div className="flex flex-col min-h-screen justify-center items-center h-full w-full">
+        <section className="flex flex-col min-h-screen justify-center items-center h-full w-full">
           <LogoComponent styles={logoStyle.welcome} />
           <OrgContentBody />
           <SweatpalEvents />
-          <div className="flex flex-col flex-row items-center justify-center px-4">
+          <section className="flex flex-col flex-row items-center justify-center px-4">
             <CustomHeadlineWidget
               headline="Our Long-Term Goal"
               headlineStyle={textBoxStyle.standard}
               bodyStyle={textBoxStyle.content}
               body={
-                <motion.div
+                <motion.section
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.2 }}
@@ -46,20 +47,24 @@ export default function Home() {
                     destination for travelers near and far.
                   </motion.p>
                   <AltGFMPoster />
-                </motion.div>
+                </motion.section>
               }
             />
-          </div>
-          <SubStackNibble />
-          <div className="flex sm:flex-col md:flex-col lg:flex-row min-h-screen min-w-screen justify-center items-center h-full w-full px-20">
+          </section>
+          <section>
+            <InstaWidgetD2D />
+          </section>
+          <section>
+            <SubStackNibble />
+          </section>
+          <section className="flex sm:flex-col md:flex-col lg:flex-row min-h-screen min-w-screen justify-center items-center h-full w-full px-20">
             <p className="text-2xl font-bold">
               Want to work our events or be a part of our organization? Fill out
               the form below to express your interest.
             </p>
             <VolunteerInterestWidget />
-          </div>
-
-          <motion.div
+          </section>
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -67,8 +72,8 @@ export default function Home() {
           >
             <GofundmeWidget />
             <DonationBody />
-          </motion.div>
-        </div>
+          </motion.section>
+        </section>
       </Screen>
     </>
   );

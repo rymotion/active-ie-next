@@ -5,10 +5,13 @@ import { Analytics } from "@vercel/analytics/react";
 import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
-import InstaWidget from "@/app/contact/instagram_gallery";
+import {
+  InstaWidgetMain,
+  InstaWidgetD2D,
+} from "@/app/contact/instagram_gallery";
 import React, { useState } from "react";
 import ACTVDialog from "@/components/dialog/dialog";
-import InstagramPost from "@/app/contact/instagram_post";
+
 import SweatpalEvents from "@/components/events/sw_events";
 
 export default function SpecialEvent() {
@@ -62,24 +65,10 @@ export default function SpecialEvent() {
             id="application-head"
           >
             <SweatpalEvents />
-            <InstagramPost />
           </div>
 
-          {/* <div
-            className="hidden lg:hidden md:hidden flex flex-col justify-center px-10 w-full h-full"
-            id="application-head"
-          >
-            <Image
-              src={SocialPlunge}
-              alt="Event Widget"
-              objectFit="contain"
-              width={200}
-            />
-            <div id="sweatpals-container"></div>
-          </div> */}
-
-          <InstaWidget />
-
+          <InstaWidgetMain />
+          <InstaWidgetD2D />
           <AltGFMPoster />
           <div className="flex justify-center">
             <button

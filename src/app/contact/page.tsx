@@ -1,7 +1,6 @@
 "use client";
 import Screen from "@/components/screen/screen";
-import InstaWidget from "./instagram_gallery";
-
+import { InstaWidgetMain, InstaWidgetD2D } from "./instagram_gallery";
 import NewsletterWidget from "./newsletter_subscribe";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -13,7 +12,8 @@ export default function Contact() {
           <div className="hidden lg:block">
             <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
               <NewsletterWidget />
-              <InstaWidget />
+              <InstaWidgetMain />
+              <InstaWidgetD2D />
             </div>
           </div>
 
