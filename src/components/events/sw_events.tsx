@@ -16,7 +16,7 @@ export default function SweatpalEvents() {
     container.style.display = "flex";
     container.style.flexDirection = "row";
     container.style.width = "50%";
-    container.style.height = "50%";
+    container.style.height = "500px";
     container.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
     const marquee = document.getElementById("sweatpal-calendar");
@@ -40,29 +40,29 @@ export default function SweatpalEvents() {
   }, []);
 
   return (
-    <>
+    <section className="w-full px-[10px] max-w-[100vw] box-border">
       <Analytics />
-
-      <div className="flex flex-col justify-center w-full h-full items-center px-4 sm:px-8 lg:px-20 sm:py40 lg:py-20">
+      <div className="w-full max-w-[100%] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex flex-col h-full items-center justify-center py-20"
+          className="flex flex-col items-center justify-center py-10 w-full"
+          id="sweatpal-headline"
         >
-          <h1 className="text-2xl font-bold text-white">
+          <h1 className="text-2xl font-bold text-white mb-4">
             Our Events hosted on SweatPals
           </h1>
           <Image src={SweatPalsLogo} alt="SweatPals Logo" />
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          id="sweatpal-calendar"
+          className="flex w-full justify-center items-center py-10"
+        ></motion.div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        id="sweatpal-calendar"
-        className="flex w-full h-full justify-center items-center"
-      ></motion.div>
-    </>
+    </section>
   );
 }

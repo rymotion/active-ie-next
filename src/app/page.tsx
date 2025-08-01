@@ -5,11 +5,8 @@ import OrgContentBody from "@/components/about-body";
 import { Analytics } from "@vercel/analytics/react";
 import SweatpalEvents from "@/components/events/sw_events";
 import GofundmeWidget from "@/components/gofundme";
-import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
+import Image from "next/image";
 import LogoComponent, { logoStyle } from "@/components/logo";
-import CustomHeadlineWidget, {
-  textBoxStyle,
-} from "@/components/animated/container/text/custom-headline-text";
 import { motion } from "framer-motion";
 import VolunteerInterestWidget from "./volunteer/volunteer_interest";
 import { SubStackNibble } from "@/app/blog/substack";
@@ -24,33 +21,32 @@ export default function Home() {
           <LogoComponent styles={logoStyle.welcome} />
           <OrgContentBody />
           <SweatpalEvents />
-          <section className="flex flex-col flex-row items-center justify-center px-4">
-            <CustomHeadlineWidget
-              headline="Our Long-Term Goal"
-              headlineStyle={textBoxStyle.standard}
-              bodyStyle={textBoxStyle.content}
-              body={
-                <motion.section
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2 }}
-                  className="mt-6 text-lg text-gray-200 max-w-xl"
-                >
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.2 }}
-                    className="mt-6 text-lg text-gray-200 max-w-xl"
-                  >
-                    Build a physical space and establish a third-place that is
-                    easily accessible, multi-use, and becomes an anchor
-                    destination for travelers near and far.
-                  </motion.p>
-                  <AltGFMPoster />
-                </motion.section>
-              }
-            />
-          </section>
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="flex flex-col items-center px-4 max-w-xl"
+          >
+            <h1 className="flex flex-col items-center justify-center text-2xl font-bold">
+              {" "}
+              Our Brands{" "}
+            </h1>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="mt-6 text-lg text-gray-200 max-w-xl flex-row justify-center items-center"
+            >
+              <Image
+                src={
+                  "https://cdn.shopify.com/s/files/1/0638/5536/2102/files/be-wave-sticker-band-aid-brand.png?v=1754035334"
+                }
+                alt={"Anti-Detox Detox Club"}
+                width={400}
+                height={400}
+              ></Image>
+            </motion.div>
+          </motion.section>
           <section>
             <InstaWidgetD2D />
           </section>
