@@ -3,7 +3,6 @@ import Screen from "@/components/screen/screen";
 import DonationBody from "@/components/donation/donation";
 import OrgContentBody from "@/components/about-body";
 import { Analytics } from "@vercel/analytics/react";
-import SweatpalEvents from "@/components/events/sw_events";
 import GofundmeWidget from "@/components/gofundme";
 import Image from "next/image";
 import LogoComponent, { logoStyle } from "@/components/logo";

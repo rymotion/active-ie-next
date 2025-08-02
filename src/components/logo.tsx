@@ -1,8 +1,6 @@
 import Logo from "../assets/logo.png";
-import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { shopifyService } from "@/services/shopify";
 
 export default function LogoComponent({
   styles,

@@ -1,7 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import OrgContentBody from "../about-body";
-
-import LogoComponent, { logoStyle } from "@/components/logo";
 
 interface ScrollableVideoProps {
   componentUrl: string;
