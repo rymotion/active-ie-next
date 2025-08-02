@@ -2,9 +2,7 @@ import Logo from "../assets/logo.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
-export default function LogoComponent({
-  styles,
-}: {
+export default function LogoComponent({}: {
   styles: {
     minHeight: string;
     display: string;
