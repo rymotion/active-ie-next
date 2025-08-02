@@ -11,16 +11,22 @@ import { motion } from "framer-motion";
 import VolunteerInterestWidget from "./volunteer/volunteer_interest";
 import { SubStackNibble } from "@/app/blog/substack";
 import { InstaWidgetD2D } from "@/app/contact/instagram_gallery";
+import ScrollableVideoView from "@/components/multi-media/scrollable_video";
 
 export default function Home() {
   return (
     <>
       <Analytics />
       <Screen>
-        <section className="flex flex-col min-h-screen justify-center items-center h-full w-full">
+        <ScrollableVideoView componentUrl="https://cdn.shopify.com/videos/c/o/v/ee108db5cf354e62bf3cca4363d5bdb8.mp4">
+          <div style={{ height: "100px" }} />
           <LogoComponent styles={logoStyle.welcome} />
+          <div style={{ height: "100px" }} />
           <OrgContentBody />
-          <SweatpalEvents />
+          <div style={{ height: "100px" }} />
+        </ScrollableVideoView>
+        <section className="flex flex-col min-h-screen justify-center items-center h-full w-full">
+          {/* brand section */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -28,8 +34,7 @@ export default function Home() {
             className="flex flex-col items-center px-4 max-w-xl"
           >
             <h1 className="flex flex-col items-center justify-center text-2xl font-bold">
-              {" "}
-              Our Brands{" "}
+              Our Brands
             </h1>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

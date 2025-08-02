@@ -34,9 +34,7 @@ export default function CustomHeadlineWidget({
         </motion.h1>
       </div>
       <div style={bodyStyle}>
-        <div className="flex flex-col items-center justify-center sm:px-60 md:px-40 lg:px-20">
-          {body}
-        </div>
+        <div className="flex flex-col items-center justify-center">{body}</div>
       </div>
     </section>
   );
@@ -50,7 +48,7 @@ export const textBoxStyle = {
     alignItems: "center",
   },
   content: {
-    minHeight: "50vh",
+    minHeight: "20vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

@@ -1,7 +1,7 @@
 import Logo from "../assets/logo.png";
-import Image from "next/image";
-import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { shopifyService } from "@/services/shopify";
 
 export default function LogoComponent({
@@ -16,42 +16,12 @@ export default function LogoComponent({
 }) {
   const { scrollYProgress } = useScroll();
   const scaleValue = useTransform(scrollYProgress, [0, 1, 1], [1, 2, 1]);
-  const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Fetch a product image from Shopify to use as background
-    const fetchBackgroundImage = async () => {
-      try {
-        // Fetch a featured collection
-        const collection = await shopifyService.getCollectionByHandle(
-          "featured",
-          1
-        );
-        if (collection?.products?.[0]?.images?.[0]?.src) {
-          setBackgroundImage(collection.products[0].images[0].src);
-        }
-      } catch (error) {
-        console.error("Error fetching background image:", error);
-      }
-    };
-
-    fetchBackgroundImage();
-  }, []);
 
   return (
-    <div
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        ...styles,
-        backgroundImage: backgroundImage ? `url(${backgroundImage})` : "none",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-50" />
+    <>
+      <div className="absolute inset-0 bg-opacity-50" />
       <video
-        src="https://cdn.shopify.com/videos/c/o/v/1a1c3a2e5dce42fb99821f36002c1bd0.mov"
+        src="https://cdn.shopify.com/videos/c/o/v/ee108db5cf354e62bf3cca4363d5bdb8.mp4"
         autoPlay
         muted
         loop
@@ -87,7 +57,7 @@ export default function LogoComponent({
           <h1 className="text-center">Active Inland Empire</h1>
         </div>
       </motion.div>
-    </div>
+    </>
   );
 }
 
