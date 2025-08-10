@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import ProjectFundingWidget from "./bike_project_widget.jsx";
 import { motion } from "framer-motion";
 import BikeProjectWindow from "@/app/projects/bike_project_window.jsx";
+import BikeProjectSlideshow from "@/app/projects/bike_project_slideshow.jsx";
 const Project = () => {
   return (
     <>
@@ -35,6 +36,11 @@ const Project = () => {
                 <div className="lg:col-span-5 xl:col-span-4 flex items-center justify-center">
                   <div className="w-full max-w-md">
                     <ProjectFundingWidget />
+                  </div>
+                </div>
+                <div className="lg:col-span-5 xl:col-span-4 flex items-center justify-center">
+                  <div className="w-full max-w-md">
+                    <BikeProjectSlideshow />
                   </div>
                 </div>
               </div>
