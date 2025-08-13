@@ -4,20 +4,10 @@ import Logo from "../assets/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNav = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const [checkoutOpen, setCheckoutOpen] = useState(false);
-
-  const handleCheckoutOpen = () => {
-    setCheckoutOpen(!checkoutOpen);
-  };
-
-  const handleCheckoutClose = () => {
-    setCheckoutOpen(!checkoutOpen);
   };
 
   return (

@@ -26,46 +26,44 @@ export default function Home() {
           <OrgContentBody />
           <div style={{ height: "100px" }} />
         </ScrollableVideoView>
-        <section className="flex flex-col min-h-screen justify-center items-center h-full w-full">
+        <section className="page-width flex-col h-[calc(100vh-4rem)] min-h-screen win-w-screen justify-center items-center w-full">
           {/* brand section */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            className="page-width flex-col min-h-screen win-w-screen justify-center items-center w-full"
           >
-            <h1 className="flex flex-col h-[10vh] items-center justify-center text-2xl font-bold">
+            <h1 className="page-width flex-col h-[10vh] items-center justify-center items-center text-2xl font-bold">
               Join Our Events
             </h1>
-            <div className="flex flex-col w-full h-[calc(100vh-4rem)] min-h-[600px] py-8">
+            <div className="page-width flex-col w-full py-8 items-center justify-center">
               <h2 className="text-xl font-semibold mb-4 text-center">
                 Our Event Calendar
               </h2>
-              <div className="flex-1 w-full max-w-5xl mx-auto">
-                <PublicCalendar />
-              </div>
+              <PublicCalendar />
             </div>
           </motion.section>
-          {/* <section>
-            <InstaWidgetD2D />
-          </section> */}
 
           <section>
             <h1 className="flex flex-col h-[10vh] items-center justify-center text-2xl font-bold">
               Shop Active Inland Empire
             </h1>
-            <BuyButton
-              componentId="product-component-1754935153925"
-              productId="7900658729014"
-            />
-            <BuyButton
-              componentId="product-component-1754937482467"
-              productId="7813628297270"
-            />
+            <div className="page-width flex-row w-full py-8">
+              <BuyButton
+                componentId="product-component-1754935153925"
+                productId="7900658729014"
+              />
+              <BuyButton
+                componentId="product-component-1754937482467"
+                productId="7813628297270"
+              />
+            </div>
           </section>
           <section>
             <SubStackNibble />
           </section>
-          <section className="flex sm:flex-col md:flex-col lg:flex-row min-h-screen min-w-screen justify-center items-center h-full w-full px-20">
+          <section className="page-width flex sm:flex-col md:flex-col lg:flex-row min-h-screen min-w-screen justify-center items-center h-full w-full px-20">
             <p className="text-2xl font-bold">
               Want to work our events or be a part of our organization? Fill out
               the form below to express your interest.

@@ -15,24 +15,6 @@ export default function LogoComponent({}: {
 
   return (
     <>
-      <div className="absolute inset-0 bg-opacity-50" />
-      <video
-        src="https://cdn.shopify.com/videos/c/o/v/ee108db5cf354e62bf3cca4363d5bdb8.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}
-      />
       <motion.div
         style={{
           scale: scaleValue,

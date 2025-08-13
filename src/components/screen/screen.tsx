@@ -1,55 +1,31 @@
-"use client";
-import Navbar from "@/components/navbar";
-import DisclosureBar from "@/components/disclosure";
-import { ScrollArrow } from "../scroll-arrow";
-import { useContext, useState, useEffect } from "react";
+import React, { ReactNode } from "react";
+import Navbar from "../navbar";
+import DisclosureBar from "../disclosure";
 
-export default function Screen({ children }: { children: React.ReactNode }) {
-  const [scaler, setScaler] = useState("compact");
-  // const [screen, setScreen] = useState(useContext.name);
-  // const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setScaler("compact");
-      } else {
-        setScaler("full");
-      }
-    };
-
-    const handleScreenChange = () => {
-      console.log(`handle screen change: ${useContext.name}`);
-      // setScreen(useContext.name);
-    };
-
-    handleResize();
-    window.addEventListener(`resized for ${scaler}`, handleResize);
-    window.addEventListener(
-      `screen change for ${useContext.name}`,
-      handleScreenChange
-    );
-
-    return () => {
-      window.removeEventListener(`resized for ${scaler}`, handleResize);
-    };
-  }, [scaler]);
-
-  // useEffect(() => {
-  //   const handleCartUpdate = () => {};
-  //   handleCartUpdate();
-  // }, [cart]);
-
-  return (
-    <>
-      <Navbar />
-      <div className="page-width flex-row min-h-screen min-w-screen justify-center items-center h-full w-full bg-black">
-        <ScrollArrow />
-        <section>{children}</section>
-      </div>
-      <footer className="geist-wrapper flex justify-center items-center h-full w-full">
-        <DisclosureBar />
-      </footer>
-    </>
-  );
+interface ScreenProps {
+  children: ReactNode;
+  className?: string;
 }
+
+const Screen: React.FC<ScreenProps> = ({ children, className = "" }) => {
+  return (
+    <div className="flex flex-col min-h-screen w-full bg-black">
+      {/* Persistent Navigation */}
+      <header className="sticky top-0 z-50 w-full">
+        <Navbar />
+      </header>
+
+      {/* Main Content */}
+      <main className={`flex-grow w-full ${className}`}>{children}</main>
+
+      {/* Sticky Footer */}
+      <footer className="w-full bg-black border-t border-gray-800">
+        <div className="page-width mx-auto py-4">
+          <DisclosureBar />
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Screen;
