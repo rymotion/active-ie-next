@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import ACTVDialog from "@/components/dialog/dialog";
 import SweatpalEvents from "@/components/events/sw_events";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Events() {
   const [open, setOpen] = useState(false);
@@ -23,14 +24,19 @@ export default function Events() {
             journey.
           </p>
         </div>
-        <div className="flex justify-center">
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="flex justify-center"
+        >
           <button
             onClick={() => setOpen(true)}
             className="inline-block mt-4 px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-color"
           >
             Take the Program Schedule Survey
           </button>
-        </div>
+        </motion.section>
 
         {/* Modal Dialog */}
         <ACTVDialog open={open} setOpen={setOpen}>
@@ -53,9 +59,22 @@ export default function Events() {
           </div>
         </ACTVDialog>
 
-        <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
-          <PublicCalendar />
-        </div>
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="page-width flex-col min-h-screen win-w-screen justify-center items-center w-full"
+        >
+          <h1 className="page-width flex-col h-[10vh] items-center justify-center items-center text-2xl font-bold">
+            Join Our Events
+          </h1>
+          <div className="page-width flex-col w-full py-8 items-center justify-center">
+            <h2 className="text-xl font-semibold mb-4 text-center">
+              Our Event Calendar
+            </h2>
+            <PublicCalendar />
+          </div>
+        </motion.section>
       </Screen>
     </>
   );

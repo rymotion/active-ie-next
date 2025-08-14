@@ -9,20 +9,22 @@ interface ScreenProps {
 
 const Screen: React.FC<ScreenProps> = ({ children, className = "" }) => {
   return (
-    <div className="flex flex-col min-h-screen w-full bg-black">
+    <div className="flex flex-col min-h-[100dvh] bg-black">
       {/* Persistent Navigation */}
       <header className="sticky top-0 z-50 w-full">
         <Navbar />
       </header>
 
       {/* Main Content */}
-      <main className={`flex-grow w-full ${className}`}>{children}</main>
-
-      {/* Sticky Footer */}
-      <footer className="w-full bg-black border-t border-gray-800">
-        <div className="page-width mx-auto py-4">
-          <DisclosureBar />
+      <main className={`flex-grow w-full ${className}`}>
+        <div className="h-full">
+          {children}
         </div>
+      </main>
+      
+      {/* Footer */}
+      <footer className="w-full">
+        <DisclosureBar />
       </footer>
     </div>
   );
