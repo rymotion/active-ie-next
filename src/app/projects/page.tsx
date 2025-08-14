@@ -38,10 +38,6 @@ const Project = () => {
                   <ProjectFundingWidget />
                 </div>
               </div>
-              <div className="lg:col-span-12 xl:col-span-12">
-                <GofundmeWidget />
-              </div>
-
               <div className="flex flex-col items-center justify-center mx-auto px-4">
                 <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
                   Public Comment Board
@@ -54,6 +50,9 @@ const Project = () => {
                   participate.
                 </p>
                 <PublicCommentBoard />
+              </div>
+              <div className="lg:col-span-12 xl:col-span-12">
+                <GofundmeWidget />
               </div>
             </div>
           </motion.section>
