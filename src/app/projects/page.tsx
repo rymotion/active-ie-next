@@ -43,11 +43,11 @@ const Project = () => {
                   Public Comment Board
                 </h2>
                 <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
-                  By selecting the image below you will be taken to the file
-                  hosted on Google Drive to provide feedback on the bike ramp
-                  project. And have a voice in the planning of the project. You
-                  must be signed in to a registered Google account to
-                  participate.
+                  By selecting the pup-out window option from the image below
+                  you will be taken to the file hosted on Google Drive to
+                  provide feedback on the bike ramp project. Have a voice in the
+                  planning of the project. You must be signed in to a registered
+                  Google account to participate.
                 </p>
                 <PublicCommentBoard />
               </div>
