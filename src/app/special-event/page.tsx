@@ -2,7 +2,6 @@
 import Screen from "@/components/screen/screen";
 import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import AltGFMPoster from "@/components/donation/special-donation/gfm-bike-ramp";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
 import {
@@ -11,8 +10,6 @@ import {
 } from "@/app/contact/instagram_gallery";
 import React, { useState } from "react";
 import ACTVDialog from "@/components/dialog/dialog";
-
-import SweatpalEvents from "@/components/events/sw_events";
 import VolunteerInterestWidget from "../volunteer/volunteer_interest";
 import GofundmeWidget from "@/components/gofundme";
 import { motion } from "framer-motion";
