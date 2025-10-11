@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import ProjectFundingWidget from "./bike_project_widget.jsx";
 import { motion } from "framer-motion";
 import BikeProjectWindow from "@/app/projects/bike_project_window.jsx";
-import PublicCommentBoard from "@/app/projects/public_comment_board.jsx";
+import BikeParkForm from "@/app/volunteer/volunteer_interest.jsx";
 import GofundmeWidget from "@/components/gofundme.jsx";
 const Project = () => {
   return (
@@ -49,7 +49,7 @@ const Project = () => {
                   planning of the project. You must be signed in to a registered
                   Google account to participate.
                 </p>
-                <PublicCommentBoard />
+                <BikeParkForm />
               </div>
               <div className="lg:col-span-12 xl:col-span-12">
                 <GofundmeWidget />
