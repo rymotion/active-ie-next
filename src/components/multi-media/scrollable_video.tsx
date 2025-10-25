@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ScrollableVideoProps {
   componentUrl: string;
@@ -14,6 +15,9 @@ export default function ScrollableVideoView({
   const scrollContentRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [showScrollPrompt, setShowScrollPrompt] = useState(false);
+  const [autoPlayComplete, setAutoPlayComplete] = useState(false);
+  const [isScrollControlled, setIsScrollControlled] = useState(false);
 
   useEffect(() => {
     // Check if the device is mobile
@@ -26,21 +30,61 @@ export default function ScrollableVideoView({
     setIsMobile(isMobileDevice);
   }, []);
 
+  // Auto-play for 5 seconds then show scroll prompt
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Pause video initially
+    video.pause();
+
+    // Start auto-play after a brief delay to ensure video is loaded
+    const startTimer = setTimeout(() => {
+      video.play().catch((error) => {
+        console.log("Auto-play prevented:", error);
+      });
+    }, 100);
+
+    // After 5 seconds, pause and show scroll prompt
+    const autoPlayTimer = setTimeout(() => {
+      video.pause();
+      setAutoPlayComplete(true);
+      setShowScrollPrompt(true);
+    }, 5100);
+
+    return () => {
+      clearTimeout(startTimer);
+      clearTimeout(autoPlayTimer);
+    };
+  }, []);
+
   const handleScroll = (e: Event) => {
-    const scrollableContent = document.getElementById("scrollable-video");
+    const video = videoRef.current;
     const target = e.target as HTMLElement;
     const scrollTop = target.scrollTop;
 
-    if (scrollPosition != 0 && scrollableContent) {
-      const playbackOpacity = (scrollTop - scrollPosition) / scrollPosition;
-      scrollableContent.style.opacity = playbackOpacity.toString();
+    // Hide scroll prompt once user starts scrolling
+    if (scrollTop > 10 && showScrollPrompt) {
+      setShowScrollPrompt(false);
+      setIsScrollControlled(true);
     }
 
+    // Calculate scroll progress
     const maxScroll =
       (scrollContentRef.current?.scrollHeight || 0) -
       (scrollContainerRef.current?.clientHeight || 0);
     const scrollPercentage = Math.min(scrollTop / maxScroll, 1);
     setScrollPosition(scrollPercentage);
+
+    // Control video playback based on scroll position
+    if (video && autoPlayComplete && isScrollControlled) {
+      // Map scroll position to video duration
+      const videoDuration = video.duration;
+      if (!isNaN(videoDuration) && videoDuration > 0) {
+        const targetTime = scrollPercentage * videoDuration;
+        video.currentTime = targetTime;
+      }
+    }
   };
 
   useEffect(() => {
@@ -74,7 +118,7 @@ export default function ScrollableVideoView({
         });
       };
     }
-  }, []);
+  }, [autoPlayComplete, isScrollControlled, showScrollPrompt]);
 
   return (
     <>
@@ -82,9 +126,9 @@ export default function ScrollableVideoView({
         {/* Background Video */}
         <video
           ref={videoRef}
-          autoPlay={true}
+          autoPlay={false}
           muted={true}
-          loop={true}
+          loop={false}
           playsInline={true}
           id="scrollable-video"
           controls={false}
@@ -96,6 +140,45 @@ export default function ScrollableVideoView({
         >
           <source src={componentUrl} type="video/mp4" />
         </video>
+
+        {/* Scroll Prompt Overlay */}
+        <AnimatePresence>
+          {showScrollPrompt && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0 flex items-center justify-center pointer-events-none z-10"
+            >
+              <div className="bg-black/60 backdrop-blur-sm px-8 py-6 rounded-lg text-center">
+                <motion.div
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <svg
+                    className="w-8 h-8 mx-auto mb-3 text-white"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                  </svg>
+                </motion.div>
+                <p className="text-white text-lg font-light tracking-wide">
+                  Scroll to continue
+                </p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Scrollable Content */}
         <div

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import BikeProjectWindow from "@/app/projects/bike_project_window.jsx";
 import BikeParkForm from "@/app/projects/bike park form_b.jsx";
 import GofundmeWidget from "@/components/gofundme.jsx";
+
 const Project = () => {
   return (
     <>
