@@ -11,6 +11,7 @@ import { SubStackNibble } from "@/app/blog/substack";
 import ScrollableVideoView from "@/components/multi-media/scrollable_video";
 import BuyButton from "../products/products/buybutton";
 import PublicCalendar from "../events/calender";
+import SweatpalEvents from "@/components/events/sw_events";
 
 export default function Home() {
   return (
@@ -36,16 +37,18 @@ export default function Home() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="w-full">
                   <h2 className="text-xl font-semibold mb-6 text-center">
-                    Our Event Calendar
+                    Our Event Calendars
                   </h2>
                   <div className="w-full">
                     <PublicCalendar />
+                    <SweatpalEvents />
                   </div>
                 </div>
               </div>
             </motion.section>
 
             <section className="py-12">
+              {/* TODO implement a better way to convey projects */}
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-2xl font-bold text-center mb-8">
                   Shop Active Inland Empire
