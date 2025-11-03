@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "events": "Events",
+    "projects": "Projects",
+    "merch": "Merch",
+    "contactUs": "Contact Us",
+    "supportUs": "Support Us",
+    "organizationName": "Active Inland Empire"
+  },
+  "landing": {
+    "eventCalendars": "Our Event Calendars",
+    "shopTitle": "Shop Active Inland Empire",
+    "donate": "Donate",
+    "volunteer": "Volunteer",
+    "readBlog": "Read Our Blog"
+  },
+  "contact": {
+    "inquiries": "Inquries:",
+    "email": "organization@activeie.org"
+  },
+  "support": {
+    "sponsorshipTitle": "Interested in Sponsorship?",
+    "sponsorshipDescription": "In the health and wellness space and looking to grow your brand? Expand with us!",
+    "getInTouch": "Get in touch"
+  },
+  "volunteer": {
+    "description": "Want to work our events or be a part of our organization? Fill out the form below to express your interest."
+  },
+  "metadata": {
+    "title": "Active Inland Empire",
+    "description": "Active Inland Empire is the nonprofit building community through sport, lowering financial barriers to participate in sports, health, and wellness activites."
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Help support Active Inland Empire and our mission to help build community through sport, health, and wellness."
+  },
+  "events": {
+    "title": "Join Our Events",
+    "ourCalendar": "Our Event Calendar",
+    "sweatpalsCalendar": "Our SweatPals Events Calendar",
+    "surveyPrompt": "We want to hear from you, the community, on how we can best serve you and have our in-person events. By clicking the button below, we can learn how to better serve you to support you on your health journey.",
+    "takeSurvey": "Take the Program Schedule Survey",
+    "surveyTitle": "Program Schedule Survey",
+    "close": "Close"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "These are our current ongoing projects and efforts across the Inland Empire.",
+    "bikeRampTitle": "Bike Ramp Project Update",
+    "publicCommentTitle": "Public Comment Board",
+    "publicCommentDescription": "By selecting the pup-out window option from the image below you will be taken to the file hosted on Google Drive to provide feedback on the bike ramp project. Have a voice in the planning of the project. You must be signed in to a registered Google account to participate."
+  },
+  "addc": {
+    "title": "Anti-Detox Detox Club",
+    "description": "Get more information about Anti-Detox Detox Club"
+  },
+  "donation": {
+    "yourProceeds": "Your Proceeds",
+    "proceedsDescription": "While we continue our capacity and program efforts, your contribution helps support our efforts, test, build, and sustain these \"third-place\" program. Every contribution made we also ask contributors if they want regular updates on the impact their proceeds made.",
+    "partnerDescription": "If you want to partner with us to help build a better, healthier, and safer Inland Empire you can contribute to our General Contribution Fund. Monthly we look to allocate 10% of the proceeds given to be used on the other efforts listed below.",
+    "additionalBenefits": "Additional Benefits to Setting up Monthly, Quarterly, or Annual Contributions",
+    "directImpact": "If you are looking to make a direct impact with a specific effort we are supporting here are the projects we are assisting with."
+  },
+  "footer": {
+    "nonprofitInfo": "Active: Inland Empire Inc is a 501(c)(3) non-profit organization",
+    "ein": "Federal EIN 33-1746388 - All donations are tax-deductible",
+    "moreInfo": "More information is available on our Guidestar page or by opening an inquiry at"
+  },
+  "common": {
+    "scrollToContinue": "Scroll to continue",
+    "loading": "Loading...",
+    "loadingInstagram": "Loading Instagram post...",
+    "loadingFundraiser": "Loading fundraiser...",
+    "ourBlog": "Our Blog",
+    "activeInlandEmpire": "Active Inland Empire"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "events": "Eventos",
+    "projects": "Proyectos",
+    "merch": "Mercancía",
+    "contactUs": "Contáctenos",
+    "supportUs": "Apóyenos",
+    "organizationName": "Active Inland Empire"
+  },
+  "landing": {
+    "eventCalendars": "Nuestros Calendarios de Eventos",
+    "shopTitle": "Compra Active Inland Empire",
+    "donate": "Donar",
+    "volunteer": "Voluntario",
+    "readBlog": "Lee Nuestro Blog"
+  },
+  "contact": {
+    "inquiries": "Consultas:",
+    "email": "organization@activeie.org"
+  },
+  "support": {
+    "sponsorshipTitle": "¿Interesado en Patrocinio?",
+    "sponsorshipDescription": "¿Estás en el espacio de salud y bienestar y buscas hacer crecer tu marca? ¡Expande con nosotros!",
+    "getInTouch": "Ponte en contacto"
+  },
+  "volunteer": {
+    "description": "¿Quieres trabajar en nuestros eventos o ser parte de nuestra organización? Completa el formulario a continuación para expresar tu interés."
+  },
+  "metadata": {
+    "title": "Active Inland Empire",
+    "description": "Active Inland Empire es la organización sin fines de lucro que construye comunidad a través del deporte, reduciendo las barreras financieras para participar en actividades deportivas, de salud y bienestar."
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "description": "Ayuda a apoyar Active Inland Empire y nuestra misión de construir comunidad a través del deporte, la salud y el bienestar."
+  },
+  "events": {
+    "title": "Únete a Nuestros Eventos",
+    "ourCalendar": "Nuestro Calendario de Eventos",
+    "sweatpalsCalendar": "Nuestro Calendario de Eventos SweatPals",
+    "surveyPrompt": "Queremos escuchar de ti, la comunidad, sobre cómo podemos servirte mejor y realizar nuestros eventos en persona. Al hacer clic en el botón a continuación, podemos aprender cómo servirte mejor para apoyarte en tu viaje de salud.",
+    "takeSurvey": "Tomar la Encuesta de Horario del Programa",
+    "surveyTitle": "Encuesta de Horario del Programa",
+    "close": "Cerrar"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description": "Estos son nuestros proyectos y esfuerzos actuales en todo el Inland Empire.",
+    "bikeRampTitle": "Actualización del Proyecto de Rampa para Bicicletas",
+    "publicCommentTitle": "Tablero de Comentarios Públicos",
+    "publicCommentDescription": "Al seleccionar la opción de ventana emergente de la imagen a continuación, serás llevado al archivo alojado en Google Drive para proporcionar comentarios sobre el proyecto de rampa para bicicletas. Ten voz en la planificación del proyecto. Debes iniciar sesión en una cuenta de Google registrada para participar."
+  },
+  "addc": {
+    "title": "Club Anti-Detox Detox",
+    "description": "Obtén más información sobre el Club Anti-Detox Detox"
+  },
+  "donation": {
+    "yourProceeds": "Tus Contribuciones",
+    "proceedsDescription": "Mientras continuamos nuestros esfuerzos de capacidad y programa, tu contribución ayuda a apoyar nuestros esfuerzos, probar, construir y sostener estos programas de \"tercer lugar\". Cada contribución realizada también preguntamos a los contribuyentes si desean actualizaciones regulares sobre el impacto que tuvieron sus contribuciones.",
+    "partnerDescription": "Si quieres asociarte con nosotros para ayudar a construir un Inland Empire mejor, más saludable y más seguro, puedes contribuir a nuestro Fondo de Contribución General. Mensualmente buscamos asignar el 10% de las contribuciones dadas para ser utilizadas en los otros esfuerzos enumerados a continuación.",
+    "additionalBenefits": "Beneficios Adicionales al Configurar Contribuciones Mensuales, Trimestrales o Anuales",
+    "directImpact": "Si estás buscando tener un impacto directo con un esfuerzo específico que estamos apoyando, aquí están los proyectos con los que estamos ayudando."
+  },
+  "footer": {
+    "nonprofitInfo": "Active: Inland Empire Inc es una organización sin fines de lucro 501(c)(3)",
+    "ein": "EIN Federal 33-1746388 - Todas las donaciones son deducibles de impuestos",
+    "moreInfo": "Más información está disponible en nuestra página de Guidestar o abriendo una consulta en"
+  },
+  "common": {
+    "scrollToContinue": "Desplázate para continuar",
+    "loading": "Cargando...",
+    "loadingInstagram": "Cargando publicación de Instagram...",
+    "loadingFundraiser": "Cargando recaudación de fondos...",
+    "ourBlog": "Nuestro Blog",
+    "activeInlandEmpire": "Active Inland Empire"
+  }
+}

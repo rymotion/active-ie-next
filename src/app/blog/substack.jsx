@@ -13,15 +13,12 @@ export function SubStack() {
           "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Factiveie.substack.com%2Ffeed"
         );
         const data = await response.json();
-        console.log(data);
         if (data.status === "ok") {
           setFeed(data.feed);
           setArticles(data.items);
-        } else {
-          console.error("Invalid response status:", data.status);
         }
       } catch (error) {
-        console.error("Error fetching articles:", error);
+        // Error fetching articles
       }
     };
 
@@ -90,15 +87,12 @@ export function SubStackNibble() {
           "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Factiveie.substack.com%2Ffeed"
         );
         const data = await response.json();
-        console.log(data);
         if (data.status === "ok") {
           setFeed(data.feed);
           setArticles(data.items);
-        } else {
-          console.error("Invalid response status:", data.status);
         }
       } catch (error) {
-        console.error("Error fetching articles:", error);
+        // Error fetching articles
       }
     };
 

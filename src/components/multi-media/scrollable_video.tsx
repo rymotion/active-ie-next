@@ -40,8 +40,8 @@ export default function ScrollableVideoView({
 
     // Start auto-play after a brief delay to ensure video is loaded
     const startTimer = setTimeout(() => {
-      video.play().catch((error) => {
-        console.log("Auto-play prevented:", error);
+      video.play().catch(() => {
+        // Auto-play prevented by browser
       });
     }, 100);
 

@@ -1,6 +1,5 @@
 "use client";
 import Screen from "@/components/screen/screen";
-// import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
@@ -15,56 +14,12 @@ import BikeProjectWindow from "../projects/bike_project_window";
 
 export default function SpecialEvent() {
   const [open, setOpen] = useState(false);
-  // useEffect(() => {
-  //   const container = document.createElement("div");
-  //   window.addEventListener("resize", () => {
-  //     document.body.removeChild(container);
-  //     console.log(window.innerWidth);
-  //     container.style.width = "auto";
-  //     container.style.maxWidth = "100vw";
-  //     container.style.minWidth = "20vw";
-  //     container.style.height = "auto";
-  //     container.style.minHeight = "300px";
-  //     if (marquee) {
-  //       marquee.appendChild(script);
-  //       document.body.appendChild(container);
-  //     }
-  //   });
-
-  //   container.id = "sweatpals-container";
-  //   container.style.justifyContent = "center";
-  //   container.style.display = "flex";
-  //   container.style.alignItems = "center";
-
-  //   container.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-  //   const marquee = document.getElementById("sweatpals-container");
-
-  //   const script = document.createElement("script");
-  //   script.src =
-  //     "https://www.sweatpals.com/static/embed/event/checkout/script.js?enableAutoEmbed=true&eventAlias=chill-vibe&shortLocalInstance=2025-07-05&colorHex=ffffff&backgroundHex=000000&fontFamily=Poppins&priceTierId=169a1714-23b1-4957-91a5-5f965c61d182";
-  //   script.async = true;
-
-  //   if (marquee) {
-  //     marquee.appendChild(script);
-  //     document.body.appendChild(container);
-  //   }
-
-  //   return () => {
-  //     document.body.removeChild(container);
-  //   };
-  // }, []);
 
   return (
     <>
       <Analytics />
       <Screen>
         <main>
-          {/* <div
-            className="flex flex-col justify-center px-5 w-full h-full"
-            id="application-head"
-          >
-            <SweatpalEvents />
-          </div> */}
           <section className="min-h-screen py-20 bg-black">
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
@@ -121,7 +76,6 @@ export default function SpecialEvent() {
               </div>
             </motion.section>
           </div>
-          {/* <AltGFMPoster /> */}
           <div className="flex justify-center">
             <button
               onClick={() => setOpen(true)}

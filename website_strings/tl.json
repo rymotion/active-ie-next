@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Tahanan",
+    "blog": "Blog",
+    "events": "Mga Kaganapan",
+    "projects": "Mga Proyekto",
+    "merch": "Mga Produkto",
+    "contactUs": "Makipag-ugnayan",
+    "supportUs": "Suportahan Kami",
+    "organizationName": "Active Inland Empire"
+  },
+  "landing": {
+    "eventCalendars": "Aming Mga Kalendaryo ng Kaganapan",
+    "shopTitle": "Bumili sa Active Inland Empire",
+    "donate": "Mag-donate",
+    "volunteer": "Magboluntaryo",
+    "readBlog": "Basahin ang Aming Blog"
+  },
+  "contact": {
+    "inquiries": "Mga Katanungan:",
+    "email": "organization@activeie.org"
+  },
+  "support": {
+    "sponsorshipTitle": "Interesado sa Sponsorship?",
+    "sponsorshipDescription": "Nasa larangan ng kalusugan at wellness at gustong palakasin ang iyong brand? Lumaki kasama namin!",
+    "getInTouch": "Makipag-ugnayan"
+  },
+  "volunteer": {
+    "description": "Gusto mo bang magtrabaho sa aming mga kaganapan o maging bahagi ng aming organisasyon? Punan ang form sa ibaba upang ipahayag ang iyong interes."
+  },
+  "metadata": {
+    "title": "Active Inland Empire",
+    "description": "Ang Active Inland Empire ay isang nonprofit na bumubuo ng komunidad sa pamamagitan ng palakasan, binabawasan ang mga hadlang sa pananalapi upang makilahok sa mga aktibidad sa palakasan, kalusugan, at wellness."
+  },
+  "products": {
+    "title": "Aming Mga Produkto",
+    "description": "Tumulong na suportahan ang Active Inland Empire at ang aming misyon na bumuo ng komunidad sa pamamagitan ng palakasan, kalusugan, at wellness."
+  },
+  "events": {
+    "title": "Sumali sa Aming Mga Kaganapan",
+    "ourCalendar": "Aming Kalendaryo ng Kaganapan",
+    "sweatpalsCalendar": "Aming SweatPals Kalendaryo ng Kaganapan",
+    "surveyPrompt": "Gusto naming marinig mula sa iyo, ang komunidad, kung paano kami makakapaglingkod sa iyo nang mas mahusay at magkaroon ng aming mga personal na kaganapan. Sa pag-click sa button sa ibaba, matututunan namin kung paano ka mas mahusay na paglingkuran upang suportahan ka sa iyong paglalakbay sa kalusugan.",
+    "takeSurvey": "Kunin ang Survey ng Iskedyul ng Programa",
+    "surveyTitle": "Survey ng Iskedyul ng Programa",
+    "close": "Isara"
+  },
+  "projects": {
+    "title": "Mga Proyekto",
+    "description": "Ito ang aming kasalukuyang mga proyekto at pagsisikap sa buong Inland Empire.",
+    "bikeRampTitle": "Update ng Bike Ramp Project",
+    "publicCommentTitle": "Public Comment Board",
+    "publicCommentDescription": "Sa pagpili ng pop-out window option mula sa larawan sa ibaba, dadalhin ka sa file na naka-host sa Google Drive upang magbigay ng feedback sa bike ramp project. Magkaroon ng boses sa pagpaplano ng proyekto. Dapat kang naka-sign in sa isang rehistradong Google account upang makilahok."
+  },
+  "addc": {
+    "title": "Anti-Detox Detox Club",
+    "description": "Kumuha ng higit pang impormasyon tungkol sa Anti-Detox Detox Club"
+  },
+  "donation": {
+    "yourProceeds": "Ang Iyong Mga Kontribusyon",
+    "proceedsDescription": "Habang ipinagpapatuloy namin ang aming mga pagsisikap sa kapasidad at programa, ang iyong kontribusyon ay tumutulong na suportahan ang aming mga pagsisikap, subukan, bumuo, at panatilihin ang mga programang \"third-place\" na ito. Bawat kontribusyon na ginawa, tinatanong din namin ang mga nag-ambag kung gusto nila ng regular na mga update sa epekto ng kanilang mga kontribusyon.",
+    "partnerDescription": "Kung gusto mong makipagtulungan sa amin upang tumulong na bumuo ng mas mahusay, mas malusog, at mas ligtas na Inland Empire, maaari kang mag-ambag sa aming General Contribution Fund. Buwanang naglalaan kami ng 10% ng mga kontribusyong ibinigay upang magamit sa iba pang mga pagsisikap na nakalista sa ibaba.",
+    "additionalBenefits": "Karagdagang Benepisyo sa Pag-setup ng Buwanang, Quarterly, o Taunang Kontribusyon",
+    "directImpact": "Kung naghahanap ka ng direktang epekto sa isang partikular na pagsisikap na sinusuportahan namin, narito ang mga proyektong tinutulungan namin."
+  },
+  "footer": {
+    "nonprofitInfo": "Ang Active: Inland Empire Inc ay isang 501(c)(3) non-profit organization",
+    "ein": "Federal EIN 33-1746388 - Lahat ng donasyon ay tax-deductible",
+    "moreInfo": "Ang higit pang impormasyon ay available sa aming Guidestar page o sa pamamagitan ng pagbubukas ng inquiry sa"
+  },
+  "common": {
+    "scrollToContinue": "Mag-scroll upang magpatuloy",
+    "loading": "Naglo-load...",
+    "loadingInstagram": "Naglo-load ng Instagram post...",
+    "loadingFundraiser": "Naglo-load ng fundraiser...",
+    "ourBlog": "Aming Blog",
+    "activeInlandEmpire": "Active Inland Empire"
+  }
+}
