@@ -1,4 +1,3 @@
-import GofundmeWidget from "../gofundme";
 import style from "@/components/donation/donation.module.css";
 
 const DonationBody = () => {
@@ -23,8 +22,8 @@ const DonationBody = () => {
           Additional Benefits to Setting up Monthly, Quarterly, or Annual
           Contributions
         </h2>
-        {/* <table className={style.li}>
-          <ul>
+        <table className={style.li}>
+          {/* <ul>
             <li>Monthly Giveaway for Merch Drops</li>
           </ul>
           <ul>
@@ -32,9 +31,9 @@ const DonationBody = () => {
           </ul>
           <ul>
             <li>First Access to Test Events</li>
-          </ul>
-        </table> */}
-        <div className="py-10 px-10">
+          </ul> */}
+        </table>
+        <div className="py-10">
           <script
             async
             src="https://widgets.givebutter.com/latest.umd.cjs?acct=ZJkY9KxBnEd5eqgh&p=other"
@@ -45,9 +44,6 @@ const DonationBody = () => {
           If you are looking to make a direct impact with a specific effort we
           are supporting here are the projects we are assisting with.
         </p>
-        <div className="flex flex-col items-center padding-10">
-          <GofundmeWidget />
-        </div>
       </div>
     </div>
   );

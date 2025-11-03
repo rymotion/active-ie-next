@@ -1,6 +1,6 @@
 "use client";
 import Screen from "@/components/screen/screen";
-import SubStack from "./substack";
+import { SubStack } from "./substack";
 import { Analytics } from "@vercel/analytics/react";
 
 export default function Blog() {

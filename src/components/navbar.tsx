@@ -4,23 +4,20 @@ import Logo from "../assets/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <header className="text-white bg-black">
-      <nav
-        className="fixed justify-center
-  items-center w-full h-500 shadow-xl bg-black"
-      >
-        <div>
-          <h1>ACTIVE INLAND EMPIRE</h1>
-        </div>
-        <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16 bg-black text-white">
-          <Link href="/">
+    <header className="bg-black text-white">
+      <nav className="fixed w-full h-24 shadow-xl bg-black">
+        <div className="header-menu items-center h-full w-full px-4 2xl:px-16 bg-black">
+          <button onClick={handleNav}>
+            <AiOutlineMenu size={25} />
+          </button>
+          <Link href="/" className="flex flex-row items-center">
             <Image
               src={Logo}
               alt="Logo"
@@ -28,55 +25,19 @@ const Navbar = () => {
               height="100"
               className="cursor-pointer"
               priority
-            ></Image>
+            />
+            <h2 className="text-2xl font-bold">Active Inland Empire</h2>
           </Link>
-          <div className="hidden sm:flex">
-            <ul className="hidden sm:flex">
-              <Link href="/">
-                <li className="ml-10 uppercase hover:border-b text-xl">Home</li>
-              </Link>
-              <Link href="/blog">
-                <li className="ml-10 uppercase hover:border-b text-xl">Blog</li>
-              </Link>
-              <Link href="/events">
-                <li className="ml-10 uppercase hover:border-b text-xl">
-                  Events
-                </li>
-              </Link>
-              {/* <Link href="/projects">
-              <li className="ml-10 uppercase hover:border-b text-xl">
-                Projects
-              </li>
-            </Link> */}
-              <Link href="https://activeie.myshopify.com">
-                <li className="ml-10 uppercase hover:border-b text-xl">
-                  Products
-                </li>
-              </Link>
-              <Link href="/contact">
-                <li className="ml-10 uppercase hover:border-b text-xl">
-                  Contact Us
-                </li>
-              </Link>
-              <Link href="/support">
-                <li className="mx-10 uppercase hover:border-b text-xl">
-                  Support Us
-                </li>
-              </Link>
-            </ul>
-          </div>
-          <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">
-            <AiOutlineMenu size={25} />
-          </div>
         </div>
+        {/* <NavMenu /> */}
         <div
           className={
             menuOpen
-              ? "fixed left-0 top-0 w-{65%} sm:hidden h-screen bg-[#FFFFFF] p-10 ease-in duration-450 bg-black"
+              ? "fixed left-0 top-0 w-{65%} h-screen bg-[#FFFFFF] p-10 ease-in duration-450 bg-black"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-450 bg-black"
           }
         >
-          <div className="flex w-full items-center justify-end">
+          <div className="flex w-full items-center justify-center">
             <div onClick={handleNav} className="cursor-pointer">
               <AiOutlineClose size={25} />
             </div>
@@ -107,17 +68,20 @@ const Navbar = () => {
                   Events
                 </li>
               </Link>
-              {/* <Link href="/projects">
-              <li className="py-4 cursor-pointer" onClick={() => setMenuOpen(false)}>
-                Projects
-              </li>
-            </Link> */}
-              <Link href="https://activeie.myshopify.com">
+              <Link href="/projects">
                 <li
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Products
+                  Projects
+                </li>
+              </Link>
+              <Link href="/products">
+                <li
+                  className="py-4 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Merch
                 </li>
               </Link>
               <Link href="/contact">
@@ -134,6 +98,21 @@ const Navbar = () => {
                   onClick={() => setMenuOpen(false)}
                 >
                   Support Us
+                </li>
+              </Link>
+              <Link href="/addc">
+                <li
+                  className="py-4 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <Image
+                    src={
+                      "https://cdn.shopify.com/s/files/1/0638/5536/2102/files/be-wave-sticker-band-aid-brand.png?v=1754035334"
+                    }
+                    alt="ADD"
+                    width={200}
+                    height={200}
+                  />
                 </li>
               </Link>
             </ul>
