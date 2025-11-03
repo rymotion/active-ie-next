@@ -10,7 +10,7 @@ export default function ScrollableVideoView({
   children,
   componentUrl,
 }: ScrollableVideoProps) {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [, setScrollPosition] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const scrollContentRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
