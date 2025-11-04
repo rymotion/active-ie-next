@@ -12,8 +12,10 @@ import ScrollableVideoView from "@/components/multi-media/scrollable_video";
 import BuyButton from "../products/products/buybutton";
 import PublicCalendar from "../events/calender";
 import SweatpalEvents from "@/components/events/sw_events";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <>
       <Analytics />
@@ -37,7 +39,7 @@ export default function Home() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="w-full">
                   <h2 className="text-xl font-semibold mb-6 text-center">
-                    Our Event Calendars
+                    {t('landing.eventCalendars')}
                   </h2>
                   <div className="w-full">
                     <PublicCalendar />
@@ -51,7 +53,19 @@ export default function Home() {
               {/* TODO implement a better way to convey projects */}
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-2xl font-bold text-center mb-8">
-                  Shop Active Inland Empire
+                  Ongoing Projects
+                </h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                  <GofundmeWidget />
+                </div>
+              </div>
+            </section>
+
+            <section className="py-12">
+              {/* TODO implement a better way to convey projects */}
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 className="text-2xl font-bold text-center mb-8">
+                  {t('landing.shopTitle')}
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                   <BuyButton
@@ -68,9 +82,8 @@ export default function Home() {
 
             <section className="py-12 bg-black">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-2xl font-bold text-center mb-8">Donate</h1>
+                <h1 className="text-2xl font-bold text-center mb-8">{t('landing.donate')}</h1>
                 <div className="flex justify-center">
-                  <GofundmeWidget />
                   <DonationBody />
                 </div>
               </div>
@@ -79,7 +92,7 @@ export default function Home() {
             <section className="py-12">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-2xl font-bold text-center mb-8">
-                  Volunteer
+                  {t('landing.volunteer')}
                 </h1>
                 <div className="flex justify-center">
                   <VolunteerInterestWidget />
@@ -90,7 +103,7 @@ export default function Home() {
             <section className="py-12 bg-black">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-2xl font-bold text-center mb-8">
-                  Read Our Blog
+                  {t('landing.readBlog')}
                 </h1>
                 <div className="flex justify-center">
                   <SubStackNibble />

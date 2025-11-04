@@ -23,8 +23,8 @@ export async function fetchArticles() {
         throw new Error(`Substack API error: ${response.status}`);
       }
     }
-    console.log(await response.json());
-    return NextResponse.json(await response.json());
+    const data = await response.json();
+    return NextResponse.json(data);
   } catch (error) {
     console.error("Error fetching Substack articles:", error);
     return NextResponse.json(
