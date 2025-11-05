@@ -1,5 +1,6 @@
 import { Locale } from '@/hooks/useTranslation';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const translations: Record<Locale, Record<string, any>> = {
   en: {
     nav: {

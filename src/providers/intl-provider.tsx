@@ -3,11 +3,11 @@
 import { NextIntlClientProvider } from "next-intl";
 import { ReactNode, useEffect, useState } from "react";
 import { LocaleProvider, useLocaleContext } from "@/contexts/locale-context";
-import { type Locale, defaultLocale } from "@/i18n/config";
+import { type Locale } from "@/i18n/config";
 
 type IntlProviderProps = {
   locale: string;
-  messages: Record<string, any>;
+  messages: Record<string, unknown>;
   children: ReactNode;
 };
 
@@ -17,7 +17,7 @@ function IntlContent({
   children,
 }: {
   initialLocale: Locale;
-  initialMessages: Record<string, any>;
+  initialMessages: Record<string, unknown>;
   children: ReactNode;
 }) {
   const { locale } = useLocaleContext();

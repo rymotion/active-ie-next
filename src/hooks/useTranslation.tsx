@@ -34,7 +34,8 @@ export function useTranslation() {
 // Translation provider props
 type TranslationProviderProps = {
   children: ReactNode;
-  translations: Record<Locale, Record<string, string>>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  translations: Record<Locale, Record<string, any>>;
 };
 
 // Translation provider component
@@ -63,18 +64,18 @@ export function TranslationProvider({
   // Translation function
   const t = (key: string): string => {
     const keys = key.split(".");
-    let value = translations[locale];
-    var retValue = "";
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let value: any = translations[locale];
 
     for (const k of keys) {
-      if (value && typeof value === "object") {
-        retValue = value[k].toString();
+      if (value && typeof value === "object" && k in value) {
+        value = value[k];
       } else {
         return key; // Return key if translation not found
       }
     }
 
-    return typeof value === "string" ? retValue : key;
+    return typeof value === "string" ? value : key;
   };
 
   const setLocale = (newLocale: Locale) => {
