@@ -1,5 +1,6 @@
 "use client";
 import Screen from "@/components/screen/screen";
+import { useTranslation } from "@/hooks/useTranslation";
 // import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import PublicCalendar from "../events/calender";
@@ -12,8 +13,10 @@ import { motion } from "framer-motion";
 import PublicCommentBoard from "../projects/public_comment_board";
 import ProjectFundingWidget from "../projects/bike_project_widget";
 import BikeProjectWindow from "../projects/bike_project_window";
+import BikeParkForm from "../projects/bike park form_b";
 
 export default function SpecialEvent() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   // useEffect(() => {
   //   const container = document.createElement("div");
@@ -67,9 +70,9 @@ export default function SpecialEvent() {
           </div> */}
           <section className="min-h-screen py-20 bg-black">
             <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
+              <h2 className="text-3xl font-bold mb-6">{t("specialEvent.joinOurCommunity")}</h2>
               <p className="text-xl mb-8">
-                Want to work our events or be a part of our organization?
+                {t("specialEvent.wantToWorkEvents")}
               </p>
               <VolunteerInterestWidget />
             </div>
@@ -77,11 +80,10 @@ export default function SpecialEvent() {
           <div className="flex-grow">
             <div className="text-center mb-6 sm:mb-8 w-full">
               <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">
-                Projects
+                {t("projects.title")}
               </h1>
               <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
-                These are our current ongoing projects and efforts across the
-                Inland Empire.
+                {t("projects.description")}
               </p>
             </div>
             <motion.section
@@ -91,7 +93,7 @@ export default function SpecialEvent() {
               className="w-full max-w-6xl mx-auto px-2 sm:px-0"
             >
               <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
-                Bike Ramp Project Update
+                {t("projects.bikeRampTitle")}
               </h2>
               <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
                 <div className="lg:col-span-7 xl:col-span-8">
@@ -104,16 +106,14 @@ export default function SpecialEvent() {
                 </div>
                 <div className="flex flex-col items-center justify-center mx-auto px-4">
                   <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
-                    Public Comment Board
+                    {t("projects.publicCommentTitle")}
                   </h2>
                   <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
-                    By selecting the pup-out window option from the image below
-                    you will be taken to the file hosted on Google Drive to
-                    provide feedback on the bike ramp project. Have a voice in
-                    the planning of the project. You must be signed in to a
-                    registered Google account to participate.
+                    We would love to have feedback on the bike ramp project. You
+                    must be signed in to a registered Google account to
+                    participate.
                   </p>
-                  <PublicCommentBoard />
+                  <BikeParkForm />
                 </div>
                 <div className="lg:col-span-12 xl:col-span-12">
                   <GofundmeWidget />
@@ -127,12 +127,12 @@ export default function SpecialEvent() {
               onClick={() => setOpen(true)}
               className="text-2xl font-bold bg-black text-white hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
             >
-              Click here to subscribe to our newsletter.
+              {t("specialEvent.clickToSubscribe")}
             </button>
           </div>
           <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
             <div>
-              <p>Our Event Calendar</p>
+              <p>{t("specialEvent.ourEventCalendar")}</p>
             </div>
             <PublicCalendar />
           </div>
@@ -146,11 +146,11 @@ export default function SpecialEvent() {
                   onClick={() => setOpen(false)}
                   aria-label="Close"
                 >
-                  {"Close"}
+                  {t("common.close")}
                 </button>
                 <div className="relative bg-black rounded-lg shadow-lg w-[95vw] max-w-4xl max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
                   <h2 className="text-lg md:text-2xl font-semibold mb-4 text-center">
-                    Newsletter Subscribe
+                    {t("specialEvent.newsletterSubscribe")}
                   </h2>
                   <NewsletterWidget />
                 </div>
