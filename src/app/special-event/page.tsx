@@ -10,7 +10,6 @@ import ACTVDialog from "@/components/dialog/dialog";
 import VolunteerInterestWidget from "../volunteer/volunteer_interest";
 import GofundmeWidget from "@/components/gofundme";
 import { motion } from "framer-motion";
-import PublicCommentBoard from "../projects/public_comment_board";
 import ProjectFundingWidget from "../projects/bike_project_widget";
 import BikeProjectWindow from "../projects/bike_project_window";
 import BikeParkForm from "../projects/bike park form_b";
