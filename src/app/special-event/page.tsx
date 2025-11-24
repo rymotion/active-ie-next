@@ -22,15 +22,6 @@ export default function SpecialEvent() {
       <Analytics />
       <Screen>
         <main>
-          <section className="min-h-screen py-20 bg-black">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl font-bold mb-6">{t("specialEvent.joinOurCommunity")}</h2>
-              <p className="text-xl mb-8">
-                {t("specialEvent.wantToWorkEvents")}
-              </p>
-              <VolunteerInterestWidget />
-            </div>
-          </section>
           <div className="flex-grow">
             <div className="text-center mb-6 sm:mb-8 w-full">
               <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">
@@ -75,6 +66,18 @@ export default function SpecialEvent() {
               </div>
             </motion.section>
           </div>
+          <section className="min-h-screen py-20 bg-black">
+            <div className="container mx-auto px-4 text-center">
+              <h2 className="text-3xl font-bold mb-6">
+                {t("specialEvent.joinOurCommunity")}
+              </h2>
+              <p className="text-xl mb-8">
+                {t("specialEvent.wantToWorkEvents")}
+              </p>
+              <VolunteerInterestWidget />
+            </div>
+          </section>
+
           {/* <AltGFMPoster /> */}
           <div className="flex justify-center">
             <button
