@@ -21,6 +21,16 @@ const Project = () => {
               Inland Empire.
             </p>
           </div>
+          <div className="flex flex-col items-center justify-center mx-auto px-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
+              Public Comment Board
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
+              We would love to have feedback on the bike ramp project. You must
+              be signed in to a registered Google account to participate.
+            </p>
+            <BikeParkForm />
+          </div>
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -38,17 +48,6 @@ const Project = () => {
                 <div className="w-full max-w-md">
                   <ProjectFundingWidget />
                 </div>
-              </div>
-              <div className="flex flex-col items-center justify-center mx-auto px-4">
-                <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
-                  Public Comment Board
-                </h2>
-                <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
-                  We would love to have feedback on the bike ramp project. You
-                  must be signed in to a registered Google account to
-                  participate.
-                </p>
-                <BikeParkForm />
               </div>
               <div className="lg:col-span-12 xl:col-span-12">
                 <GofundmeWidget />
