@@ -44,22 +44,27 @@ export default function SpecialEvent() {
                 <div className="lg:col-span-7 xl:col-span-8">
                   <BikeProjectWindow />
                 </div>
-                <div className="lg:col-span-5 xl:col-span-4 flex items-center justify-center">
-                  <div className="w-full max-w-md">
-                    <ProjectFundingWidget />
+
+                <div className="lg:col-span-5 xl:col-span-4 flex flex-col gap-8">
+                  <div className="flex flex-col items-center justify-center mx-auto px-4">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
+                      {t("projects.publicCommentTitle")}
+                    </h2>
+                    <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
+                      We would love to have feedback on the bike ramp project. You
+                      must be signed in to a registered Google account to
+                      participate.
+                    </p>
+                    <BikeParkForm />
+                  </div>
+
+                  <div className="flex items-center justify-center">
+                    <div className="w-full max-w-md">
+                      <ProjectFundingWidget />
+                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col items-center justify-center mx-auto px-4">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
-                    {t("projects.publicCommentTitle")}
-                  </h2>
-                  <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
-                    We would love to have feedback on the bike ramp project. You
-                    must be signed in to a registered Google account to
-                    participate.
-                  </p>
-                  <BikeParkForm />
-                </div>
+
                 <div className="lg:col-span-12 xl:col-span-12">
                   <GofundmeWidget />
                 </div>
@@ -87,7 +92,7 @@ export default function SpecialEvent() {
               {t("specialEvent.clickToSubscribe")}
             </button>
           </div>
-          <div className="flex flex-col min-h-screen min-w-screen justify-center items-center  w-full">
+          <div className="flex flex-col min-h-screen w-full justify-center items-center">
             <div>
               <p>{t("specialEvent.ourEventCalendar")}</p>
             </div>
@@ -96,7 +101,7 @@ export default function SpecialEvent() {
 
           {/* Modal Dialog */}
           <ACTVDialog open={open} setOpen={setOpen}>
-            <div className=" inset-0 z-50 items-center justify-center bg-black p-20">
+            <div className=" inset-0 z-50 items-center justify-center bg-black p-4 md:p-20">
               <div className="w-full flex-col min-h-screen flex items-center justify-center">
                 <button
                   className="text-2xl font-bold text-gray-400 hover:text-white bg-black hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
@@ -105,7 +110,7 @@ export default function SpecialEvent() {
                 >
                   {t("common.close")}
                 </button>
-                <div className="relative bg-black rounded-lg shadow-lg w-[95vw] max-w-4xl max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
+                <div className="relative bg-black rounded-lg shadow-lg w-full max-w-4xl mx-4 max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
                   <h2 className="text-lg md:text-2xl font-semibold mb-4 text-center">
                     {t("specialEvent.newsletterSubscribe")}
                   </h2>

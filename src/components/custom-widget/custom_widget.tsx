@@ -49,7 +49,7 @@ export default function ScrollVideoWidget({
       <video
         ref={videoRef}
         src={src}
-        style={{ width: "100%", position: "sticky", top: "20vh" }}
+        style={{ width: "100%", maxWidth: "100%", position: "sticky", top: "20vh" }}
         playsInline
         muted
         preload="auto"
