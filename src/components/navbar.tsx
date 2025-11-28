@@ -1,11 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../assets/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation();
+
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
@@ -26,15 +31,15 @@ const Navbar: React.FC = () => {
               className="cursor-pointer"
               priority
             />
-            <h2 className="text-2xl font-bold">Active Inland Empire</h2>
+            <h2 className="text-2xl font-bold">{t("nav.organizationName")}</h2>
           </Link>
         </div>
         {/* <NavMenu /> */}
         <div
           className={
             menuOpen
-              ? "fixed left-0 top-0 w-{65%} h-screen bg-[#FFFFFF] p-10 ease-in duration-450 bg-black"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-450 bg-black"
+              ? "fixed left-0 top-0 w-[65%] h-screen bg-[#FFFFFF] p-10 ease-in duration-500 bg-black"
+              : "fixed left-[-100%] top-0 p-10 ease-in duration-500 bg-black"
           }
         >
           <div className="flex w-full items-center justify-center">
@@ -49,7 +54,7 @@ const Navbar: React.FC = () => {
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Home
+                  {t("nav.home")}
                 </li>
               </Link>
               <Link href="/blog">
@@ -57,7 +62,7 @@ const Navbar: React.FC = () => {
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Blog
+                  {t("nav.blog")}
                 </li>
               </Link>
               <Link href="/events">
@@ -65,7 +70,7 @@ const Navbar: React.FC = () => {
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Events
+                  {t("nav.events")}
                 </li>
               </Link>
               <Link href="/projects">
@@ -73,7 +78,7 @@ const Navbar: React.FC = () => {
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Projects
+                  {t("nav.projects")}
                 </li>
               </Link>
               <Link href="/products">
@@ -81,7 +86,7 @@ const Navbar: React.FC = () => {
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Merch
+                  {t("nav.merch")}
                 </li>
               </Link>
               <Link href="/contact">
@@ -89,7 +94,7 @@ const Navbar: React.FC = () => {
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Contact Us
+                  {t("nav.contactUs")}
                 </li>
               </Link>
               <Link href="/support">
@@ -97,7 +102,7 @@ const Navbar: React.FC = () => {
                   className="py-4 cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Support Us
+                  {t("nav.supportUs")}
                 </li>
               </Link>
               <Link href="/addc">

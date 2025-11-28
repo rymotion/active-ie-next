@@ -1,21 +1,19 @@
 "use client";
 import Screen from "@/components/screen/screen";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Privacy() {
+  const { t } = useTranslation();
+  
   return (
     <>
       <div>
         <Screen>
-          <div className="flex flex-row">
-            All Active Inland Empire events will have photos and videos taken
-            during participation. Active Inland Empire reserves the right to
-            reuse and distribute material in our marketing, grant reporting, and
-            social media channels. Request for removal can be sent to
-            organization@activeie.org. Surveys and content written by willing
-            participants will remain confidential and will abide by California
-            privacy laws. No information provided through such surveys will be
-            retained long-term by Active Inland Empire. You will only be reached
-            out to by event and support profiles directly from the organization.
+          <div className="flex flex-col p-8">
+            <h1 className="text-3xl font-bold mb-6">{t("privacy.title")}</h1>
+            <p className="text-base leading-relaxed">
+              {t("privacy.content")}
+            </p>
           </div>
         </Screen>
       </div>

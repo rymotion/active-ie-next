@@ -62,19 +62,19 @@ export default function MarqueeWidget({
       {/* standard vertical widget */}
       <div className="sm:hidden">
         <div>{marquee}</div>
-        <div className="flex flex-wrap items-start padding-20px">
+        <div className="flex flex-wrap items-start p-5">
           {information}
         </div>
       </div>
       {/* standard widescreen  marquee widget */}
       <div
         className={
-          "flex flex-row items-center padding-20px hidden  sp:even sm:flex"
+          "flex flex-row items-center p-5 hidden sm:flex"
         }
       >
         {/* TODO: Add programs and efforts components */}
-        <div className="flex flex-wrap items-start padding-20">{marquee}</div>
-        <div className="flex flex-wrap items-start padding-20">
+        <div className="flex flex-wrap items-start p-5">{marquee}</div>
+        <div className="flex flex-wrap items-start p-5">
           {information}
         </div>
       </div>

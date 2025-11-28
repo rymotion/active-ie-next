@@ -1,18 +1,20 @@
 "use client";
 import Screen from "@/components/screen/screen";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Analytics } from "@vercel/analytics/react";
 
 import BuyButton from "./products/buybutton";
 
 export default function Products() {
+  const { t } = useTranslation();
+  
   return (
     <Screen>
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Products</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("products.title")}</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Help support Active Inland Empire and our mission to help build
-            community through sport, health, and wellness.
+            {t("products.description")}
           </p>
         </div>
       </div>

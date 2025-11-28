@@ -1,10 +1,13 @@
 "use client";
 import Screen from "@/components/screen/screen";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import { Analytics } from "@vercel/analytics/react";
 import { motion } from "framer-motion";
 
 export default function Project() {
+  const { t } = useTranslation();
+  
   return (
     <>
       <div>
@@ -15,10 +18,9 @@ export default function Project() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="flex flex-col items-center px-4 max-w-xl"
           >
-            <h1 className="text-2xl font-bold">Interested in Sponsorship?</h1>
+            <h1 className="text-2xl font-bold">{t("support.sponsorshipTitle")}</h1>
             <p>
-              In the health and wellness space and looking to grow your brand?
-              Expand with us!
+              {t("support.sponsorshipDescription")}
             </p>
             <motion.button
               initial={{ opacity: 0, y: 20 }}
@@ -29,7 +31,7 @@ export default function Project() {
                 (window.location.href = "mailto:sponsorships@active-ie.org")
               }
             >
-              Get in touch
+              {t("support.getInTouch")}
             </motion.button>
           </motion.div>
 

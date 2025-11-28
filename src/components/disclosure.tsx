@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function DisclosureBar() {
+  const { t } = useTranslation();
+  
   // Handle scroll events to detect when user is at the bottom
   useEffect(() => {
     // Load the member script
@@ -34,12 +37,11 @@ export default function DisclosureBar() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0">
             <div className="text-xs leading-5 text-gray-300">
               <p>
-                Active: Inland Empire Inc is a 501(c)(3) non-profit organization
+                {t("footer.nonprofitInfo")}
               </p>
-              <p>Federal EIN 33-1746388 - All donations are tax-deductible</p>
+              <p>{t("footer.ein")}</p>
               <p className="mt-1">
-                More information is available on our Guidestar page or by
-                opening an inquiry at{" "}
+                {t("footer.moreInfo")}{" "}
                 <a
                   href="mailto:organization@activeie.org"
                   className="text-blue-400 hover:text-blue-300 hover:underline"
