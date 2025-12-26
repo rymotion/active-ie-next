@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export default function EventWidget() {
   return (
-    <div className="event-widget w-full">
+    <div className="event-widget w-full px-5">
       <Script
         src="https://www.sweatpals.com/static/embed/event/checkout/script.js"
         strategy="afterInteractive"

@@ -165,5 +165,5 @@ export default function BuyButton({ componentId, productId }) {
     };
   }, []);
 
-  return <div id={componentId} ref={buyButtonRef} />;
+  return <div id={componentId} ref={buyButtonRef} className="px-5" />;
 }

@@ -5,7 +5,7 @@ export default function PublicCalendar() {
         width: "100%",
         maxWidth: "1200px",
         margin: "0 auto",
-        padding: "0 16px",
+        padding: "0 20px",
         boxSizing: "border-box",
       }}
     >

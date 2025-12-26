@@ -51,9 +51,7 @@ export default function SpecialEvent() {
                       {t("projects.publicCommentTitle")}
                     </h2>
                     <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
-                      We would love to have feedback on the bike ramp project. You
-                      must be signed in to a registered Google account to
-                      participate.
+                      {t("projects.publicCommentDescription")}
                     </p>
                     <BikeParkForm />
                   </div>

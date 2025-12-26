@@ -6,7 +6,7 @@ export default function PublicCommentBoard() {
   const [dimensions, setDimensions] = useState({
     width: "100%",
     height: "600px",
-    padding: 20, // padding in pixels
+    padding: 20,
   });
 
   useEffect(() => {

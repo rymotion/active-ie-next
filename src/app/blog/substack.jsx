@@ -30,7 +30,7 @@ export function SubStack() {
 
   return (
     <motion.div
-      className="max-w-4xl mx-auto py-8 px-4"
+      className="max-w-4xl mx-auto py-8 px-5"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.2 }}
@@ -107,7 +107,7 @@ export function SubStackNibble() {
 
   return (
     <motion.div
-      className="flex flex-col min-h-screen min-w-screen justify-center items-center h-full w-full px-20 max-w-4xl mx-auto py-8 px-4 sm:px-20 sm:flex-col sm:items-center sm:justify-center"
+      className="flex flex-col min-h-screen min-w-screen justify-center items-center h-full w-full max-w-4xl mx-auto py-8 px-5 sm:flex-col sm:items-center sm:justify-center"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.2 }}

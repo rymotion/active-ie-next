@@ -7,7 +7,7 @@ const GofundmeWidget = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
+    <div className="w-full max-w-4xl mx-auto px-5 py-4">
       {/* GoFundMe Widget Container - Exact embed code from GoFundMe */}
       <div
         className="gfm-embed"

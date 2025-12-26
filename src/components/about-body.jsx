@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const OrgContentBody = () => {
   return (
     <>
-      <div className="relative flex w-full h-full flex-col items-center overflow-hidden  ">
+      <div className="relative flex w-full h-full flex-col items-center overflow-hidden px-5">
         <CustomHeadlineWidget
           headline="Our Mission"
           headlineStyle={textBoxStyle.standard}

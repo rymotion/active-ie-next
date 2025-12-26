@@ -15,7 +15,7 @@ export const InstaWidgetMain = () => {
   }, []);
 
   return (
-    <div className="w-full h-full max-w-4xl mx-auto py-40">
+    <div className="w-full h-full max-w-4xl mx-auto py-40 px-5">
       {/* Desktop version - larger embed */}
       <div className="hidden md:block">
         <div className="flex justify-center">
@@ -64,7 +64,7 @@ export const InstaWidgetD2D = () => {
     };
   }, []);
   return (
-    <div className="w-full h-full max-w-4xl mx-auto py-40">
+    <div className="w-full h-full max-w-4xl mx-auto py-40 px-5">
       {/* Desktop version - larger embed */}
       <div className="hidden md:block">
         <div className="flex justify-center">

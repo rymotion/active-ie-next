@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 import BikeProjectWindow from "@/app/projects/bike_project_window.jsx";
 import BikeParkForm from "@/app/projects/bike park form_b.jsx";
 import GofundmeWidget from "@/components/gofundme.jsx";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Project = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Screen className="flex flex-col min-h-screen">
@@ -23,11 +26,10 @@ const Project = () => {
           </div>
           <div className="flex flex-col items-center justify-center mx-auto px-4">
             <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
-              Public Comment Board
+              {t("projects.publicCommentTitle")}
             </h2>
             <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
-              We would love to have feedback on the bike ramp project. You must
-              be signed in to a registered Google account to participate.
+              {t("projects.publicCommentDescription")}
             </p>
             <BikeParkForm />
           </div>

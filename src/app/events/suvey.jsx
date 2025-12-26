@@ -1,6 +1,6 @@
 export default function ScheduleSurvey() {
   return (
-    <div>
+    <div className="px-5">
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSe_QnSlhjyshpSxG9PYtYUS17Gc6IoXscuuv3n1ZWPISx3Tdw/viewform?embedded=true"
         width="100%"

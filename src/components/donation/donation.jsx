@@ -2,8 +2,8 @@ import style from "@/components/donation/donation.module.css";
 
 const DonationBody = () => {
   return (
-    <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
-      <div className="flex flex-col items-center px-4 p-20">
+    <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full px-5">
+      <div className="flex flex-col items-center p-20">
         <h1>Your Proceeds</h1>
         <p className="py-10">
           While we continue our capacity and program efforts, your contribution

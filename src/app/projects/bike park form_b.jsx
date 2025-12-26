@@ -1,9 +1,10 @@
 const BikeParkForm = () => {
   return (
-    <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
+    <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full px-5">
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSecKNJuCscv8xKOYxyxUY5KFA5k0r0oyMboYGwVfERDkKGmhg/viewform?embedded=true"
-        width="650"
+        width="100%"
+        style={{ maxWidth: 650 }}
         height="500"
         frameBorder="0"
         marginHeight="0"
