@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -23,10 +21,7 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*",
-        "./public/activeie/build/*"
-      ]
+      "@/*": ["./src/*", "./public/activeie/build/*"]
     }
   },
   "include": [
@@ -36,7 +31,5 @@
     "**/*.d.ts",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
