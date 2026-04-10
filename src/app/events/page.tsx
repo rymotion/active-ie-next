@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import ACTVDialog from "@/components/dialog/dialog";
 import SweatpalEvents from "@/components/events/sw_events";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import ScrollReveal from "@/components/animated/scroll-reveal";
 
 export default function Events() {
   const { t } = useTranslation();
@@ -23,11 +23,11 @@ export default function Events() {
             {t("events.surveyPrompt")}
           </p>
         </div>
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        <ScrollReveal
+          delay={0.2}
+          duration={0.7}
           className="flex justify-center"
+          as="section"
         >
           <button
             onClick={() => setOpen(true)}
@@ -35,7 +35,7 @@ export default function Events() {
           >
             {t("events.takeSurvey")}
           </button>
-        </motion.section>
+        </ScrollReveal>
 
         {/* Modal Dialog */}
         <ACTVDialog open={open} setOpen={setOpen}>
@@ -58,11 +58,11 @@ export default function Events() {
           </div>
         </ACTVDialog>
 
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        <ScrollReveal
+          delay={0.2}
+          duration={0.7}
           className="page-width flex-col min-h-screen win-w-screen justify-center items-center w-full"
+          as="section"
         >
           <h1 className="page-width flex-col h-[10vh] items-center justify-center items-center text-2xl font-bold">
             {t("events.title")}
@@ -73,7 +73,7 @@ export default function Events() {
             </h2>
             <PublicCalendar />
           </div>
-        </motion.section>
+        </ScrollReveal>
       </Screen>
     </>
   );

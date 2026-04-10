@@ -2,8 +2,8 @@
 import Screen from "@/components/screen/screen";
 import { Analytics } from "@vercel/analytics/react";
 import ProjectFundingWidget from "./bike_project_widget.jsx";
-import { motion } from "framer-motion";
 import BikeProjectWindow from "@/app/projects/bike_project_window.jsx";
+import ScrollReveal from "@/components/animated/scroll-reveal";
 import BikeParkForm from "@/app/projects/bike park form_b.jsx";
 import GofundmeWidget from "@/components/gofundme.jsx";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -33,11 +33,11 @@ const Project = () => {
             </p>
             <BikeParkForm />
           </div>
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+          <ScrollReveal
+            delay={0.2}
+            duration={0.7}
             className="w-full max-w-6xl mx-auto px-2 sm:px-0"
+            as="section"
           >
             <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
               Bike Ramp Project Update
@@ -55,7 +55,7 @@ const Project = () => {
                 <GofundmeWidget />
               </div>
             </div>
-          </motion.section>
+          </ScrollReveal>
         </div>
         <Analytics />
       </Screen>

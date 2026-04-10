@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import ACTVDialog from "@/components/dialog/dialog";
 import VolunteerInterestWidget from "../volunteer/volunteer_interest";
 import GofundmeWidget from "@/components/gofundme";
-import { motion } from "framer-motion";
+import ScrollReveal from "@/components/animated/scroll-reveal";
 import ProjectFundingWidget from "../projects/bike_project_widget";
 import BikeProjectWindow from "../projects/bike_project_window";
 import BikeParkForm from "../projects/bike park form_b";
@@ -31,11 +31,11 @@ export default function SpecialEvent() {
                 {t("projects.description")}
               </p>
             </div>
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+            <ScrollReveal
+              delay={0.2}
+              duration={0.7}
               className="w-full max-w-6xl mx-auto px-2 sm:px-0"
+              as="section"
             >
               <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
                 {t("projects.bikeRampTitle")}
@@ -67,7 +67,7 @@ export default function SpecialEvent() {
                   <GofundmeWidget />
                 </div>
               </div>
-            </motion.section>
+            </ScrollReveal>
           </div>
           <section className="min-h-screen py-20 bg-black">
             <div className="container mx-auto px-4 text-center">

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import ScrollReveal from "@/components/animated/scroll-reveal";
 
 // This creates a custom headlining widget that will have a slight animation on user interaction
 export default function CustomHeadlineWidget({
@@ -25,13 +25,13 @@ export default function CustomHeadlineWidget({
   return (
     <section>
       <div style={headlineStyle}>
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        <ScrollReveal
+          delay={0.2}
+          duration={0.7}
+          as="h1"
         >
           {headline}
-        </motion.h1>
+        </ScrollReveal>
       </div>
       <div style={bodyStyle}>
         <div className="flex flex-col items-center justify-center">{body}</div>

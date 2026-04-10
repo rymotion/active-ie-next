@@ -12,6 +12,7 @@ import ScrollableVideoView from "@/components/multi-media/scrollable_video";
 import BuyButton from "../products/products/buybutton";
 import PublicCalendar from "../events/calender";
 import SweatpalEvents from "@/components/events/sw_events";
+import ScrollReveal from "@/components/animated/scroll-reveal";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Home() {
@@ -30,11 +31,11 @@ export default function Home() {
           </ScrollableVideoView>
 
           <div className="w-full">
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+            <ScrollReveal
+              delay={0.2}
+              duration={0.7}
               className="w-full py-12"
+              as="section"
             >
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="w-full">
@@ -47,7 +48,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </motion.section>
+            </ScrollReveal>
 
             <section className="py-12">
               {/* TODO implement a better way to convey projects */}

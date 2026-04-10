@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import SweatPalsLogo from "@/assets/vendors/sweatpals-logo.svg";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import ScrollReveal from "@/components/animated/scroll-reveal";
 
 export default function SweatpalEvents() {
   const calendarContainerRef = useRef<HTMLDivElement>(null);
@@ -80,21 +80,20 @@ export default function SweatpalEvents() {
     <section className="w-full px-[10px] max-w-[100vw] box-border overflow-hidden">
       <Analytics />
       <div className="w-full max-w-[100%] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        <ScrollReveal
+          delay={0.2}
+          duration={0.7}
           className="flex flex-col items-center justify-center py-10 w-full"
+          as="div"
         >
           <h1 className="text-2xl font-bold text-white mb-4">
             Our SweatPals Events Calendar
           </h1>
           <Image src={SweatPalsLogo} alt="SweatPals Logo" />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        </ScrollReveal>
+        <ScrollReveal
+          delay={0.2}
+          duration={0.7}
           ref={calendarContainerRef}
           className="flex w-full justify-center items-start py-10 relative"
           style={{
@@ -102,7 +101,7 @@ export default function SweatpalEvents() {
             minHeight: `${containerHeight}px`,
             transition: "min-height 0.3s ease-in-out",
           }}
-        ></motion.div>
+        ></ScrollReveal>
       </div>
     </section>
   );
