@@ -1,12 +1,69 @@
-.parent {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  flex-direction: row;
+.sweatpals-events-section {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: clamp(0.75rem, 3vw, 2rem);
+  box-sizing: border-box;
+  overflow-x: clip;
+  background-color: #000000;
 }
 
-.child {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+.sweatpals-events-header {
+  padding-block: clamp(1.5rem, 4vw, 2.5rem);
+  color: #ff0000;
+}
+
+.sweatpals-events-embed-host {
+  width: 100%;
+  min-width: 0;
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  padding-block: clamp(1rem, 3vw, 2.5rem);
+  background-color: #000000;
+}
+
+.sweatpal-embed-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+  min-height: clamp(18rem, 52vh, 28rem);
+  overflow-x: clip;
+  overflow-y: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  background-color: #000000;
+}
+
+/* Sweatpals injects a root node and sometimes an iframe */
+.sweatpal-embed-wrapper > * {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.sweatpal-embed-wrapper iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  border: 0;
+}
+
+@media (min-width: 640px) {
+  .sweatpal-embed-wrapper {
+    min-height: clamp(22rem, 58vh, 36rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sweatpal-embed-wrapper {
+    min-height: clamp(26rem, 62vh, 42rem);
+    max-width: 72rem;
+  }
 }
