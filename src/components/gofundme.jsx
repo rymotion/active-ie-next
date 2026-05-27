@@ -1,26 +1,60 @@
 "use client";
 
-import Script from "next/script";
+import { useLayoutEffect, useRef } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
+import styles from "./gofundme.module.css";
+
+const GOFUNDME_WIDGET_URL =
+  "https://www.gofundme.com/f/axels-eagle-project-bike-ramps-for-rancho-cucamonga/widget/large?sharesheet=undefined&attribution_id=sl:36c9bb55-d95a-46ce-a8fa-197a857f6dcf";
+
+const GOFUNDME_SCRIPT_SRC = "https://www.gofundme.com/static/js/embed.js";
+
+const WIDGET_WIDTH = 250;
+const WIDGET_HEIGHT = 500;
 
 const GofundmeWidget = () => {
   const { t } = useTranslation();
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    // Mirror the raw HTML snippet as closely as possible:
+    // <div class="gfm-embed" data-url="..."></div>
+    // <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+
+    const existingScript = document.querySelector(
+      `script[src="${GOFUNDME_SCRIPT_SRC}"]`,
+    );
+
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src = GOFUNDME_SCRIPT_SRC;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   return (
     <div className="w-full max-w-4xl mx-auto px-5 py-4">
-      {/* GoFundMe Widget Container - Exact embed code from GoFundMe */}
-      <div
-        className="gfm-embed"
-        data-url="https://www.gofundme.com/f/axels-eagle-project-bike-ramps-for-rancho-cucamonga/widget/large?sharesheet=undefined&attribution_id=sl:36c9bb55-d95a-46ce-a8fa-197a857f6dcf"
-      />
+      <div className={styles.gofundmeWrapper}>
+        <div
+          ref={containerRef}
+          className={`gfm-embed ${styles.gfmEmbed}`}
+          data-url={GOFUNDME_WIDGET_URL}
+        >
+          {/* If GoFundMe's embed.js doesn't initialize (SPA/hydration/CSP),
+              this iframe still renders the exact "large" widget. */}
+          <iframe
+            title="GoFundMe fundraiser widget"
+            src={GOFUNDME_WIDGET_URL}
+            className={styles.gofundmeIframe}
+            width={WIDGET_WIDTH}
+            height={WIDGET_HEIGHT}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
 
-      {/* GoFundMe Script - loads and auto-initializes */}
-      <Script
-        src="https://www.gofundme.com/static/js/embed.js"
-        strategy="lazyOnload"
-      />
-
-      {/* Fallback link */}
       <div className="text-center mt-4">
         <a
           href="https://www.gofundme.com/f/axels-eagle-project-bike-ramps-for-rancho-cucamonga"

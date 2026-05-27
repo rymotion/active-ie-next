@@ -1,0 +1,45 @@
+.gofundmeWrapper {
+  width: 250px;
+  height: 500px;
+  max-width: 250px;
+  max-height: 500px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gfmEmbed {
+  width: 250px;
+  height: 500px;
+  max-width: 250px;
+  max-height: 500px;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.gofundmeIframe {
+  width: 250px;
+  height: 500px;
+  max-width: 250px;
+  max-height: 500px;
+  border: 0;
+  display: block;
+}
+
+.gofundmeIframe:focus {
+  outline: none;
+}
+
+.gfmEmbed iframe,
+.gfmEmbed [class*="gfm-media-widget"],
+.gfmEmbed iframe.gfm-media-widget {
+  width: 250px !important;
+  height: 500px !important;
+  max-width: 250px !important;
+  max-height: 500px !important;
+  border: 0;
+  display: block;
+}
