@@ -19,9 +19,6 @@ export default function Events() {
       <Screen>
         <div className="flex flex-col min-h-screen justify-center items-center w-full h-full">
           <SweatpalEvents />
-          <p className="max-w-xl text-center px-4">
-            {t("events.surveyPrompt")}
-          </p>
         </div>
         <motion.section
           initial={{ opacity: 0, y: 20 }}

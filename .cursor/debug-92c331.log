@@ -1,0 +1,2 @@
+{"sessionId":"92c331","runId":"pre-fix","hypothesisId":"H0","location":"src/components/gofundme.jsx","message":"GofundmeWidget mounted","data":{"hasWindow":true,"readyState":"interactive","widgetDivCount":1},"timestamp":1779817386579}
+{"sessionId":"92c331","runId":"pre-fix","hypothesisId":"H2","location":"src/components/gofundme.jsx","message":"GoFundMe embed.js loaded","data":{"widgetDivCount":1,"gfmGlobals":["gfmWidgetLoaded"]},"timestamp":1779817386581}
