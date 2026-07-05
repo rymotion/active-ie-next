@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        maroon: "#7B1113",
+        cream: "#F2EDE9",
       },
     },
   },
