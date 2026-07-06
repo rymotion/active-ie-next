@@ -1,5 +1,5 @@
 import "server-only";
-import { getSupabaseAdmin } from "@/lib/supabase/server";
+import { getSupabaseRead } from "@/lib/supabase/server";
 import { projects, type ProjectContent } from "@/content/projects";
 
 export type FundingNumbers = {
@@ -21,7 +21,7 @@ export async function getFundingNumbers(): Promise<
     bySlug[project.slug] = fallbackFor(project);
   }
 
-  const supabase = getSupabaseAdmin();
+  const supabase = getSupabaseRead();
   if (supabase) {
     const { data } = await supabase
       .from("funding_snapshots")
