@@ -7,71 +7,33 @@
   align-items: center;
   gap: 1rem;
 }
+
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --max-width-mobile: 100%;
-  --max-width-tablet: 100%;
-  --max-width-desktop: 100%;
-  --content-padding: 1rem;
-  max-width: 1920px;
+  /* Fluid horizontal gutter: 1rem on phones up to 6rem on very wide screens */
+  --gutter: clamp(1rem, 4vw, 6rem);
 }
 
-html {
-  font-family: var(--font-beba);
-  font-size: large;
-}
-
-/* Main content container - this won't affect the video in logo.tsx */
-main {
-  width: 100%;
-  max-width: var(--max-width-mobile);
-  margin: 0 auto;
-  padding: 0 var(--content-padding);
-  box-sizing: border-box;
-}
-
-/* Responsive constraints for content */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
-/* Responsive breakpoints */
-/* Tablet */
-@media (min-width: 640px) {
-  main {
-    --content-padding: 1.5rem;
-    --max-width-tablet: 100%;
-  }
+main {
+  width: 100%;
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-  main {
-    --content-padding: 2rem;
-    --max-width-desktop: 1440px;
-  }
-}
-
-/* Large Desktop */
-@media (min-width: 1280px) {
-  main {
-    --content-padding: 3rem;
-  }
+h1 {
+  font-family: var(--font-bebas), var(--font-geist-sans), sans-serif;
+  font-size: xx-large;
 }
 
 .hidden {
   opacity: 0;
   transition: all 1s;
-}
-
-@media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
 }
 
 /* Reset for specific elements that should be full width */
@@ -96,20 +58,23 @@ body {
   z-index: -1;
 }
 
-h1 {
-  font-family: var(--font-beba);
-  font-size: xx-large;
+/* Visible keyboard focus everywhere (WCAG 2.4.7) */
+:focus-visible {
+  outline: 2px solid #f2ede9;
+  outline-offset: 2px;
 }
 
-nav {
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  list-style-type: none;
-  background-color: #ffffff;
-  z-index: 999;
+@media (prefers-reduced-motion: reduce) {
+  .hidden {
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

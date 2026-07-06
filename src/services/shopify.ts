@@ -31,6 +31,7 @@ export interface Product {
   available: boolean;
   tags: string[];
   url: string;
+  currencyCode: string;
   collections: Array<{
     id: string;
     title: string;
@@ -197,17 +198,16 @@ export class ShopifyService {
   private shopifyStorefrontToken: string;
 
   private constructor() {
-    const url = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_URL;
-    const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_KEY;
+    // Missing env must not crash builds/pages — callers check isConfigured()
+    // and render a fallback (link to the hosted store) instead.
+    this.shopifyStorefrontUrl =
+      process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_URL ?? "";
+    this.shopifyStorefrontToken =
+      process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_KEY ?? "";
+  }
 
-    if (!url || !token) {
-      throw new Error(
-        "Missing Shopify environment variables. Please check your .env file."
-      );
-    }
-
-    this.shopifyStorefrontUrl = url;
-    this.shopifyStorefrontToken = token;
+  public isConfigured(): boolean {
+    return Boolean(this.shopifyStorefrontUrl && this.shopifyStorefrontToken);
   }
 
   public static getInstance(): ShopifyService {
@@ -227,6 +227,9 @@ export class ShopifyService {
     query: string,
     variables: Record<string, unknown> = {}
   ): Promise<T> {
+    if (!this.isConfigured()) {
+      throw new Error("Shopify Storefront API is not configured.");
+    }
     try {
       const response = await fetch(this.shopifyStorefrontUrl, {
         method: "POST",
@@ -238,6 +241,8 @@ export class ShopifyService {
           query,
           variables,
         }),
+        // Server-side calls cache for 5 minutes.
+        next: { revalidate: 300, tags: ["shopify"] },
       });
 
       if (!response.ok) {
@@ -332,6 +337,8 @@ export class ShopifyService {
       price,
       available: productNode.availableForSale,
       tags: productNode.tags || [],
+      currencyCode:
+        productNode.priceRange?.minVariantPrice?.currencyCode || "USD",
       url:
         productNode.onlineStoreUrl ||
         `https://${this.shopifyStorefrontUrl.split("/")[2]}/products/${
@@ -412,8 +419,14 @@ export class ShopifyService {
                     id
                     title
                     availableForSale
-                    price
-                    compareAtPrice
+                    price {
+                      amount
+                      currencyCode
+                    }
+                    compareAtPrice {
+                      amount
+                      currencyCode
+                    }
                     selectedOptions {
                       name
                       value
@@ -514,8 +527,14 @@ export class ShopifyService {
                 id
                 title
                 availableForSale
-                price
-                compareAtPrice
+                price {
+                  amount
+                  currencyCode
+                }
+                compareAtPrice {
+                  amount
+                  currencyCode
+                }
                 selectedOptions {
                   name
                   value
@@ -660,6 +679,8 @@ export class ShopifyService {
           descriptionHtml: "",
           variants: [],
           tags: [],
+          currencyCode:
+            productNode.priceRange?.minVariantPrice?.currencyCode || "USD",
           url: `https://${this.shopifyStorefrontUrl.split("/")[2]}/products/${
             productNode.handle
           }`,

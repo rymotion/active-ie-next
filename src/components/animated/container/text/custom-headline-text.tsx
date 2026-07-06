@@ -25,13 +25,15 @@ export default function CustomHeadlineWidget({
   return (
     <section>
       <div style={headlineStyle}>
-        <motion.h1
+        {/* h2: pages provide their own h1; this widget renders section headings */}
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
+          className="font-display text-title uppercase tracking-wide"
         >
           {headline}
-        </motion.h1>
+        </motion.h2>
       </div>
       <div style={bodyStyle}>
         <div className="flex flex-col items-center justify-center">{body}</div>

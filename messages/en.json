@@ -1,0 +1,279 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "events": "Events",
+    "projects": "Projects",
+    "merch": "Merch",
+    "contactUs": "Contact Us",
+    "supportUs": "Support Us",
+    "organizationName": "Active Inland Empire",
+    "products": "Merch",
+    "contact": "Contact Us",
+    "support": "Support Us",
+    "contrastTherapy": "Contrast Therapy",
+    "volunteer": "Volunteer",
+    "addc": "ADDC",
+    "specialEvent": "Special Event",
+    "privacy": "Privacy Policy",
+    "dataPolicy": "Data Policy",
+    "sitemap": "Sitemap"
+  },
+  "landing": {
+    "eventCalendars": "Our Event Calendars",
+    "shopTitle": "Shop Active Inland Empire",
+    "donate": "Donate",
+    "volunteer": "Volunteer",
+    "readBlog": "Read Our Blog",
+    "contrastTherapyTitle": "Contrast Therapy Pop-Ups",
+    "contrastTherapyTeaser": "We bring mobile cold plunge and contrast therapy pop-up events to gyms, teams, and private events across the Inland Empire — equipment, power, ice, and on-site operation all handled for you.",
+    "contrastTherapyCta": "View packages & inquire",
+    "heroTagline": "Building community through sport, health, and wellness — across the Inland Empire.",
+    "missionLabel": "Our Mission",
+    "sectionsAria": "Page sections",
+    "missionBody": "To build community by creating, cultivating, and promoting health and wellness programs with a low financial barrier of entry in the Inland Empire. At Active Inland Empire we aim to foster a “third place” with local business partners, city governments, and community-led efforts to make a safer Southern California region."
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Help support Active Inland Empire and our mission to help build community through sport, health, and wellness.",
+    "soldOut": "Sold out",
+    "shopAll": "Shop all merch",
+    "unavailable": "Our shop is taking a quick breather.",
+    "visitStore": "Visit our Shopify store"
+  },
+  "events": {
+    "title": "Join Our Events",
+    "ourCalendar": "Our Event Calendar",
+    "sweatpalsCalendar": "Our SweatPals Events Calendar",
+    "surveyPrompt": "We want to hear from you, the community, on how we can best serve you and have our in-person events. By clicking the button below, we can learn how to better serve you to support you on your health journey.",
+    "takeSurvey": "Take the Program Schedule Survey",
+    "surveyTitle": "Program Schedule Survey",
+    "close": "Close"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "These are our current ongoing projects and efforts across the Inland Empire.",
+    "bikeRampTitle": "Bike Ramp Project Update",
+    "publicCommentTitle": "Public Comment Board",
+    "publicCommentDescription": "Let us know what we should add to the bike park with the comment form below.",
+    "items": {
+      "bikeRamps": {
+        "hook": "Build Bike Ramps for Rancho Cucamonga",
+        "summary": "Axel's Eagle Scout project is bringing free public bike ramps to Rancho Cucamonga — a safe place for local kids to ride, built by the community.",
+        "story": "Led by Scout Axel with support from Active Inland Empire, this project turns donated lumber and volunteer weekends into ramps every rider can use — free, forever. Your donation buys materials and safety gear, and you can tell the city what you want in the bike park through the public comment board below.",
+        "cta": "Donate on GoFundMe",
+        "cardCta": "See the project",
+        "shareText": "Help build free public bike ramps in Rancho Cucamonga with Active Inland Empire!"
+      },
+      "generalFund": {
+        "hook": "Power the Next Community Event",
+        "summary": "The General Fund covers permits, equipment, ice, and insurance so our health and wellness events stay free or low-cost for everyone.",
+        "story": "Every month we allocate contributions across our programs — community rides, contrast therapy pop-ups, and new “third place” experiments. Contributors can opt into impact updates, so you see exactly what your support made happen.",
+        "cta": "Open the donation form",
+        "cardCta": "Support the fund",
+        "shareText": "Support free community health and wellness events in the Inland Empire!"
+      }
+    }
+  },
+  "addc": {
+    "title": "Ritual Wellness",
+    "description": "Get more information about Ritual Wellness"
+  },
+  "donation": {
+    "yourProceeds": "Your Proceeds",
+    "proceedsDescription": "While we continue our capacity and program efforts, your contribution helps support our efforts, test, build, and sustain these \"third-place\" program. Every contribution made we also ask contributors if they want regular updates on the impact their proceeds made.",
+    "partnerDescription": "If you want to partner with us to help build a better, healthier, and safer Inland Empire you can contribute to our General Contribution Fund. Monthly we look to allocate 10% of the proceeds given to be used on the other efforts listed below.",
+    "additionalBenefits": "Additional Benefits to Setting up Monthly, Quarterly, or Annual Contributions",
+    "directImpact": "If you are looking to make a direct impact with a specific effort we are supporting here are the projects we are assisting with."
+  },
+  "contact": {
+    "inquiries": "Inquiries:",
+    "email": "organization@activeie.org"
+  },
+  "support": {
+    "sponsorshipTitle": "Interested in Sponsorship?",
+    "sponsorshipDescription": "In the health and wellness space and looking to grow your brand? Expand with us!",
+    "getInTouch": "Get in touch"
+  },
+  "volunteer": {
+    "description": "Want to work our events or be a part of our organization? Fill out the form below to express your interest."
+  },
+  "footer": {
+    "nonprofitInfo": "Active: Inland Empire Inc is a 501(c)(3) non-profit organization",
+    "ein": "Federal EIN 33-1746388 - All donations are tax-deductible",
+    "moreInfo": "More information is available on our Guidestar page or by opening an inquiry at",
+    "aboutHeading": "About",
+    "exploreHeading": "Explore",
+    "legalHeading": "Legal & Language",
+    "partnersHeading": "Partners",
+    "manageCookies": "Manage cookies",
+    "guidestarAlt": "Guidestar Transparency Seal"
+  },
+  "common": {
+    "scrollToContinue": "Scroll to continue",
+    "loading": "Loading...",
+    "loadingInstagram": "Loading Instagram post...",
+    "loadingFundraiser": "Loading fundraiser...",
+    "ourBlog": "Our Blog",
+    "activeInlandEmpire": "Active Inland Empire",
+    "viewOnGofundme": "View on GoFundMe",
+    "close": "Close",
+    "home": "Home",
+    "language": "Language",
+    "notFound": "This page could not be found.",
+    "menu": "Menu"
+  },
+  "burnchart": {
+    "bikeParkFunding": "Bike Park Funding",
+    "goalCappedAt20k": "Goal (Capped at $20k)",
+    "amountRaised": "Amount Raised",
+    "currentTotal": "Current Total",
+    "goal": "Goal",
+    "fundingSourcesBreakdown": "Funding Sources Breakdown",
+    "government": "Government",
+    "grants": "Grants",
+    "fundraising": "Fundraising",
+    "sponsors": "Sponsors",
+    "dashboardNote": "Note: This dashboard gets regular updates every 12-24 hours."
+  },
+  "specialEvent": {
+    "joinOurCommunity": "Join Our Community",
+    "wantToWorkEvents": "Want to work our events or be a part of our organization?",
+    "clickToSubscribe": "Click here to subscribe to our newsletter.",
+    "newsletterSubscribe": "Newsletter Subscribe",
+    "ourEventCalendar": "Our Event Calendar",
+    "popOutWindowDescription": "By selecting the pup-out window option from the image below you will be taken to the file hosted on Google Drive to provide feedback on the bike ramp project. Have a voice in the planning of the project. You must be signed in to a registered Google account to participate."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "content": "All Active Inland Empire events will have photos and videos taken during participation. Active Inland Empire reserves the right to reuse and distribute material in our marketing, grant reporting, and social media channels. Request for removal can be sent to organization@activeie.org. Surveys and content written by willing participants will remain confidential and will abide by California privacy laws. No information provided through such surveys will be retained long-term by Active Inland Empire. You will only be reached out to by event and support profiles directly from the organization."
+  },
+  "contrastTherapy": {
+    "logoAlt": "Active Inland Empire shield logo",
+    "subtitle": "Contrast Therapy Services — Mobile Cold Plunge & Recovery",
+    "contactWebsite": "activeie.org",
+    "contactLocation": "Rancho Cucamonga, California",
+    "metaLine": "Pricing Sheet • Effective June 2026 • Prices valid 30 days from quote",
+    "intro": "Mobile contrast therapy — cold plunge and recovery setups delivered, set up, and operated at your location. Every package includes equipment, generator power, fuel, and ice. Choose on-site water (we pump from your source) or let us bring the water to you.",
+    "packagesHeading": "Packages (per event / per day)",
+    "pkgSingle": "Single Plunge",
+    "pkgParty": "Party Plunge",
+    "pkgCustom": "Custom / Large",
+    "gallonsSingle": "100 gallons",
+    "gallonsParty": "400 gallons",
+    "gallonsCustom": "400+ gallons",
+    "waterOnSiteCaption": "Water available on-site",
+    "weBringCaption": "We bring the water",
+    "customNoteLead": "Custom / Large events:",
+    "customNoteBody": "beyond 400 gallons, add $200 per additional 400-gallon increment. Large volumes include us bringing the water.",
+    "includesHeading": "What every package includes",
+    "includes1": "Delivery, setup & breakdown at your location",
+    "includes2": "Cold plunge / contrast therapy equipment rental",
+    "includes3": "On-site generator power for the full event",
+    "includes4": "Generator & pump fuel",
+    "includes5": "Ice & ice delivery, sized to your plunge volume",
+    "includes6": "On-site operation & water management during the event",
+    "waterHeading": "Water options",
+    "waterColOption": "Option",
+    "waterColMeaning": "What it means",
+    "waterColPricing": "Pricing",
+    "waterOnSiteOption": "Water on-site",
+    "waterOnSiteMeaning": "We fill on location.",
+    "waterOnSitePricing": "Base package price",
+    "waterBringOption": "We bring the water",
+    "waterBringMeaning": "No usable water at the venue. We haul water in by truck and trailer and fill on arrival.",
+    "waterBringPricing": "Base + $200",
+    "depositHeading": "Deposit & booking terms",
+    "depositTerms": "A 50% deposit of the total reserves your date; the balance is due the day of the event before setup. Deposits are refundable up to 7 days out, then may be applied to a rescheduled date.",
+    "depositColPackage": "Package",
+    "depositColTotal": "Total",
+    "depositColDeposit": "50% deposit",
+    "depositColBalance": "Balance due",
+    "depositRowSingleOnSite": "Single Plunge — on-site water",
+    "depositRowSingleBring": "Single Plunge — we bring water",
+    "depositRowPartyOnSite": "Party Plunge — on-site water",
+    "depositRowPartyBring": "Party Plunge — we bring water",
+    "finePrint": "Mileage beyond the local service area may add $0.29/mile.",
+    "videoComingSoon": "Video coming soon",
+    "photoComingSoon": "Photo coming soon",
+    "form": {
+      "heading": "Book your event / Inquire",
+      "intro": "Tell us about your event and we'll get back to you with availability and a quote.",
+      "requiredNote": "* Required fields",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "eventDateLabel": "Event date",
+      "eventLocationLabel": "Event location / city",
+      "packageLabel": "Package interest",
+      "messageLabel": "Message",
+      "optionSingle": "Single Plunge",
+      "optionParty": "Party Plunge",
+      "optionCustom": "Custom / Large",
+      "optionNotSure": "Not sure",
+      "errorNameRequired": "Please enter your name.",
+      "errorEmailRequired": "Please enter your email address.",
+      "errorEmailInvalid": "Please enter a valid email address.",
+      "errorMessageRequired": "Please include a short message about your event.",
+      "submit": "Send inquiry",
+      "sending": "Sending…",
+      "successTitle": "Thank you — your inquiry has been sent.",
+      "successBody": "We'll get back to you as soon as possible at the email you provided.",
+      "errorSubmit": "Something went wrong and your inquiry was not sent. Please try again, or email us directly at"
+    }
+  },
+  "instagram": {
+    "title": "Follow the Movement",
+    "follow": "Follow @actv_ie",
+    "carouselAria": "Latest Instagram posts",
+    "postAlt": "Instagram post from Active Inland Empire",
+    "previous": "Previous posts",
+    "next": "Next posts",
+    "fallbackText": "See the latest from our community events, rides, and pop-ups on Instagram."
+  },
+  "funding": {
+    "ofGoal": "of {goal} goal",
+    "donorCount": "{count} donors so far",
+    "progressAria": "Fundraising progress",
+    "share": "Share this project",
+    "linkCopied": "Link copied!"
+  },
+  "consent": {
+    "ariaLabel": "Cookie consent",
+    "message": "We use analytics to understand which events matter to our community — participation data helps us fund the next one.",
+    "learnMore": "How we use data",
+    "accept": "Accept analytics",
+    "decline": "Decline"
+  },
+  "dataPolicy": {
+    "title": "Data Policy",
+    "intro": "Active Inland Empire is a community-first nonprofit. This page explains what data we collect at events and on this website, and how we use it to plan and fund future community programs.",
+    "collectHeading": "What we collect",
+    "collectBody": "Website analytics: ContentSquare session analytics (only with your consent) and Vercel's cookieless page statistics. Event data: registrations and attendance through SweatPals. Forms: what you submit in inquiry forms (name, email, message). Newsletter: your email address through Substack.",
+    "whyHeading": "Why we collect it",
+    "whyBody": "Attendance and engagement numbers show us which programs matter to the community. We use aggregated analytics in grant applications and sponsorship pitches — real participation data is how we fund the next event. We never sell personal data.",
+    "retentionHeading": "How long we keep it",
+    "retentionBody": "Aggregated statistics are kept indefinitely. Session-level analytics follow ContentSquare's 13-month retention. Inquiry emails are kept up to 24 months after our last exchange. You can ask us to delete your data at any time.",
+    "rightsHeading": "Your rights",
+    "rightsBody": "You can request access to, correction of, or deletion of your personal data. You can withdraw analytics consent at any time via “Manage cookies” in the footer, and unsubscribe from the newsletter with one click. EU/EEA visitors have these rights under the GDPR; California residents under the CCPA.",
+    "cookiesHeading": "Cookies we use",
+    "cookiesBody": "aie-consent — remembers your analytics choice (1 year). NEXT_LOCALE — remembers your language. ContentSquare analytics cookies — set only after you accept.",
+    "contactHeading": "Contact",
+    "contactBody": "Questions or requests about your data? Email us and we'll respond within 30 days.",
+    "contactEmailLabel": "Data requests:"
+  },
+  "sitemapPage": {
+    "title": "Sitemap",
+    "description": "Every page on this website, grouped by section.",
+    "sections": {
+      "main": "Main",
+      "getInvolved": "Get Involved",
+      "programs": "Programs",
+      "legal": "Legal"
+    }
+  },
+  "meta": {
+    "siteTitle": "Active Inland Empire",
+    "siteDescription": "Active Inland Empire is the nonprofit building community through sport, lowering financial barriers to participate in sports, health, and wellness activities."
+  }
+}

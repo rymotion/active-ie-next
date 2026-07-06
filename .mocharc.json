@@ -1,0 +1,7 @@
+{
+  "require": ["tsx/cjs", "test/setup.ts"],
+  "extensions": ["ts", "tsx"],
+  "spec": "test/**/*.test.{ts,tsx}",
+  "node-option": ["import=tsx"],
+  "timeout": 5000
+}

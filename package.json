@@ -10,7 +10,7 @@
     "test": "mocha",
     "test:watch": "mocha --watch",
     "test:coverage": "c8 mocha",
-    "translations:check": "tsx scripts/extract-missing-translations.ts",
+    "translations:check": "node scripts/check-messages.mjs",
     "translations:help": "cat scripts/TRANSLATION_WORKFLOW.md"
   },
   "dependencies": {
@@ -34,18 +34,27 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/chai": "^5.2.3",
+    "@types/jsdom": "^28.0.3",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
+    "chai": "^6.2.2",
     "eslint": "^9",
-    "eslint-plugin-unused-imports": "^4.1.4",
     "eslint-config-next": "15.1.6",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "jsdom": "^27.0.1",
+    "mocha": "^11.7.6",
     "postcss": "^8",
     "postcss-import": "^16.1.1",
     "svelte": "^5.20.2",
     "svelte-loader": "^3.2.4",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.23.0",
     "typescript": "^5",
     "webpack": "^5.98.0"
   }

@@ -1,0 +1,279 @@
+{
+  "nav": {
+    "home": "Tahanan",
+    "blog": "Blog",
+    "events": "Mga Kaganapan",
+    "projects": "Mga Proyekto",
+    "merch": "Mga Produkto",
+    "contactUs": "Makipag-ugnayan",
+    "supportUs": "Suportahan Kami",
+    "organizationName": "Active Inland Empire",
+    "products": "Merch",
+    "contact": "Makipag-ugnayan",
+    "support": "Suportahan Kami",
+    "contrastTherapy": "Contrast Therapy",
+    "volunteer": "Magboluntaryo",
+    "addc": "ADDC",
+    "specialEvent": "Espesyal na Kaganapan",
+    "privacy": "Patakaran sa Privacy",
+    "dataPolicy": "Patakaran sa Datos",
+    "sitemap": "Mapa ng Site"
+  },
+  "landing": {
+    "eventCalendars": "Aming Mga Kalendaryo ng Kaganapan",
+    "shopTitle": "Bumili sa Active Inland Empire",
+    "donate": "Mag-donate",
+    "volunteer": "Magboluntaryo",
+    "readBlog": "Basahin ang Aming Blog",
+    "contrastTherapyTitle": "Contrast Therapy Pop-Ups",
+    "contrastTherapyTeaser": "Nagdadala kami ng mobile cold plunge at contrast therapy pop-up events sa mga gym, team, at pribadong kaganapan sa buong Inland Empire — kagamitan, kuryente, yelo, at operasyon sa site, kami na ang bahala.",
+    "contrastTherapyCta": "Tingnan ang mga package at magtanong",
+    "heroTagline": "Bumubuo ng komunidad sa pamamagitan ng isports, kalusugan, at wellness sa buong Inland Empire.",
+    "missionLabel": "Aming Misyon",
+    "sectionsAria": "Mga seksyon ng pahina",
+    "missionBody": "Bumuo ng komunidad sa pamamagitan ng paglikha, pagpapaunlad, at pagtataguyod ng mga programa sa kalusugan at wellness na may mababang hadlang sa pananalapi sa Inland Empire. Sa Active Inland Empire, layunin naming magpaunlad ng isang “third place” kasama ang mga lokal na negosyo, pamahalaang lungsod, at mga pagsisikap na pinamumunuan ng komunidad para sa mas ligtas na rehiyon ng Southern California."
+  },
+  "products": {
+    "title": "Aming Mga Produkto",
+    "description": "Tumulong na suportahan ang Active Inland Empire at ang aming misyon na bumuo ng komunidad sa pamamagitan ng palakasan, kalusugan, at wellness.",
+    "soldOut": "Ubos na",
+    "shopAll": "Tingnan ang lahat ng merch",
+    "unavailable": "Pansamantalang nagpapahinga ang aming tindahan.",
+    "visitStore": "Bisitahin ang aming Shopify store"
+  },
+  "events": {
+    "title": "Sumali sa Aming Mga Kaganapan",
+    "ourCalendar": "Aming Kalendaryo ng Kaganapan",
+    "sweatpalsCalendar": "Aming SweatPals Kalendaryo ng Kaganapan",
+    "surveyPrompt": "Gusto naming marinig mula sa iyo, ang komunidad, kung paano kami makakapaglingkod sa iyo nang mas mahusay at magkaroon ng aming mga personal na kaganapan. Sa pag-click sa button sa ibaba, matututunan namin kung paano ka mas mahusay na paglingkuran upang suportahan ka sa iyong paglalakbay sa kalusugan.",
+    "takeSurvey": "Kunin ang Survey ng Iskedyul ng Programa",
+    "surveyTitle": "Survey ng Iskedyul ng Programa",
+    "close": "Isara"
+  },
+  "projects": {
+    "title": "Mga Proyekto",
+    "description": "Ito ang aming kasalukuyang mga proyekto at pagsisikap sa buong Inland Empire.",
+    "bikeRampTitle": "Pagbabago sa Proyekto ng Rampa ng Bisikleta",
+    "publicCommentTitle": "Lupon ng Pampublikong Komento",
+    "publicCommentDescription": "Ipaalam sa amin kung ano ang dapat naming idagdag sa bike park sa pamamagitan ng form ng komento sa ibaba.",
+    "items": {
+      "bikeRamps": {
+        "hook": "Magtayo ng Bike Ramps para sa Rancho Cucamonga",
+        "summary": "Ang Eagle Scout project ni Axel ay magdadala ng libreng pampublikong bike ramps sa Rancho Cucamonga — isang ligtas na lugar para makapag-bike ang mga bata, na itinayo ng komunidad.",
+        "story": "Sa pangunguna ni Scout Axel at suporta ng Active Inland Empire, ginagawang ramps ang donadong kahoy at volunteer weekends — libre, habang-buhay. Ang iyong donasyon ay pambili ng materyales at safety gear, at maaari mong sabihin sa lungsod kung ano ang gusto mo sa bike park sa pamamagitan ng public comment board.",
+        "cta": "Mag-donate sa GoFundMe",
+        "cardCta": "Tingnan ang proyekto",
+        "shareText": "Tumulong magtayo ng libreng pampublikong bike ramps sa Rancho Cucamonga kasama ang Active Inland Empire!"
+      },
+      "generalFund": {
+        "hook": "Palakasin ang Susunod na Community Event",
+        "summary": "Sinasagot ng General Fund ang mga permit, kagamitan, yelo, at insurance para manatiling libre o abot-kaya ang aming mga health at wellness event.",
+        "story": "Bawat buwan, inilalaan namin ang mga kontribusyon sa aming mga programa — community rides, contrast therapy pop-ups, at mga bagong “third place” na eksperimento. Maaaring mag-opt in ang mga contributor sa impact updates para makita kung saan napunta ang kanilang suporta.",
+        "cta": "Buksan ang donation form",
+        "cardCta": "Suportahan ang pondo",
+        "shareText": "Suportahan ang libreng community health at wellness events sa Inland Empire!"
+      }
+    }
+  },
+  "addc": {
+    "title": "Ritual Wellness",
+    "description": "Kumuha ng higit pang impormasyon tungkol sa Ritual Wellness"
+  },
+  "donation": {
+    "yourProceeds": "Ang Iyong Mga Kontribusyon",
+    "proceedsDescription": "Habang ipinagpapatuloy namin ang aming mga pagsisikap sa kapasidad at programa, ang iyong kontribusyon ay tumutulong na suportahan ang aming mga pagsisikap, subukan, bumuo, at panatilihin ang mga programang \"third-place\" na ito. Bawat kontribusyon na ginawa, tinatanong din namin ang mga nag-ambag kung gusto nila ng regular na mga update sa epekto ng kanilang mga kontribusyon.",
+    "partnerDescription": "Kung gusto mong makipagtulungan sa amin upang tumulong na bumuo ng mas mahusay, mas malusog, at mas ligtas na Inland Empire, maaari kang mag-ambag sa aming General Contribution Fund. Buwanang naglalaan kami ng 10% ng mga kontribusyong ibinigay upang magamit sa iba pang mga pagsisikap na nakalista sa ibaba.",
+    "additionalBenefits": "Karagdagang Benepisyo sa Pag-setup ng Buwanang, Quarterly, o Taunang Kontribusyon",
+    "directImpact": "Kung naghahanap ka ng direktang epekto sa isang partikular na pagsisikap na sinusuportahan namin, narito ang mga proyektong tinutulungan namin."
+  },
+  "contact": {
+    "inquiries": "Mga Katanungan:",
+    "email": "organization@activeie.org"
+  },
+  "support": {
+    "sponsorshipTitle": "Interesado sa Sponsorship?",
+    "sponsorshipDescription": "Nasa larangan ng kalusugan at wellness at gustong palakasin ang iyong brand? Lumaki kasama namin!",
+    "getInTouch": "Makipag-ugnayan"
+  },
+  "volunteer": {
+    "description": "Gusto mo bang magtrabaho sa aming mga kaganapan o maging bahagi ng aming organisasyon? Punan ang form sa ibaba upang ipahayag ang iyong interes."
+  },
+  "footer": {
+    "nonprofitInfo": "Ang Active: Inland Empire Inc ay isang 501(c)(3) non-profit organization",
+    "ein": "Federal EIN 33-1746388 - Lahat ng donasyon ay tax-deductible",
+    "moreInfo": "Ang higit pang impormasyon ay available sa aming Guidestar page o sa pamamagitan ng pagbubukas ng inquiry sa",
+    "aboutHeading": "Tungkol",
+    "exploreHeading": "Tuklasin",
+    "legalHeading": "Legal at Wika",
+    "partnersHeading": "Mga Kasosyo",
+    "manageCookies": "Pamahalaan ang cookies",
+    "guidestarAlt": "Guidestar Transparency Seal"
+  },
+  "common": {
+    "scrollToContinue": "Mag-scroll upang magpatuloy",
+    "loading": "Naglo-load...",
+    "loadingInstagram": "Naglo-load ng Instagram post...",
+    "loadingFundraiser": "Naglo-load ng fundraiser...",
+    "ourBlog": "Aming Blog",
+    "activeInlandEmpire": "Active Inland Empire",
+    "viewOnGofundme": "Tingnan sa GoFundMe",
+    "close": "Isara",
+    "home": "Tahanan",
+    "language": "Wika",
+    "notFound": "Hindi mahanap ang pahinang ito.",
+    "menu": "Menu"
+  },
+  "burnchart": {
+    "bikeParkFunding": "Pagpopondo ng Bike Park",
+    "goalCappedAt20k": "Layunin (Limitado sa $20k)",
+    "amountRaised": "Halagang Nakolekta",
+    "currentTotal": "Kasalukuyang Kabuuan",
+    "goal": "Layunin",
+    "fundingSourcesBreakdown": "Detalye ng mga Pinagmumulan ng Pondo",
+    "government": "Gobyerno",
+    "grants": "Mga Grant",
+    "fundraising": "Pagkolekta ng Pondo",
+    "sponsors": "Mga Sponsor",
+    "dashboardNote": "Paalala: Ang dashboard na ito ay regular na nag-update bawat 12-24 oras."
+  },
+  "specialEvent": {
+    "joinOurCommunity": "Sumali sa Aming Komunidad",
+    "wantToWorkEvents": "Gusto mo bang magtrabaho sa aming mga kaganapan o maging bahagi ng aming organisasyon?",
+    "clickToSubscribe": "Mag-click dito upang mag-subscribe sa aming newsletter.",
+    "newsletterSubscribe": "Mag-subscribe sa Newsletter",
+    "ourEventCalendar": "Aming Kalendaryo ng Kaganapan",
+    "popOutWindowDescription": "Sa pagpili ng pop-out window option mula sa larawan sa ibaba, dadalhin ka sa file na naka-host sa Google Drive upang magbigay ng feedback sa bike ramp project. Magkaroon ng boses sa pagpaplano ng proyekto. Dapat kang naka-sign in sa isang rehistradong Google account upang makilahok."
+  },
+  "privacy": {
+    "title": "Patakaran sa Privacy",
+    "content": "Lahat ng mga kaganapan ng Active Inland Empire ay magkakaroon ng mga larawan at video na kinuha sa panahon ng paglahok. Ang Active Inland Empire ay naglalaan ng karapatan na muling gamitin at ipamahagi ang materyales sa aming marketing, grant reporting, at social media channels. Ang kahilingan para sa pag-alis ay maaaring ipadala sa organization@activeie.org. Ang mga survey at nilalaman na isinulat ng mga kusang kalahok ay mananatiling kumpidensyal at susundin ang mga batas sa privacy ng California. Walang impormasyong ibinigay sa pamamagitan ng mga survey na ito na itatago ng matagal ng Active Inland Empire. Makikipag-ugnayan lamang sa iyo ang mga profile ng kaganapan at suporta direkta mula sa organisasyon."
+  },
+  "contrastTherapy": {
+    "logoAlt": "Shield logo ng Active Inland Empire",
+    "subtitle": "Mga Serbisyo ng Contrast Therapy — Mobile Cold Plunge at Recovery",
+    "contactWebsite": "activeie.org",
+    "contactLocation": "Rancho Cucamonga, California",
+    "metaLine": "Listahan ng Presyo • Simula Hunyo 2026 • May bisa ang presyo sa loob ng 30 araw mula sa quote",
+    "intro": "Mobile contrast therapy — mga cold plunge at recovery setup na inihahatid, ini-set up, at pinapatakbo sa iyong lokasyon. Kasama sa bawat package ang kagamitan, kuryente mula sa generator, gasolina, at yelo. Piliin ang tubig mula sa site (magbobomba kami mula sa iyong pinagkukunan) o hayaang kami ang magdala ng tubig sa iyo.",
+    "packagesHeading": "Mga Package (bawat kaganapan / bawat araw)",
+    "pkgSingle": "Single Plunge",
+    "pkgParty": "Party Plunge",
+    "pkgCustom": "Custom / Malaki",
+    "gallonsSingle": "100 galon",
+    "gallonsParty": "400 galon",
+    "gallonsCustom": "400+ galon",
+    "waterOnSiteCaption": "May tubig sa mismong lugar",
+    "weBringCaption": "Kami ang magdadala ng tubig",
+    "customNoteLead": "Custom / malalaking kaganapan:",
+    "customNoteBody": "lampas sa 400 galon, magdagdag ng $200 para sa bawat karagdagang 400 galon. Kasama na sa malalaking volume ang pagdadala namin ng tubig.",
+    "includesHeading": "Ano ang kasama sa bawat package",
+    "includes1": "Paghahatid, pag-set up, at pag-baklas sa iyong lokasyon",
+    "includes2": "Rental ng cold plunge / contrast therapy equipment",
+    "includes3": "Generator power sa site sa buong kaganapan",
+    "includes4": "Gasolina para sa generator at bomba",
+    "includes5": "Yelo at paghahatid ng yelo, ayon sa laki ng iyong plunge",
+    "includes6": "Operasyon sa site at pamamahala ng tubig habang may kaganapan",
+    "waterHeading": "Mga opsyon sa tubig",
+    "waterColOption": "Opsyon",
+    "waterColMeaning": "Ano ang ibig sabihin",
+    "waterColPricing": "Presyo",
+    "waterOnSiteOption": "Tubig sa site",
+    "waterOnSiteMeaning": "Kami ang maglalagay ng tubig sa mismong lugar.",
+    "waterOnSitePricing": "Batayang presyo ng package",
+    "waterBringOption": "Kami ang magdadala ng tubig",
+    "waterBringMeaning": "Walang magagamit na tubig sa venue. Maghahakot kami ng tubig gamit ang truck at trailer at maglalagay pagdating.",
+    "waterBringPricing": "Base + $200",
+    "depositHeading": "Mga tuntunin sa deposito at booking",
+    "depositTerms": "Ang 50% deposito ng kabuuan ang nagre-reserba ng iyong petsa; ang balanse ay babayaran sa araw ng kaganapan bago ang setup. Ang deposito ay maaaring i-refund hanggang 7 araw bago ang kaganapan; pagkatapos nito, maaari itong ilipat sa bagong petsa.",
+    "depositColPackage": "Package",
+    "depositColTotal": "Kabuuan",
+    "depositColDeposit": "50% deposito",
+    "depositColBalance": "Balanseng babayaran",
+    "depositRowSingleOnSite": "Single Plunge — tubig sa site",
+    "depositRowSingleBring": "Single Plunge — kami ang magdadala ng tubig",
+    "depositRowPartyOnSite": "Party Plunge — tubig sa site",
+    "depositRowPartyBring": "Party Plunge — kami ang magdadala ng tubig",
+    "finePrint": "Ang milyahe lampas sa lokal na service area ay maaaring magdagdag ng $0.29 bawat milya.",
+    "videoComingSoon": "Malapit nang dumating ang video",
+    "photoComingSoon": "Malapit nang dumating ang larawan",
+    "form": {
+      "heading": "I-book ang iyong kaganapan / Magtanong",
+      "intro": "Ikuwento sa amin ang iyong kaganapan at babalikan ka namin tungkol sa availability at presyo.",
+      "requiredNote": "* Mga kinakailangang field",
+      "nameLabel": "Pangalan",
+      "emailLabel": "Email",
+      "phoneLabel": "Telepono",
+      "eventDateLabel": "Petsa ng kaganapan",
+      "eventLocationLabel": "Lokasyon ng kaganapan / lungsod",
+      "packageLabel": "Package na interesado ka",
+      "messageLabel": "Mensahe",
+      "optionSingle": "Single Plunge",
+      "optionParty": "Party Plunge",
+      "optionCustom": "Custom / Malaki",
+      "optionNotSure": "Hindi pa sigurado",
+      "errorNameRequired": "Pakilagay ang iyong pangalan.",
+      "errorEmailRequired": "Pakilagay ang iyong email address.",
+      "errorEmailInvalid": "Pakilagay ang wastong email address.",
+      "errorMessageRequired": "Pakilagay ang maikling mensahe tungkol sa iyong kaganapan.",
+      "submit": "Ipadala ang katanungan",
+      "sending": "Ipinapadala…",
+      "successTitle": "Salamat — naipadala na ang iyong katanungan.",
+      "successBody": "Babalikan ka namin sa lalong madaling panahon sa email na ibinigay mo.",
+      "errorSubmit": "May problemang naganap at hindi naipadala ang iyong katanungan. Pakisubukang muli, o mag-email nang direkta sa"
+    }
+  },
+  "instagram": {
+    "title": "Sundan ang Kilusan",
+    "follow": "I-follow ang @actv_ie",
+    "carouselAria": "Pinakabagong mga post sa Instagram",
+    "postAlt": "Instagram post mula sa Active Inland Empire",
+    "previous": "Mga nakaraang post",
+    "next": "Mga susunod na post",
+    "fallbackText": "Tingnan ang pinakabago mula sa aming mga community event, ride, at pop-up sa Instagram."
+  },
+  "funding": {
+    "ofGoal": "mula sa {goal} na layunin",
+    "donorCount": "{count} donor na",
+    "progressAria": "Progreso ng fundraising",
+    "share": "I-share ang proyektong ito",
+    "linkCopied": "Nakopya ang link!"
+  },
+  "consent": {
+    "ariaLabel": "Pahintulot sa cookies",
+    "message": "Gumagamit kami ng analytics para malaman kung aling mga event ang mahalaga sa aming komunidad — ang datos ng partisipasyon ang tumutulong pondohan ang susunod.",
+    "learnMore": "Paano namin ginagamit ang datos",
+    "accept": "Tanggapin ang analytics",
+    "decline": "Tanggihan"
+  },
+  "dataPolicy": {
+    "title": "Patakaran sa Datos",
+    "intro": "Ang Active Inland Empire ay isang nonprofit na nakatuon sa komunidad. Ipinapaliwanag ng pahinang ito kung anong datos ang kinokolekta namin sa mga event at sa website na ito, at kung paano ito ginagamit para magplano at magpondo ng mga susunod na programa.",
+    "collectHeading": "Ano ang kinokolekta namin",
+    "collectBody": "Website analytics: ContentSquare session analytics (kapag pumayag ka lang) at cookieless na istatistika ng Vercel. Datos ng event: mga rehistrasyon at attendance sa pamamagitan ng SweatPals. Mga form: ang isinusumite mo sa mga inquiry form (pangalan, email, mensahe). Newsletter: ang iyong email sa pamamagitan ng Substack.",
+    "whyHeading": "Bakit namin ito kinokolekta",
+    "whyBody": "Ipinapakita ng attendance at engagement kung aling mga programa ang mahalaga sa komunidad. Ginagamit namin ang pinagsama-samang analytics sa mga grant application at sponsorship pitch — ang totoong datos ng partisipasyon ang paraan namin para pondohan ang susunod na event. Hindi namin kailanman ibinebenta ang personal na datos.",
+    "retentionHeading": "Gaano katagal namin itong itinatago",
+    "retentionBody": "Ang pinagsama-samang istatistika ay itinatago nang walang taning. Ang session-level analytics ay sumusunod sa 13-buwang retention ng ContentSquare. Ang mga inquiry email ay itinatago hanggang 24 buwan pagkatapos ng aming huling palitan ng mensahe. Maaari mong hilingin na burahin ang iyong datos anumang oras.",
+    "rightsHeading": "Ang iyong mga karapatan",
+    "rightsBody": "Maaari kang humiling ng access, pagwawasto, o pagbura ng iyong personal na datos. Maaari mong bawiin ang pahintulot sa analytics anumang oras sa “Pamahalaan ang cookies” sa footer, at mag-unsubscribe sa newsletter sa isang click. Ang mga bisita mula sa EU/EEA ay may mga karapatang ito sa ilalim ng GDPR; ang mga residente ng California sa ilalim ng CCPA.",
+    "cookiesHeading": "Mga cookies na ginagamit namin",
+    "cookiesBody": "aie-consent — inaalala ang iyong pinili sa analytics (1 taon). NEXT_LOCALE — inaalala ang iyong wika. ContentSquare analytics cookies — itinatakda lang pagkatapos mong pumayag.",
+    "contactHeading": "Makipag-ugnayan",
+    "contactBody": "May mga tanong o kahilingan tungkol sa iyong datos? Mag-email sa amin at sasagot kami sa loob ng 30 araw.",
+    "contactEmailLabel": "Mga kahilingan sa datos:"
+  },
+  "sitemapPage": {
+    "title": "Mapa ng Site",
+    "description": "Lahat ng pahina ng website na ito, nakapangkat ayon sa seksyon.",
+    "sections": {
+      "main": "Pangunahin",
+      "getInvolved": "Makilahok",
+      "programs": "Mga Programa",
+      "legal": "Legal"
+    }
+  },
+  "meta": {
+    "siteTitle": "Active Inland Empire",
+    "siteDescription": "Ang Active Inland Empire ay ang nonprofit na bumubuo ng komunidad sa pamamagitan ng isports, na nagpapababa ng mga hadlang sa pananalapi para makalahok sa isports, kalusugan, at wellness."
+  }
+}

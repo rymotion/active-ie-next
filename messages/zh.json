@@ -1,0 +1,279 @@
+{
+  "nav": {
+    "home": "首页",
+    "blog": "博客",
+    "events": "活动",
+    "projects": "项目",
+    "merch": "周边商品",
+    "contactUs": "联系我们",
+    "supportUs": "支持我们",
+    "organizationName": "Active Inland Empire",
+    "products": "周边商店",
+    "contact": "联系我们",
+    "support": "支持我们",
+    "contrastTherapy": "冷热交替疗法",
+    "volunteer": "志愿服务",
+    "addc": "ADDC",
+    "specialEvent": "特别活动",
+    "privacy": "隐私政策",
+    "dataPolicy": "数据政策",
+    "sitemap": "网站地图"
+  },
+  "landing": {
+    "eventCalendars": "我们的活动日历",
+    "shopTitle": "选购 Active Inland Empire 周边",
+    "donate": "捐款",
+    "volunteer": "志愿服务",
+    "readBlog": "阅读我们的博客",
+    "contrastTherapyTitle": "冷热交替疗法快闪活动",
+    "contrastTherapyTeaser": "我们为内陆帝国地区的健身房、运动队和私人活动带来移动式冷水浸泡和冷热交替疗法快闪活动 — 设备、电力、冰块和现场运营全部由我们负责。",
+    "contrastTherapyCta": "查看套餐并咨询",
+    "heroTagline": "通过运动、健康与身心保健，在内陆帝国地区建设社区。",
+    "missionLabel": "我们的使命",
+    "sectionsAria": "页面部分",
+    "missionBody": "通过在内陆帝国地区创建、培育和推广低经济门槛的健康与身心保健项目来建设社区。Active Inland Empire 致力于与本地商户、市政府和社区主导的行动一起，打造一个“第三空间”，让南加州地区更加安全。"
+  },
+  "products": {
+    "title": "我们的产品",
+    "description": "支持 Active Inland Empire，助力我们通过运动、健康和身心福祉建设社区的使命。",
+    "soldOut": "已售罄",
+    "shopAll": "查看全部周边",
+    "unavailable": "商店正在短暂休整。",
+    "visitStore": "访问我们的 Shopify 商店"
+  },
+  "events": {
+    "title": "参加我们的活动",
+    "ourCalendar": "我们的活动日历",
+    "sweatpalsCalendar": "我们的 SweatPals 活动日历",
+    "surveyPrompt": "我们希望听到你——社区成员——的声音，了解我们如何更好地为你服务、如何举办线下活动。点击下方按钮，帮助我们了解怎样更好地支持你的健康之旅。",
+    "takeSurvey": "填写课程时间安排问卷",
+    "surveyTitle": "课程时间安排问卷",
+    "close": "关闭"
+  },
+  "projects": {
+    "title": "项目",
+    "description": "以下是我们目前在内陆帝国地区开展的项目和工作。",
+    "bikeRampTitle": "自行车坡道项目进展",
+    "publicCommentTitle": "公众意见板",
+    "publicCommentDescription": "通过下方的意见表，告诉我们你希望在自行车公园里增加什么。",
+    "items": {
+      "bikeRamps": {
+        "hook": "为 Rancho Cucamonga 建造自行车坡道",
+        "summary": "Axel 的鹰级童军项目将为 Rancho Cucamonga 带来免费的公共自行车坡道——由社区亲手建造，让孩子们有一个安全的骑行场所。",
+        "story": "在童军 Axel 的带领和 Active Inland Empire 的支持下，捐赠的木材和志愿者的周末劳动将变成人人可用的坡道——永久免费。你的捐款将用于购买材料和安全装备，你还可以通过下方的公众意见板告诉市政府你希望自行车公园有什么。",
+        "cta": "在 GoFundMe 上捐款",
+        "cardCta": "查看项目",
+        "shareText": "和 Active Inland Empire 一起，为 Rancho Cucamonga 建造免费的公共自行车坡道！"
+      },
+      "generalFund": {
+        "hook": "为下一场社区活动助力",
+        "summary": "普通基金用于支付许可证、设备、冰块和保险，让我们的健康与身心保健活动对所有人保持免费或低价。",
+        "story": "我们每月将捐款分配到各个项目——社区骑行、冷热交替疗法快闪活动，以及新的“第三空间”尝试。捐赠者可以选择接收影响力报告，清楚看到你的支持带来了什么。",
+        "cta": "打开捐款表单",
+        "cardCta": "支持基金",
+        "shareText": "支持内陆帝国地区免费的社区健康与身心保健活动！"
+      }
+    }
+  },
+  "addc": {
+    "title": "Ritual Wellness",
+    "description": "了解更多关于 Ritual Wellness 的信息"
+  },
+  "donation": {
+    "yourProceeds": "你的捐款去向",
+    "proceedsDescription": "在我们持续拓展能力和项目的过程中，你的捐助帮助我们开展工作，测试、建设并维持这些\"第三空间\"项目。每次收到捐助时，我们也会询问捐助者是否希望定期了解他们的捐款所产生的影响。",
+    "partnerDescription": "如果你想与我们携手，共同建设一个更美好、更健康、更安全的内陆帝国地区，可以向我们的一般捐助基金捐款。我们计划每月将所收捐款的 10% 用于下方列出的其他项目。",
+    "additionalBenefits": "设置每月、每季度或每年定期捐助的额外福利",
+    "directImpact": "如果你想为我们支持的某个具体项目做出直接贡献，以下是我们正在协助的项目。"
+  },
+  "contact": {
+    "inquiries": "咨询：",
+    "email": "organization@activeie.org"
+  },
+  "support": {
+    "sponsorshipTitle": "有兴趣成为赞助商？",
+    "sponsorshipDescription": "你在健康与身心福祉领域，想扩大品牌影响力？和我们一起成长！",
+    "getInTouch": "联系我们"
+  },
+  "volunteer": {
+    "description": "想在我们的活动中出力，或成为我们组织的一员？填写下方表格，告诉我们你的意向。"
+  },
+  "footer": {
+    "nonprofitInfo": "Active: Inland Empire Inc 是一家 501(c)(3) 非营利组织",
+    "ein": "联邦雇主识别号（EIN）33-1746388 - 所有捐款均可抵税",
+    "moreInfo": "更多信息请查阅我们的 Guidestar 页面，或发送咨询至",
+    "aboutHeading": "关于我们",
+    "exploreHeading": "浏览",
+    "legalHeading": "法律与语言",
+    "partnersHeading": "合作伙伴",
+    "manageCookies": "管理 Cookie",
+    "guidestarAlt": "Guidestar 透明度认证"
+  },
+  "common": {
+    "scrollToContinue": "向下滚动继续",
+    "loading": "加载中...",
+    "loadingInstagram": "正在加载 Instagram 帖子...",
+    "loadingFundraiser": "正在加载筹款活动...",
+    "ourBlog": "我们的博客",
+    "activeInlandEmpire": "Active Inland Empire",
+    "viewOnGofundme": "在 GoFundMe 上查看",
+    "close": "关闭",
+    "home": "首页",
+    "language": "语言",
+    "notFound": "找不到此页面。",
+    "menu": "菜单"
+  },
+  "burnchart": {
+    "bikeParkFunding": "自行车公园筹款",
+    "goalCappedAt20k": "目标（上限 $20k）",
+    "amountRaised": "已筹金额",
+    "currentTotal": "当前总额",
+    "goal": "目标",
+    "fundingSourcesBreakdown": "资金来源明细",
+    "government": "政府",
+    "grants": "拨款",
+    "fundraising": "募捐",
+    "sponsors": "赞助商",
+    "dashboardNote": "注：此看板每 12-24 小时定期更新。"
+  },
+  "specialEvent": {
+    "joinOurCommunity": "加入我们的社区",
+    "wantToWorkEvents": "想在我们的活动中出力，或成为我们组织的一员？",
+    "clickToSubscribe": "点击这里订阅我们的通讯。",
+    "newsletterSubscribe": "订阅通讯",
+    "ourEventCalendar": "我们的活动日历",
+    "popOutWindowDescription": "点击下方图片中的弹出窗口选项，你将进入托管在 Google Drive 上的文件，为自行车坡道项目提供反馈。在项目规划中发出你的声音。参与前须登录已注册的 Google 账号。"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "content": "Active Inland Empire 的所有活动均会在参与过程中拍摄照片和视频。Active Inland Empire 保留在我们的市场宣传、拨款报告和社交媒体渠道中重复使用和发布这些素材的权利。如需移除，可发送请求至 organization@activeie.org。自愿参与者填写的问卷及撰写的内容将予以保密，并遵守加州隐私法。通过此类问卷提供的任何信息，Active Inland Empire 均不会长期保留。只有本组织的活动与支持账号会直接与你联系。"
+  },
+  "contrastTherapy": {
+    "logoAlt": "Active Inland Empire 盾形标志",
+    "subtitle": "冷热交替疗法服务 — 移动式冷水浸泡与恢复",
+    "contactWebsite": "activeie.org",
+    "contactLocation": "加州兰乔库卡蒙加（Rancho Cucamonga）",
+    "metaLine": "价格表 • 2026 年 6 月起生效 • 报价后 30 天内有效",
+    "intro": "移动式冷热交替疗法 — 冷水浸泡与恢复设备送达你的场地，由我们负责搭建和运营。每个套餐均包含设备、发电机供电、燃料和冰块。可选择使用现场水源（我们从你的水源抽水），或由我们把水送到现场。",
+    "packagesHeading": "套餐（按活动 / 按天计）",
+    "pkgSingle": "单人浸泡",
+    "pkgParty": "派对浸泡",
+    "pkgCustom": "定制 / 大型",
+    "gallonsSingle": "100 加仑",
+    "gallonsParty": "400 加仑",
+    "gallonsCustom": "400+ 加仑",
+    "waterOnSiteCaption": "现场有水源",
+    "weBringCaption": "我们负责送水",
+    "customNoteLead": "定制 / 大型活动：",
+    "customNoteBody": "超过 400 加仑后，每增加 400 加仑加收 $200。大水量套餐已包含由我们送水。",
+    "includesHeading": "每个套餐包含的内容",
+    "includes1": "送货上门、现场搭建与拆除",
+    "includes2": "冷水浸泡 / 冷热交替疗法设备租赁",
+    "includes3": "活动全程的现场发电机供电",
+    "includes4": "发电机与水泵燃料",
+    "includes5": "冰块及送冰服务，用量按浸泡水量配置",
+    "includes6": "活动期间的现场运营与水质管理",
+    "waterHeading": "供水方式",
+    "waterColOption": "选项",
+    "waterColMeaning": "含义",
+    "waterColPricing": "价格",
+    "waterOnSiteOption": "现场水源",
+    "waterOnSiteMeaning": "我们在现场取水注水。",
+    "waterOnSitePricing": "套餐基础价",
+    "waterBringOption": "我们负责送水",
+    "waterBringMeaning": "场地没有可用水源。我们用卡车和拖车把水运来，到场后注水。",
+    "waterBringPricing": "基础价 + $200",
+    "depositHeading": "定金与预订条款",
+    "depositTerms": "支付总价 50% 的定金即可锁定你的日期；余款须在活动当天搭建前付清。活动前 7 天以上取消可退还定金，之后定金可转用于改期后的日期。",
+    "depositColPackage": "套餐",
+    "depositColTotal": "总价",
+    "depositColDeposit": "50% 定金",
+    "depositColBalance": "应付余款",
+    "depositRowSingleOnSite": "单人浸泡 — 现场水源",
+    "depositRowSingleBring": "单人浸泡 — 我们送水",
+    "depositRowPartyOnSite": "派对浸泡 — 现场水源",
+    "depositRowPartyBring": "派对浸泡 — 我们送水",
+    "finePrint": "超出本地服务范围的里程可能加收 $0.29/英里。",
+    "videoComingSoon": "视频即将上线",
+    "photoComingSoon": "照片即将上线",
+    "form": {
+      "heading": "预订活动 / 咨询",
+      "intro": "告诉我们你的活动情况，我们会尽快回复档期和报价。",
+      "requiredNote": "* 必填项",
+      "nameLabel": "姓名",
+      "emailLabel": "电子邮箱",
+      "phoneLabel": "电话",
+      "eventDateLabel": "活动日期",
+      "eventLocationLabel": "活动地点 / 城市",
+      "packageLabel": "感兴趣的套餐",
+      "messageLabel": "留言",
+      "optionSingle": "单人浸泡",
+      "optionParty": "派对浸泡",
+      "optionCustom": "定制 / 大型",
+      "optionNotSure": "还不确定",
+      "errorNameRequired": "请输入你的姓名。",
+      "errorEmailRequired": "请输入你的电子邮箱。",
+      "errorEmailInvalid": "请输入有效的电子邮箱地址。",
+      "errorMessageRequired": "请简单介绍一下你的活动。",
+      "submit": "发送咨询",
+      "sending": "发送中…",
+      "successTitle": "谢谢你 — 咨询已发送。",
+      "successBody": "我们会尽快通过你提供的邮箱回复你。",
+      "errorSubmit": "出了点问题，你的咨询未能发送。请重试，或直接发邮件至"
+    }
+  },
+  "instagram": {
+    "title": "关注我们的动态",
+    "follow": "关注 @actv_ie",
+    "carouselAria": "最新 Instagram 帖子",
+    "postAlt": "Active Inland Empire 的 Instagram 帖子",
+    "previous": "上一组帖子",
+    "next": "下一组帖子",
+    "fallbackText": "在 Instagram 上查看我们社区活动、骑行和快闪活动的最新动态。"
+  },
+  "funding": {
+    "ofGoal": "目标 {goal}",
+    "donorCount": "已有 {count} 位捐赠者",
+    "progressAria": "筹款进度",
+    "share": "分享这个项目",
+    "linkCopied": "链接已复制！"
+  },
+  "consent": {
+    "ariaLabel": "Cookie 同意",
+    "message": "我们使用分析数据来了解哪些活动对社区最重要——参与数据帮助我们为下一场活动筹集资金。",
+    "learnMore": "了解我们如何使用数据",
+    "accept": "接受分析",
+    "decline": "拒绝"
+  },
+  "dataPolicy": {
+    "title": "数据政策",
+    "intro": "Active Inland Empire 是一个以社区为先的非营利组织。本页说明我们在活动和本网站上收集哪些数据，以及我们如何利用这些数据来规划和资助未来的社区项目。",
+    "collectHeading": "我们收集什么",
+    "collectBody": "网站分析：ContentSquare 会话分析（仅在你同意后）和 Vercel 的无 Cookie 页面统计。活动数据：通过 SweatPals 的报名和出席记录。表单：你在咨询表单中提交的内容（姓名、邮箱、留言）。通讯：你通过 Substack 订阅的邮箱地址。",
+    "whyHeading": "为什么收集",
+    "whyBody": "出席和参与数据让我们知道哪些项目对社区最重要。我们在申请资助和赞助时使用汇总的分析数据——真实的参与数据正是我们为下一场活动筹资的方式。我们绝不出售个人数据。",
+    "retentionHeading": "保留多久",
+    "retentionBody": "汇总统计数据会长期保留。会话级分析遵循 ContentSquare 的 13 个月保留期。咨询邮件在最后一次往来后最多保留 24 个月。你可以随时要求我们删除你的数据。",
+    "rightsHeading": "你的权利",
+    "rightsBody": "你可以请求访问、更正或删除你的个人数据。你可以随时通过页脚的“管理 Cookie”撤回分析同意，并可一键退订通讯。欧盟/欧洲经济区访客享有 GDPR 规定的上述权利；加州居民享有 CCPA 规定的权利。",
+    "cookiesHeading": "我们使用的 Cookie",
+    "cookiesBody": "aie-consent——记住你的分析选择（1 年）。NEXT_LOCALE——记住你的语言。ContentSquare 分析 Cookie——仅在你接受后设置。",
+    "contactHeading": "联系我们",
+    "contactBody": "对你的数据有疑问或请求？发邮件给我们，我们会在 30 天内回复。",
+    "contactEmailLabel": "数据请求："
+  },
+  "sitemapPage": {
+    "title": "网站地图",
+    "description": "本网站的所有页面，按栏目分组。",
+    "sections": {
+      "main": "主要页面",
+      "getInvolved": "参与我们",
+      "programs": "项目",
+      "legal": "法律"
+    }
+  },
+  "meta": {
+    "siteTitle": "Active Inland Empire",
+    "siteDescription": "Active Inland Empire 是一个通过运动建设社区的非营利组织，致力于降低参与运动、健康和身心保健活动的经济门槛。"
+  }
+}
