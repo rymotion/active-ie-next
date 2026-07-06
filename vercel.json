@@ -5,12 +5,8 @@
       "schedule": "0 */12 * * *"
     },
     {
-      "path": "/api/cron/sync-events",
-      "schedule": "0 0 * * *"
-    },
-    {
-      "path": "/api/cron/cleanup-old-data",
-      "schedule": "0 2 * * 0"
+      "path": "/api/cron/refresh-ig-token",
+      "schedule": "0 3 * * 1"
     }
   ]
 }

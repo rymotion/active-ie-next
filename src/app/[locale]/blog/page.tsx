@@ -1,20 +1,15 @@
-"use client";
-import Screen from "@/components/screen/screen";
-import { SubStack } from "./substack";
-import { Analytics } from "@vercel/analytics/react";
+import { setRequestLocale } from "next-intl/server";
+import { getInstagramMedia } from "@/services/instagram";
+import Content from "./content";
 
-export default function Blog() {
-  return (
-    <>
-      <div>
-        <Screen>
-          <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
-            <SubStack />
-          </div>
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-          <Analytics />
-        </Screen>
-      </div>
-    </>
-  );
+  const result = await getInstagramMedia(12);
+  return <Content igPosts={result.posts ?? null} />;
 }

@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { shopifyService } from "@/services/shopify";
+import { getInstagramMedia } from "@/services/instagram";
 import LandingClient from "./landing-client";
 
 /**
@@ -14,9 +15,14 @@ export default async function LandingPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const { products } = shopifyService.isConfigured()
-    ? await shopifyService.getProducts(8)
-    : { products: [] };
+  const [{ products }, igResult] = await Promise.all([
+    shopifyService.isConfigured()
+      ? shopifyService.getProducts(8)
+      : Promise.resolve({ products: [] }),
+    getInstagramMedia(12),
+  ]);
 
-  return <LandingClient products={products} />;
+  return (
+    <LandingClient products={products} igPosts={igResult.posts ?? null} />
+  );
 }

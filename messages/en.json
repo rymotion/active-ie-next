@@ -196,5 +196,14 @@
       "successBody": "We'll get back to you as soon as possible at the email you provided.",
       "errorSubmit": "Something went wrong and your inquiry was not sent. Please try again, or email us directly at"
     }
+  },
+  "instagram": {
+    "title": "Follow the Movement",
+    "follow": "Follow @actv_ie",
+    "carouselAria": "Latest Instagram posts",
+    "postAlt": "Instagram post from Active Inland Empire",
+    "previous": "Previous posts",
+    "next": "Next posts",
+    "fallbackText": "See the latest from our community events, rides, and pop-ups on Instagram."
   }
 }

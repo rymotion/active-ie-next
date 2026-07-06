@@ -10,6 +10,9 @@ import { SubStackNibble } from "@/app/[locale]/blog/substack";
 import SweatpalEvents from "@/components/events/sw_events";
 import ShopPreview from "@/components/shop/shop-preview";
 import type { Product } from "@/services/shopify";
+import type { IgPost } from "@/services/instagram";
+import InstagramCarousel from "@/components/instagram/instagram-carousel";
+import InstagramFallback from "@/components/instagram/instagram-fallback";
 import { useTranslations } from "next-intl";
 import VideoBackdrop from "@/components/landing/video-backdrop";
 import Hero from "@/components/landing/hero";
@@ -22,8 +25,10 @@ const HERO_VIDEO =
 
 export default function LandingClient({
   products,
+  igPosts,
 }: {
   products: Product[];
+  igPosts: IgPost[] | null;
 }) {
   const t = useTranslations();
 
@@ -127,6 +132,19 @@ export default function LandingClient({
             <div className="flex justify-center">
               <SubStackNibble />
             </div>
+          </StorySection>
+
+          <StorySection
+            id="instagram"
+            label={t("instagram.title")}
+            heading={t("instagram.title")}
+            size="wide"
+          >
+            {igPosts && igPosts.length > 0 ? (
+              <InstagramCarousel posts={igPosts} />
+            ) : (
+              <InstagramFallback />
+            )}
           </StorySection>
 
           <SectionIndicator />

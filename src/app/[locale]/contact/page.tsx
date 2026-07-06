@@ -1,35 +1,15 @@
-"use client";
-import Screen from "@/components/screen/screen";
-import { InstaWidgetMain, InstaWidgetD2D } from "./instagram_gallery";
-import NewsletterWidget from "./newsletter_subscribe";
-import { Analytics } from "@vercel/analytics/react";
+import { setRequestLocale } from "next-intl/server";
+import { getInstagramMedia } from "@/services/instagram";
+import Content from "./content";
 
-export default function Contact() {
-  return (
-    <>
-      <div>
-        <Screen>
-          <div className="hidden lg:block">
-            <div className="flex flex-row min-h-screen min-w-screen justify-center items-center h-full w-full">
-              <NewsletterWidget />
-              <InstaWidgetMain />
-              <InstaWidgetD2D />
-            </div>
-          </div>
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-          <div className="flex flex-col min-h-screen min-w-screen justify-center items-center h-full w-full">
-            <h2 className="text-2xl font-bold text-center mb-4">Inquries:</h2>
-
-            <a
-              href="mailto:organization@activeie.org"
-              className="text-blue-400 hover:text-blue-300"
-            >
-              organization@activeie.org
-            </a>
-          </div>
-          <Analytics />
-        </Screen>
-      </div>
-    </>
-  );
+  const result = await getInstagramMedia(12);
+  return <Content igPosts={result.posts ?? null} />;
 }

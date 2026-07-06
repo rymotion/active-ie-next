@@ -196,5 +196,14 @@
       "successBody": "Babalikan ka namin sa lalong madaling panahon sa email na ibinigay mo.",
       "errorSubmit": "May problemang naganap at hindi naipadala ang iyong katanungan. Pakisubukang muli, o mag-email nang direkta sa"
     }
+  },
+  "instagram": {
+    "title": "Sundan ang Kilusan",
+    "follow": "I-follow ang @actv_ie",
+    "carouselAria": "Pinakabagong mga post sa Instagram",
+    "postAlt": "Instagram post mula sa Active Inland Empire",
+    "previous": "Mga nakaraang post",
+    "next": "Mga susunod na post",
+    "fallbackText": "Tingnan ang pinakabago mula sa aming mga community event, ride, at pop-up sa Instagram."
   }
 }

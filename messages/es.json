@@ -196,5 +196,14 @@
       "successBody": "Te responderemos lo antes posible al correo que proporcionaste.",
       "errorSubmit": "Algo salió mal y tu consulta no fue enviada. Por favor intenta de nuevo, o escríbenos directamente a"
     }
+  },
+  "instagram": {
+    "title": "Sigue el Movimiento",
+    "follow": "Sigue a @actv_ie",
+    "carouselAria": "Últimas publicaciones de Instagram",
+    "postAlt": "Publicación de Instagram de Active Inland Empire",
+    "previous": "Publicaciones anteriores",
+    "next": "Publicaciones siguientes",
+    "fallbackText": "Mira lo último de nuestros eventos comunitarios, rodadas y pop-ups en Instagram."
   }
 }
