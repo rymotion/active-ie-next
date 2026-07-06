@@ -100,7 +100,13 @@
   "footer": {
     "nonprofitInfo": "Active: Inland Empire Inc 是一家 501(c)(3) 非营利组织",
     "ein": "联邦雇主识别号（EIN）33-1746388 - 所有捐款均可抵税",
-    "moreInfo": "更多信息请查阅我们的 Guidestar 页面，或发送咨询至"
+    "moreInfo": "更多信息请查阅我们的 Guidestar 页面，或发送咨询至",
+    "aboutHeading": "关于我们",
+    "exploreHeading": "浏览",
+    "legalHeading": "法律与语言",
+    "partnersHeading": "合作伙伴",
+    "manageCookies": "管理 Cookie",
+    "guidestarAlt": "Guidestar 透明度认证"
   },
   "common": {
     "scrollToContinue": "向下滚动继续",
@@ -230,5 +236,43 @@
     "progressAria": "筹款进度",
     "share": "分享这个项目",
     "linkCopied": "链接已复制！"
+  },
+  "consent": {
+    "ariaLabel": "Cookie 同意",
+    "message": "我们使用分析数据来了解哪些活动对社区最重要——参与数据帮助我们为下一场活动筹集资金。",
+    "learnMore": "了解我们如何使用数据",
+    "accept": "接受分析",
+    "decline": "拒绝"
+  },
+  "dataPolicy": {
+    "title": "数据政策",
+    "intro": "Active Inland Empire 是一个以社区为先的非营利组织。本页说明我们在活动和本网站上收集哪些数据，以及我们如何利用这些数据来规划和资助未来的社区项目。",
+    "collectHeading": "我们收集什么",
+    "collectBody": "网站分析：ContentSquare 会话分析（仅在你同意后）和 Vercel 的无 Cookie 页面统计。活动数据：通过 SweatPals 的报名和出席记录。表单：你在咨询表单中提交的内容（姓名、邮箱、留言）。通讯：你通过 Substack 订阅的邮箱地址。",
+    "whyHeading": "为什么收集",
+    "whyBody": "出席和参与数据让我们知道哪些项目对社区最重要。我们在申请资助和赞助时使用汇总的分析数据——真实的参与数据正是我们为下一场活动筹资的方式。我们绝不出售个人数据。",
+    "retentionHeading": "保留多久",
+    "retentionBody": "汇总统计数据会长期保留。会话级分析遵循 ContentSquare 的 13 个月保留期。咨询邮件在最后一次往来后最多保留 24 个月。你可以随时要求我们删除你的数据。",
+    "rightsHeading": "你的权利",
+    "rightsBody": "你可以请求访问、更正或删除你的个人数据。你可以随时通过页脚的“管理 Cookie”撤回分析同意，并可一键退订通讯。欧盟/欧洲经济区访客享有 GDPR 规定的上述权利；加州居民享有 CCPA 规定的权利。",
+    "cookiesHeading": "我们使用的 Cookie",
+    "cookiesBody": "aie-consent——记住你的分析选择（1 年）。NEXT_LOCALE——记住你的语言。ContentSquare 分析 Cookie——仅在你接受后设置。",
+    "contactHeading": "联系我们",
+    "contactBody": "对你的数据有疑问或请求？发邮件给我们，我们会在 30 天内回复。",
+    "contactEmailLabel": "数据请求："
+  },
+  "sitemapPage": {
+    "title": "网站地图",
+    "description": "本网站的所有页面，按栏目分组。",
+    "sections": {
+      "main": "主要页面",
+      "getInvolved": "参与我们",
+      "programs": "项目",
+      "legal": "法律"
+    }
+  },
+  "meta": {
+    "siteTitle": "Active Inland Empire",
+    "siteDescription": "Active Inland Empire 是一个通过运动建设社区的非营利组织，致力于降低参与运动、健康和身心保健活动的经济门槛。"
   }
 }

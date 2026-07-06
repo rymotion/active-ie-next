@@ -100,7 +100,13 @@
   "footer": {
     "nonprofitInfo": "Active: Inland Empire Inc es una organización sin fines de lucro 501(c)(3)",
     "ein": "EIN Federal 33-1746388 - Todas las donaciones son deducibles de impuestos",
-    "moreInfo": "Más información está disponible en nuestra página de Guidestar o abriendo una consulta en"
+    "moreInfo": "Más información está disponible en nuestra página de Guidestar o abriendo una consulta en",
+    "aboutHeading": "Acerca de",
+    "exploreHeading": "Explorar",
+    "legalHeading": "Legal e Idioma",
+    "partnersHeading": "Aliados",
+    "manageCookies": "Gestionar cookies",
+    "guidestarAlt": "Sello de Transparencia Guidestar"
   },
   "common": {
     "scrollToContinue": "Desplázate para continuar",
@@ -230,5 +236,43 @@
     "progressAria": "Progreso de recaudación",
     "share": "Comparte este proyecto",
     "linkCopied": "¡Enlace copiado!"
+  },
+  "consent": {
+    "ariaLabel": "Consentimiento de cookies",
+    "message": "Usamos analítica para entender qué eventos le importan a nuestra comunidad: los datos de participación nos ayudan a financiar el siguiente.",
+    "learnMore": "Cómo usamos los datos",
+    "accept": "Aceptar analítica",
+    "decline": "Rechazar"
+  },
+  "dataPolicy": {
+    "title": "Política de Datos",
+    "intro": "Active Inland Empire es una organización sin fines de lucro centrada en la comunidad. Esta página explica qué datos recopilamos en eventos y en este sitio web, y cómo los usamos para planear y financiar futuros programas comunitarios.",
+    "collectHeading": "Qué recopilamos",
+    "collectBody": "Analítica del sitio: analítica de sesiones de ContentSquare (solo con tu consentimiento) y estadísticas sin cookies de Vercel. Datos de eventos: inscripciones y asistencia a través de SweatPals. Formularios: lo que envías en los formularios de consulta (nombre, correo, mensaje). Boletín: tu correo electrónico a través de Substack.",
+    "whyHeading": "Por qué lo recopilamos",
+    "whyBody": "Las cifras de asistencia y participación nos muestran qué programas le importan a la comunidad. Usamos analítica agregada en solicitudes de subvenciones y propuestas de patrocinio: los datos reales de participación son la forma en que financiamos el próximo evento. Nunca vendemos datos personales.",
+    "retentionHeading": "Cuánto tiempo los conservamos",
+    "retentionBody": "Las estadísticas agregadas se conservan indefinidamente. La analítica de sesiones sigue la retención de 13 meses de ContentSquare. Los correos de consultas se conservan hasta 24 meses después de nuestro último intercambio. Puedes pedirnos que eliminemos tus datos en cualquier momento.",
+    "rightsHeading": "Tus derechos",
+    "rightsBody": "Puedes solicitar acceso, corrección o eliminación de tus datos personales. Puedes retirar el consentimiento de analítica en cualquier momento con “Gestionar cookies” en el pie de página, y darte de baja del boletín con un clic. Los visitantes de la UE/EEE tienen estos derechos bajo el RGPD; los residentes de California bajo la CCPA.",
+    "cookiesHeading": "Cookies que usamos",
+    "cookiesBody": "aie-consent — recuerda tu elección de analítica (1 año). NEXT_LOCALE — recuerda tu idioma. Cookies de analítica de ContentSquare — solo después de que aceptes.",
+    "contactHeading": "Contacto",
+    "contactBody": "¿Preguntas o solicitudes sobre tus datos? Escríbenos y responderemos en un plazo de 30 días.",
+    "contactEmailLabel": "Solicitudes de datos:"
+  },
+  "sitemapPage": {
+    "title": "Mapa del Sitio",
+    "description": "Todas las páginas de este sitio web, agrupadas por sección.",
+    "sections": {
+      "main": "Principal",
+      "getInvolved": "Participa",
+      "programs": "Programas",
+      "legal": "Legal"
+    }
+  },
+  "meta": {
+    "siteTitle": "Active Inland Empire",
+    "siteDescription": "Active Inland Empire es la organización sin fines de lucro que construye comunidad a través del deporte, reduciendo las barreras económicas para participar en actividades deportivas, de salud y bienestar."
   }
 }

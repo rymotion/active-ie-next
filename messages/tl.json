@@ -100,7 +100,13 @@
   "footer": {
     "nonprofitInfo": "Ang Active: Inland Empire Inc ay isang 501(c)(3) non-profit organization",
     "ein": "Federal EIN 33-1746388 - Lahat ng donasyon ay tax-deductible",
-    "moreInfo": "Ang higit pang impormasyon ay available sa aming Guidestar page o sa pamamagitan ng pagbubukas ng inquiry sa"
+    "moreInfo": "Ang higit pang impormasyon ay available sa aming Guidestar page o sa pamamagitan ng pagbubukas ng inquiry sa",
+    "aboutHeading": "Tungkol",
+    "exploreHeading": "Tuklasin",
+    "legalHeading": "Legal at Wika",
+    "partnersHeading": "Mga Kasosyo",
+    "manageCookies": "Pamahalaan ang cookies",
+    "guidestarAlt": "Guidestar Transparency Seal"
   },
   "common": {
     "scrollToContinue": "Mag-scroll upang magpatuloy",
@@ -230,5 +236,43 @@
     "progressAria": "Progreso ng fundraising",
     "share": "I-share ang proyektong ito",
     "linkCopied": "Nakopya ang link!"
+  },
+  "consent": {
+    "ariaLabel": "Pahintulot sa cookies",
+    "message": "Gumagamit kami ng analytics para malaman kung aling mga event ang mahalaga sa aming komunidad — ang datos ng partisipasyon ang tumutulong pondohan ang susunod.",
+    "learnMore": "Paano namin ginagamit ang datos",
+    "accept": "Tanggapin ang analytics",
+    "decline": "Tanggihan"
+  },
+  "dataPolicy": {
+    "title": "Patakaran sa Datos",
+    "intro": "Ang Active Inland Empire ay isang nonprofit na nakatuon sa komunidad. Ipinapaliwanag ng pahinang ito kung anong datos ang kinokolekta namin sa mga event at sa website na ito, at kung paano ito ginagamit para magplano at magpondo ng mga susunod na programa.",
+    "collectHeading": "Ano ang kinokolekta namin",
+    "collectBody": "Website analytics: ContentSquare session analytics (kapag pumayag ka lang) at cookieless na istatistika ng Vercel. Datos ng event: mga rehistrasyon at attendance sa pamamagitan ng SweatPals. Mga form: ang isinusumite mo sa mga inquiry form (pangalan, email, mensahe). Newsletter: ang iyong email sa pamamagitan ng Substack.",
+    "whyHeading": "Bakit namin ito kinokolekta",
+    "whyBody": "Ipinapakita ng attendance at engagement kung aling mga programa ang mahalaga sa komunidad. Ginagamit namin ang pinagsama-samang analytics sa mga grant application at sponsorship pitch — ang totoong datos ng partisipasyon ang paraan namin para pondohan ang susunod na event. Hindi namin kailanman ibinebenta ang personal na datos.",
+    "retentionHeading": "Gaano katagal namin itong itinatago",
+    "retentionBody": "Ang pinagsama-samang istatistika ay itinatago nang walang taning. Ang session-level analytics ay sumusunod sa 13-buwang retention ng ContentSquare. Ang mga inquiry email ay itinatago hanggang 24 buwan pagkatapos ng aming huling palitan ng mensahe. Maaari mong hilingin na burahin ang iyong datos anumang oras.",
+    "rightsHeading": "Ang iyong mga karapatan",
+    "rightsBody": "Maaari kang humiling ng access, pagwawasto, o pagbura ng iyong personal na datos. Maaari mong bawiin ang pahintulot sa analytics anumang oras sa “Pamahalaan ang cookies” sa footer, at mag-unsubscribe sa newsletter sa isang click. Ang mga bisita mula sa EU/EEA ay may mga karapatang ito sa ilalim ng GDPR; ang mga residente ng California sa ilalim ng CCPA.",
+    "cookiesHeading": "Mga cookies na ginagamit namin",
+    "cookiesBody": "aie-consent — inaalala ang iyong pinili sa analytics (1 taon). NEXT_LOCALE — inaalala ang iyong wika. ContentSquare analytics cookies — itinatakda lang pagkatapos mong pumayag.",
+    "contactHeading": "Makipag-ugnayan",
+    "contactBody": "May mga tanong o kahilingan tungkol sa iyong datos? Mag-email sa amin at sasagot kami sa loob ng 30 araw.",
+    "contactEmailLabel": "Mga kahilingan sa datos:"
+  },
+  "sitemapPage": {
+    "title": "Mapa ng Site",
+    "description": "Lahat ng pahina ng website na ito, nakapangkat ayon sa seksyon.",
+    "sections": {
+      "main": "Pangunahin",
+      "getInvolved": "Makilahok",
+      "programs": "Mga Programa",
+      "legal": "Legal"
+    }
+  },
+  "meta": {
+    "siteTitle": "Active Inland Empire",
+    "siteDescription": "Ang Active Inland Empire ay ang nonprofit na bumubuo ng komunidad sa pamamagitan ng isports, na nagpapababa ng mga hadlang sa pananalapi para makalahok sa isports, kalusugan, at wellness."
   }
 }

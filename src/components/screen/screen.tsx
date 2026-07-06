@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Navbar from "../nav/navbar";
-import DisclosureBar from "../disclosure";
+import Footer from "../footer";
 
 interface ScreenProps {
   children: ReactNode;
@@ -32,7 +32,7 @@ const Screen: React.FC<ScreenProps> = ({
       </main>
 
       <footer className="w-full">
-        <DisclosureBar />
+        <Footer />
       </footer>
     </div>
   );

@@ -100,7 +100,13 @@
   "footer": {
     "nonprofitInfo": "Active: Inland Empire Inc is a 501(c)(3) non-profit organization",
     "ein": "Federal EIN 33-1746388 - All donations are tax-deductible",
-    "moreInfo": "More information is available on our Guidestar page or by opening an inquiry at"
+    "moreInfo": "More information is available on our Guidestar page or by opening an inquiry at",
+    "aboutHeading": "About",
+    "exploreHeading": "Explore",
+    "legalHeading": "Legal & Language",
+    "partnersHeading": "Partners",
+    "manageCookies": "Manage cookies",
+    "guidestarAlt": "Guidestar Transparency Seal"
   },
   "common": {
     "scrollToContinue": "Scroll to continue",
@@ -230,5 +236,43 @@
     "progressAria": "Fundraising progress",
     "share": "Share this project",
     "linkCopied": "Link copied!"
+  },
+  "consent": {
+    "ariaLabel": "Cookie consent",
+    "message": "We use analytics to understand which events matter to our community — participation data helps us fund the next one.",
+    "learnMore": "How we use data",
+    "accept": "Accept analytics",
+    "decline": "Decline"
+  },
+  "dataPolicy": {
+    "title": "Data Policy",
+    "intro": "Active Inland Empire is a community-first nonprofit. This page explains what data we collect at events and on this website, and how we use it to plan and fund future community programs.",
+    "collectHeading": "What we collect",
+    "collectBody": "Website analytics: ContentSquare session analytics (only with your consent) and Vercel's cookieless page statistics. Event data: registrations and attendance through SweatPals. Forms: what you submit in inquiry forms (name, email, message). Newsletter: your email address through Substack.",
+    "whyHeading": "Why we collect it",
+    "whyBody": "Attendance and engagement numbers show us which programs matter to the community. We use aggregated analytics in grant applications and sponsorship pitches — real participation data is how we fund the next event. We never sell personal data.",
+    "retentionHeading": "How long we keep it",
+    "retentionBody": "Aggregated statistics are kept indefinitely. Session-level analytics follow ContentSquare's 13-month retention. Inquiry emails are kept up to 24 months after our last exchange. You can ask us to delete your data at any time.",
+    "rightsHeading": "Your rights",
+    "rightsBody": "You can request access to, correction of, or deletion of your personal data. You can withdraw analytics consent at any time via “Manage cookies” in the footer, and unsubscribe from the newsletter with one click. EU/EEA visitors have these rights under the GDPR; California residents under the CCPA.",
+    "cookiesHeading": "Cookies we use",
+    "cookiesBody": "aie-consent — remembers your analytics choice (1 year). NEXT_LOCALE — remembers your language. ContentSquare analytics cookies — set only after you accept.",
+    "contactHeading": "Contact",
+    "contactBody": "Questions or requests about your data? Email us and we'll respond within 30 days.",
+    "contactEmailLabel": "Data requests:"
+  },
+  "sitemapPage": {
+    "title": "Sitemap",
+    "description": "Every page on this website, grouped by section.",
+    "sections": {
+      "main": "Main",
+      "getInvolved": "Get Involved",
+      "programs": "Programs",
+      "legal": "Legal"
+    }
+  },
+  "meta": {
+    "siteTitle": "Active Inland Empire",
+    "siteDescription": "Active Inland Empire is the nonprofit building community through sport, lowering financial barriers to participate in sports, health, and wellness activities."
   }
 }
