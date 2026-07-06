@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import GofundmeWidget from "@/components/gofundme";
 import LogoComponent, { logoStyle } from "@/components/logo";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import VolunteerInterestWidget from "../volunteer/volunteer_interest";
 import { SubStackNibble } from "@/app/blog/substack";
 import ScrollableVideoView from "@/components/multi-media/scrollable_video";
@@ -60,6 +61,30 @@ export default function Home() {
                 </div>
               </div>
             </section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="w-full py-12 bg-black"
+            >
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 className="text-2xl font-bold text-center mb-8">
+                  {t('landing.contrastTherapyTitle')}
+                </h1>
+                <p className="text-center max-w-2xl mx-auto mb-8">
+                  {t('landing.contrastTherapyTeaser')}
+                </p>
+                <div className="flex justify-center">
+                  <Link
+                    href="/contrast-therapy"
+                    className="inline-block rounded-md bg-maroon px-6 py-3 font-semibold text-white transition-colors hover:bg-red-800"
+                  >
+                    {t('landing.contrastTherapyCta')}
+                  </Link>
+                </div>
+              </div>
+            </motion.section>
 
             <section className="py-12">
               {/* TODO implement a better way to convey projects */}
