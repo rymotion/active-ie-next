@@ -88,7 +88,8 @@
     "close": "Close",
     "home": "Home",
     "language": "Language",
-    "notFound": "This page could not be found."
+    "notFound": "This page could not be found.",
+    "menu": "Menu"
   },
   "burnchart": {
     "bikeParkFunding": "Bike Park Funding",

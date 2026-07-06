@@ -88,7 +88,8 @@
     "close": "Cerrar",
     "home": "Inicio",
     "language": "Idioma",
-    "notFound": "No se pudo encontrar esta página."
+    "notFound": "No se pudo encontrar esta página.",
+    "menu": "Menú"
   },
   "burnchart": {
     "bikeParkFunding": "Financiamiento del Parque de Bicicletas",

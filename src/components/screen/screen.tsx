@@ -1,28 +1,32 @@
 import React, { ReactNode } from "react";
-import Navbar from "../navbar";
+import Navbar from "../nav/navbar";
 import DisclosureBar from "../disclosure";
 
 interface ScreenProps {
   children: ReactNode;
   className?: string;
+  /**
+   * Landing page: the fixed header starts transparent over the hero video
+   * and content flows underneath it (no top padding).
+   */
+  transparentHeader?: boolean;
 }
 
-const Screen: React.FC<ScreenProps> = ({ children, className = "" }) => {
+const Screen: React.FC<ScreenProps> = ({
+  children,
+  className = "",
+  transparentHeader = false,
+}) => {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-black">
-      {/* Persistent Navigation */}
-      <header className="sticky top-0 z-50 w-full">
-        <Navbar />
-      </header>
+      <Navbar transparent={transparentHeader} />
 
-      {/* Main Content */}
-      <main className={`flex-grow w-full ${className}`}>
-        <div className="h-full">
-          {children}
-        </div>
+      <main
+        className={`flex-grow w-full ${transparentHeader ? "" : "pt-20"} ${className}`}
+      >
+        {children}
       </main>
-      
-      {/* Footer */}
+
       <footer className="w-full">
         <DisclosureBar />
       </footer>
