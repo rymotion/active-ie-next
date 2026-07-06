@@ -75,14 +75,14 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         </Link>
 
         {/* Desktop links */}
-        <nav aria-label={t("nav.organizationName")} className="hidden lg:block">
-          <ul className="flex items-center gap-6 xl:gap-8">
+        <nav aria-label={t("nav.organizationName")} className="hidden md:block">
+          <ul className="flex items-center gap-4 lg:gap-6 xl:gap-8">
             {navRoutes.map((route) => (
               <li key={route.path} className="relative">
                 <Link
                   href={route.path}
                   aria-current={isActive(route.path) ? "page" : undefined}
-                  className="py-2 text-sm font-semibold uppercase tracking-wider text-white transition-colors xl:text-base"
+                  className="py-2 text-xs font-semibold uppercase tracking-wider text-white transition-colors lg:text-sm xl:text-base"
                 >
                   {t(route.labelKey)}
                 </Link>
@@ -98,7 +98,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         </nav>
 
         {/* Mobile: hamburger on the right */}
-        <div className="lg:hidden">
+        <div>
           <HamburgerButton
             open={menuOpen}
             onToggle={() => setMenuOpen((v) => !v)}
