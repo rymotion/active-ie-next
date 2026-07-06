@@ -7,8 +7,19 @@ import { motion } from "framer-motion";
 import Container from "@/components/layout/container";
 import InstagramSection from "@/components/instagram/instagram-section";
 import type { IgPost } from "@/services/instagram";
+import type { FundingNumbers } from "@/services/funding";
+import ProjectCard from "@/components/projects/project-card";
+import EmbedOnDemand from "@/components/projects/embed-on-demand";
+import GivebutterEmbed from "@/components/projects/givebutter-embed";
+import { projects } from "@/content/projects";
 
-export default function Support({ igPosts }: { igPosts: IgPost[] | null }) {
+export default function Support({
+  igPosts,
+  funding,
+}: {
+  igPosts: IgPost[] | null;
+  funding: Record<string, FundingNumbers>;
+}) {
   const t = useTranslations();
   
   return (
@@ -37,6 +48,25 @@ export default function Support({ igPosts }: { igPosts: IgPost[] | null }) {
               {t("support.getInTouch")}
             </motion.button>
           </motion.div>
+
+          {/* Warm audience: donate is the primary ask here */}
+          <Container size="content" className="py-12">
+            <h2 className="mb-8 text-center font-display text-title uppercase tracking-wide">
+              {t("landing.donate")}
+            </h2>
+            <EmbedOnDemand cta={t("projects.items.generalFund.cta")}>
+              <GivebutterEmbed />
+            </EmbedOnDemand>
+            <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.slug}
+                  project={project}
+                  funding={funding[project.slug]}
+                />
+              ))}
+            </div>
+          </Container>
 
           <Container size="wide">
             <InstagramSection posts={igPosts} />

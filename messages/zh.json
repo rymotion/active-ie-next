@@ -54,7 +54,25 @@
     "description": "以下是我们目前在内陆帝国地区开展的项目和工作。",
     "bikeRampTitle": "自行车坡道项目进展",
     "publicCommentTitle": "公众意见板",
-    "publicCommentDescription": "通过下方的意见表，告诉我们你希望在自行车公园里增加什么。"
+    "publicCommentDescription": "通过下方的意见表，告诉我们你希望在自行车公园里增加什么。",
+    "items": {
+      "bikeRamps": {
+        "hook": "为 Rancho Cucamonga 建造自行车坡道",
+        "summary": "Axel 的鹰级童军项目将为 Rancho Cucamonga 带来免费的公共自行车坡道——由社区亲手建造，让孩子们有一个安全的骑行场所。",
+        "story": "在童军 Axel 的带领和 Active Inland Empire 的支持下，捐赠的木材和志愿者的周末劳动将变成人人可用的坡道——永久免费。你的捐款将用于购买材料和安全装备，你还可以通过下方的公众意见板告诉市政府你希望自行车公园有什么。",
+        "cta": "在 GoFundMe 上捐款",
+        "cardCta": "查看项目",
+        "shareText": "和 Active Inland Empire 一起，为 Rancho Cucamonga 建造免费的公共自行车坡道！"
+      },
+      "generalFund": {
+        "hook": "为下一场社区活动助力",
+        "summary": "普通基金用于支付许可证、设备、冰块和保险，让我们的健康与身心保健活动对所有人保持免费或低价。",
+        "story": "我们每月将捐款分配到各个项目——社区骑行、冷热交替疗法快闪活动，以及新的“第三空间”尝试。捐赠者可以选择接收影响力报告，清楚看到你的支持带来了什么。",
+        "cta": "打开捐款表单",
+        "cardCta": "支持基金",
+        "shareText": "支持内陆帝国地区免费的社区健康与身心保健活动！"
+      }
+    }
   },
   "addc": {
     "title": "Anti-Detox Detox Club",
@@ -205,5 +223,12 @@
     "previous": "上一组帖子",
     "next": "下一组帖子",
     "fallbackText": "在 Instagram 上查看我们社区活动、骑行和快闪活动的最新动态。"
+  },
+  "funding": {
+    "ofGoal": "目标 {goal}",
+    "donorCount": "已有 {count} 位捐赠者",
+    "progressAria": "筹款进度",
+    "share": "分享这个项目",
+    "linkCopied": "链接已复制！"
   }
 }

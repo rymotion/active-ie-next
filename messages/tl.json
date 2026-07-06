@@ -54,7 +54,25 @@
     "description": "Ito ang aming kasalukuyang mga proyekto at pagsisikap sa buong Inland Empire.",
     "bikeRampTitle": "Pagbabago sa Proyekto ng Rampa ng Bisikleta",
     "publicCommentTitle": "Lupon ng Pampublikong Komento",
-    "publicCommentDescription": "Ipaalam sa amin kung ano ang dapat naming idagdag sa bike park sa pamamagitan ng form ng komento sa ibaba."
+    "publicCommentDescription": "Ipaalam sa amin kung ano ang dapat naming idagdag sa bike park sa pamamagitan ng form ng komento sa ibaba.",
+    "items": {
+      "bikeRamps": {
+        "hook": "Magtayo ng Bike Ramps para sa Rancho Cucamonga",
+        "summary": "Ang Eagle Scout project ni Axel ay magdadala ng libreng pampublikong bike ramps sa Rancho Cucamonga — isang ligtas na lugar para makapag-bike ang mga bata, na itinayo ng komunidad.",
+        "story": "Sa pangunguna ni Scout Axel at suporta ng Active Inland Empire, ginagawang ramps ang donadong kahoy at volunteer weekends — libre, habang-buhay. Ang iyong donasyon ay pambili ng materyales at safety gear, at maaari mong sabihin sa lungsod kung ano ang gusto mo sa bike park sa pamamagitan ng public comment board.",
+        "cta": "Mag-donate sa GoFundMe",
+        "cardCta": "Tingnan ang proyekto",
+        "shareText": "Tumulong magtayo ng libreng pampublikong bike ramps sa Rancho Cucamonga kasama ang Active Inland Empire!"
+      },
+      "generalFund": {
+        "hook": "Palakasin ang Susunod na Community Event",
+        "summary": "Sinasagot ng General Fund ang mga permit, kagamitan, yelo, at insurance para manatiling libre o abot-kaya ang aming mga health at wellness event.",
+        "story": "Bawat buwan, inilalaan namin ang mga kontribusyon sa aming mga programa — community rides, contrast therapy pop-ups, at mga bagong “third place” na eksperimento. Maaaring mag-opt in ang mga contributor sa impact updates para makita kung saan napunta ang kanilang suporta.",
+        "cta": "Buksan ang donation form",
+        "cardCta": "Suportahan ang pondo",
+        "shareText": "Suportahan ang libreng community health at wellness events sa Inland Empire!"
+      }
+    }
   },
   "addc": {
     "title": "Anti-Detox Detox Club",
@@ -205,5 +223,12 @@
     "previous": "Mga nakaraang post",
     "next": "Mga susunod na post",
     "fallbackText": "Tingnan ang pinakabago mula sa aming mga community event, ride, at pop-up sa Instagram."
+  },
+  "funding": {
+    "ofGoal": "mula sa {goal} na layunin",
+    "donorCount": "{count} donor na",
+    "progressAria": "Progreso ng fundraising",
+    "share": "I-share ang proyektong ito",
+    "linkCopied": "Nakopya ang link!"
   }
 }

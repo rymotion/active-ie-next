@@ -1,9 +1,7 @@
 "use client";
 import Screen from "@/components/screen/screen";
-import DonationBody from "@/components/donation/donation";
 import OrgContentBody from "@/components/about-body";
 import { Analytics } from "@vercel/analytics/react";
-import GofundmeWidget from "@/components/gofundme";
 import { Link } from "@/i18n/navigation";
 import VolunteerInterestWidget from "../volunteer/volunteer_interest";
 import { SubStackNibble } from "@/app/[locale]/blog/substack";
@@ -13,6 +11,11 @@ import type { Product } from "@/services/shopify";
 import type { IgPost } from "@/services/instagram";
 import InstagramCarousel from "@/components/instagram/instagram-carousel";
 import InstagramFallback from "@/components/instagram/instagram-fallback";
+import ProjectCard from "@/components/projects/project-card";
+import EmbedOnDemand from "@/components/projects/embed-on-demand";
+import GivebutterEmbed from "@/components/projects/givebutter-embed";
+import { projects } from "@/content/projects";
+import type { FundingNumbers } from "@/services/funding";
 import { useTranslations } from "next-intl";
 import VideoBackdrop from "@/components/landing/video-backdrop";
 import Hero from "@/components/landing/hero";
@@ -26,9 +29,11 @@ const HERO_VIDEO =
 export default function LandingClient({
   products,
   igPosts,
+  funding,
 }: {
   products: Product[];
   igPosts: IgPost[] | null;
+  funding: Record<string, FundingNumbers>;
 }) {
   const t = useTranslations();
 
@@ -71,8 +76,14 @@ export default function LandingClient({
             label={t("nav.projects")}
             heading={t("projects.title")}
           >
-            <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8">
-              <GofundmeWidget />
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.slug}
+                  project={project}
+                  funding={funding[project.slug]}
+                />
+              ))}
             </div>
           </StorySection>
 
@@ -108,10 +119,17 @@ export default function LandingClient({
             id="donate"
             label={t("landing.donate")}
             heading={t("landing.donate")}
+            size="prose"
           >
-            <div className="flex justify-center">
-              <DonationBody />
-            </div>
+            <p className="mb-6 text-center text-lg text-cream/90">
+              {t("donation.proceedsDescription")}
+            </p>
+            <p className="mb-8 text-center text-cream/80">
+              {t("donation.partnerDescription")}
+            </p>
+            <EmbedOnDemand cta={t("projects.items.generalFund.cta")}>
+              <GivebutterEmbed />
+            </EmbedOnDemand>
           </StorySection>
 
           <StorySection

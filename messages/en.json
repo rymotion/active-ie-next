@@ -54,7 +54,25 @@
     "description": "These are our current ongoing projects and efforts across the Inland Empire.",
     "bikeRampTitle": "Bike Ramp Project Update",
     "publicCommentTitle": "Public Comment Board",
-    "publicCommentDescription": "Let us know what we should add to the bike park with the comment form below."
+    "publicCommentDescription": "Let us know what we should add to the bike park with the comment form below.",
+    "items": {
+      "bikeRamps": {
+        "hook": "Build Bike Ramps for Rancho Cucamonga",
+        "summary": "Axel's Eagle Scout project is bringing free public bike ramps to Rancho Cucamonga — a safe place for local kids to ride, built by the community.",
+        "story": "Led by Scout Axel with support from Active Inland Empire, this project turns donated lumber and volunteer weekends into ramps every rider can use — free, forever. Your donation buys materials and safety gear, and you can tell the city what you want in the bike park through the public comment board below.",
+        "cta": "Donate on GoFundMe",
+        "cardCta": "See the project",
+        "shareText": "Help build free public bike ramps in Rancho Cucamonga with Active Inland Empire!"
+      },
+      "generalFund": {
+        "hook": "Power the Next Community Event",
+        "summary": "The General Fund covers permits, equipment, ice, and insurance so our health and wellness events stay free or low-cost for everyone.",
+        "story": "Every month we allocate contributions across our programs — community rides, contrast therapy pop-ups, and new “third place” experiments. Contributors can opt into impact updates, so you see exactly what your support made happen.",
+        "cta": "Open the donation form",
+        "cardCta": "Support the fund",
+        "shareText": "Support free community health and wellness events in the Inland Empire!"
+      }
+    }
   },
   "addc": {
     "title": "Anti-Detox Detox Club",
@@ -205,5 +223,12 @@
     "previous": "Previous posts",
     "next": "Next posts",
     "fallbackText": "See the latest from our community events, rides, and pop-ups on Instagram."
+  },
+  "funding": {
+    "ofGoal": "of {goal} goal",
+    "donorCount": "{count} donors so far",
+    "progressAria": "Fundraising progress",
+    "share": "Share this project",
+    "linkCopied": "Link copied!"
   }
 }
