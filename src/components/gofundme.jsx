@@ -1,7 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
-import { useTranslation } from "@/hooks/useTranslation";
+import { useTranslations } from "next-intl";
 import styles from "./gofundme.module.css";
 
 const GOFUNDME_WIDGET_URL =
@@ -13,7 +13,7 @@ const WIDGET_WIDTH = 250;
 const WIDGET_HEIGHT = 500;
 
 const GofundmeWidget = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const containerRef = useRef(null);
 
   useLayoutEffect(() => {

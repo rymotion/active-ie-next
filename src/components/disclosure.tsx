@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { useTranslation } from "@/hooks/useTranslation";
+import { useTranslations } from "next-intl";
 
 export default function DisclosureBar() {
-  const { t } = useTranslation();
+  const t = useTranslations();
   
   // Handle scroll events to detect when user is at the bottom
   useEffect(() => {

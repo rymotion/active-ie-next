@@ -1,13 +1,12 @@
 import AxelBikeRamp from "@/assets/event-photos/Eagle-scout-poster.png";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function AltGFMPoster() {
   return (
     <>
       {/* standard vertical widget */}
       <div className="flex flex-col sm:hidden items-center justify-center">
-        <Link href="https://gofund.me/af39d7ad">
+        <a href="https://gofund.me/af39d7ad" target="_blank" rel="noopener noreferrer">
           <Image
             src={AxelBikeRamp}
             alt="SweatPals"
@@ -15,7 +14,7 @@ export default function AltGFMPoster() {
             height="150"
             priority
           ></Image>
-        </Link>
+        </a>
       </div>
       {/* standard widescreen  marquee widget */}
       <div
@@ -25,7 +24,7 @@ export default function AltGFMPoster() {
       >
         {/* TODO: Add programs and efforts components */}
 
-        <Link href="https://gofund.me/af39d7ad">
+        <a href="https://gofund.me/af39d7ad" target="_blank" rel="noopener noreferrer">
           <Image
             src={AxelBikeRamp}
             alt="SweatPals"
@@ -33,7 +32,7 @@ export default function AltGFMPoster() {
             height="400"
             priority
           ></Image>
-        </Link>
+        </a>
       </div>
     </>
   );

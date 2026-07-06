@@ -1,0 +1,192 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "events": "Eventos",
+    "projects": "Proyectos",
+    "merch": "Mercancía",
+    "contactUs": "Contáctenos",
+    "supportUs": "Apóyenos",
+    "organizationName": "Active Inland Empire",
+    "products": "Tienda",
+    "contact": "Contáctanos",
+    "support": "Apóyanos",
+    "contrastTherapy": "Terapia de Contraste",
+    "volunteer": "Voluntariado",
+    "addc": "ADDC",
+    "specialEvent": "Evento Especial",
+    "privacy": "Política de Privacidad",
+    "dataPolicy": "Política de Datos",
+    "sitemap": "Mapa del Sitio"
+  },
+  "landing": {
+    "eventCalendars": "Nuestros Calendarios de Eventos",
+    "shopTitle": "Compra Active Inland Empire",
+    "donate": "Donar",
+    "volunteer": "Voluntario",
+    "readBlog": "Lee Nuestro Blog",
+    "contrastTherapyTitle": "Pop-Ups de Terapia de Contraste",
+    "contrastTherapyTeaser": "Llevamos eventos pop-up móviles de inmersión en frío y terapia de contraste a gimnasios, equipos y eventos privados en todo el Inland Empire — equipo, energía, hielo y operación en el sitio, todo a nuestro cargo.",
+    "contrastTherapyCta": "Ver paquetes y consultar"
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "description": "Ayuda a apoyar Active Inland Empire y nuestra misión de construir comunidad a través del deporte, la salud y el bienestar."
+  },
+  "events": {
+    "title": "Únete a Nuestros Eventos",
+    "ourCalendar": "Nuestro Calendario de Eventos",
+    "sweatpalsCalendar": "Nuestro Calendario de Eventos SweatPals",
+    "surveyPrompt": "Queremos escuchar de ti, la comunidad, sobre cómo podemos servirte mejor y realizar nuestros eventos en persona. Al hacer clic en el botón a continuación, podemos aprender cómo servirte mejor para apoyarte en tu viaje de salud.",
+    "takeSurvey": "Tomar la Encuesta de Horario del Programa",
+    "surveyTitle": "Encuesta de Horario del Programa",
+    "close": "Cerrar"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description": "Estos son nuestros proyectos y esfuerzos actuales en todo el Inland Empire.",
+    "bikeRampTitle": "Actualización del Proyecto de Rampa para Bicicletas",
+    "publicCommentTitle": "Tablero de Comentarios Públicos",
+    "publicCommentDescription": "Déjanos saber qué deberíamos agregar al parque de bicicletas con el formulario de comentarios a continuación."
+  },
+  "addc": {
+    "title": "Club Anti-Detox Detox",
+    "description": "Obtén más información sobre el Club Anti-Detox Detox"
+  },
+  "donation": {
+    "yourProceeds": "Tus Contribuciones",
+    "proceedsDescription": "Mientras continuamos nuestros esfuerzos de capacidad y programa, tu contribución ayuda a apoyar nuestros esfuerzos, probar, construir y sostener estos programas de \"tercer lugar\". Cada contribución realizada también preguntamos a los contribuyentes si desean actualizaciones regulares sobre el impacto que tuvieron sus contribuciones.",
+    "partnerDescription": "Si quieres asociarte con nosotros para ayudar a construir un Inland Empire mejor, más saludable y más seguro, puedes contribuir a nuestro Fondo de Contribución General. Mensualmente buscamos asignar el 10% de las contribuciones dadas para ser utilizadas en los otros esfuerzos enumerados a continuación.",
+    "additionalBenefits": "Beneficios Adicionales al Configurar Contribuciones Mensuales, Trimestrales o Anuales",
+    "directImpact": "Si estás buscando tener un impacto directo con un esfuerzo específico que estamos apoyando, aquí están los proyectos con los que estamos ayudando."
+  },
+  "contact": {
+    "inquiries": "Consultas:",
+    "email": "organization@activeie.org"
+  },
+  "support": {
+    "sponsorshipTitle": "¿Interesado en Patrocinio?",
+    "sponsorshipDescription": "¿Estás en el espacio de salud y bienestar y buscas hacer crecer tu marca? ¡Expande con nosotros!",
+    "getInTouch": "Ponte en contacto"
+  },
+  "volunteer": {
+    "description": "¿Quieres trabajar en nuestros eventos o ser parte de nuestra organización? Completa el formulario a continuación para expresar tu interés."
+  },
+  "footer": {
+    "nonprofitInfo": "Active: Inland Empire Inc es una organización sin fines de lucro 501(c)(3)",
+    "ein": "EIN Federal 33-1746388 - Todas las donaciones son deducibles de impuestos",
+    "moreInfo": "Más información está disponible en nuestra página de Guidestar o abriendo una consulta en"
+  },
+  "common": {
+    "scrollToContinue": "Desplázate para continuar",
+    "loading": "Cargando...",
+    "loadingInstagram": "Cargando publicación de Instagram...",
+    "loadingFundraiser": "Cargando recaudación de fondos...",
+    "ourBlog": "Nuestro Blog",
+    "activeInlandEmpire": "Active Inland Empire",
+    "viewOnGofundme": "Ver en GoFundMe",
+    "close": "Cerrar",
+    "home": "Inicio",
+    "language": "Idioma",
+    "notFound": "No se pudo encontrar esta página."
+  },
+  "burnchart": {
+    "bikeParkFunding": "Financiamiento del Parque de Bicicletas",
+    "goalCappedAt20k": "Meta (Limitada a $20k)",
+    "amountRaised": "Cantidad Recaudada",
+    "currentTotal": "Total Actual",
+    "goal": "Meta",
+    "fundingSourcesBreakdown": "Desglose de Fuentes de Financiamiento",
+    "government": "Gobierno",
+    "grants": "Subvenciones",
+    "fundraising": "Recaudación de Fondos",
+    "sponsors": "Patrocinadores",
+    "dashboardNote": "Nota: Este panel se actualiza regularmente cada 12-24 horas."
+  },
+  "specialEvent": {
+    "joinOurCommunity": "Únete a Nuestra Comunidad",
+    "wantToWorkEvents": "¿Quieres trabajar en nuestros eventos o ser parte de nuestra organización?",
+    "clickToSubscribe": "Haz clic aquí para suscribirte a nuestro boletín.",
+    "newsletterSubscribe": "Suscribirse al Boletín",
+    "ourEventCalendar": "Nuestro Calendario de Eventos",
+    "popOutWindowDescription": "Al seleccionar la opción de ventana emergente de la imagen a continuación, serás llevado al archivo alojado en Google Drive para proporcionar comentarios sobre el proyecto de rampa para bicicletas. Ten voz en la planificación del proyecto. Debes iniciar sesión en una cuenta de Google registrada para participar."
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "content": "Todos los eventos de Active Inland Empire tendrán fotos y videos tomados durante la participación. Active Inland Empire se reserva el derecho de reutilizar y distribuir material en nuestros canales de marketing, informes de subvenciones y redes sociales. Las solicitudes de eliminación se pueden enviar a organization@activeie.org. Las encuestas y el contenido escrito por participantes voluntarios permanecerán confidenciales y cumplirán con las leyes de privacidad de California. Ninguna información proporcionada a través de dichas encuestas será retenida a largo plazo por Active Inland Empire. Solo serás contactado por perfiles de eventos y soporte directamente de la organización."
+  },
+  "contrastTherapy": {
+    "logoAlt": "Logotipo del escudo de Active Inland Empire",
+    "subtitle": "Servicios de Terapia de Contraste — Inmersión en Frío Móvil y Recuperación",
+    "contactWebsite": "activeie.org",
+    "contactLocation": "Rancho Cucamonga, California",
+    "metaLine": "Hoja de Precios • Vigente desde junio de 2026 • Precios válidos por 30 días desde la cotización",
+    "intro": "Terapia de contraste móvil — equipos de inmersión en frío y recuperación entregados, instalados y operados en tu ubicación. Cada paquete incluye equipo, energía de generador, combustible y hielo. Elige agua en el sitio (bombeamos desde tu fuente) o deja que nosotros llevemos el agua.",
+    "packagesHeading": "Paquetes (por evento / por día)",
+    "pkgSingle": "Inmersión Individual",
+    "pkgParty": "Inmersión para Fiestas",
+    "pkgCustom": "Personalizado / Grande",
+    "gallonsSingle": "100 galones",
+    "gallonsParty": "400 galones",
+    "gallonsCustom": "400+ galones",
+    "waterOnSiteCaption": "Agua disponible en el sitio",
+    "weBringCaption": "Nosotros llevamos el agua",
+    "customNoteLead": "Eventos personalizados / grandes:",
+    "customNoteBody": "más allá de 400 galones, agrega $200 por cada incremento adicional de 400 galones. Los volúmenes grandes incluyen que nosotros llevemos el agua.",
+    "includesHeading": "Qué incluye cada paquete",
+    "includes1": "Entrega, instalación y desmontaje en tu ubicación",
+    "includes2": "Alquiler de equipo de inmersión en frío / terapia de contraste",
+    "includes3": "Energía de generador en el sitio durante todo el evento",
+    "includes4": "Combustible para el generador y la bomba",
+    "includes5": "Hielo y entrega de hielo, según el volumen de tu inmersión",
+    "includes6": "Operación en el sitio y manejo del agua durante el evento",
+    "waterHeading": "Opciones de agua",
+    "waterColOption": "Opción",
+    "waterColMeaning": "Qué significa",
+    "waterColPricing": "Precio",
+    "waterOnSiteOption": "Agua en el sitio",
+    "waterOnSiteMeaning": "Llenamos en el lugar.",
+    "waterOnSitePricing": "Precio base del paquete",
+    "waterBringOption": "Nosotros llevamos el agua",
+    "waterBringMeaning": "No hay agua utilizable en el lugar. Transportamos el agua en camión y remolque y llenamos al llegar.",
+    "waterBringPricing": "Base + $200",
+    "depositHeading": "Términos de depósito y reserva",
+    "depositTerms": "Un depósito del 50% del total reserva tu fecha; el saldo se paga el día del evento antes de la instalación. Los depósitos son reembolsables hasta 7 días antes; después pueden aplicarse a una fecha reprogramada.",
+    "depositColPackage": "Paquete",
+    "depositColTotal": "Total",
+    "depositColDeposit": "Depósito del 50%",
+    "depositColBalance": "Saldo pendiente",
+    "depositRowSingleOnSite": "Inmersión Individual — agua en el sitio",
+    "depositRowSingleBring": "Inmersión Individual — nosotros llevamos el agua",
+    "depositRowPartyOnSite": "Inmersión para Fiestas — agua en el sitio",
+    "depositRowPartyBring": "Inmersión para Fiestas — nosotros llevamos el agua",
+    "finePrint": "El millaje fuera del área de servicio local puede agregar $0.29 por milla.",
+    "videoComingSoon": "Video próximamente",
+    "photoComingSoon": "Foto próximamente",
+    "form": {
+      "heading": "Reserva tu evento / Consulta",
+      "intro": "Cuéntanos sobre tu evento y te responderemos con disponibilidad y una cotización.",
+      "requiredNote": "* Campos obligatorios",
+      "nameLabel": "Nombre",
+      "emailLabel": "Correo electrónico",
+      "phoneLabel": "Teléfono",
+      "eventDateLabel": "Fecha del evento",
+      "eventLocationLabel": "Lugar del evento / ciudad",
+      "packageLabel": "Paquete de interés",
+      "messageLabel": "Mensaje",
+      "optionSingle": "Inmersión Individual",
+      "optionParty": "Inmersión para Fiestas",
+      "optionCustom": "Personalizado / Grande",
+      "optionNotSure": "No estoy seguro",
+      "errorNameRequired": "Por favor ingresa tu nombre.",
+      "errorEmailRequired": "Por favor ingresa tu correo electrónico.",
+      "errorEmailInvalid": "Por favor ingresa un correo electrónico válido.",
+      "errorMessageRequired": "Por favor incluye un mensaje breve sobre tu evento.",
+      "submit": "Enviar consulta",
+      "sending": "Enviando…",
+      "successTitle": "Gracias — tu consulta ha sido enviada.",
+      "successBody": "Te responderemos lo antes posible al correo que proporcionaste.",
+      "errorSubmit": "Algo salió mal y tu consulta no fue enviada. Por favor intenta de nuevo, o escríbenos directamente a"
+    }
+  }
+}

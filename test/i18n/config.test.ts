@@ -1,6 +1,6 @@
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
-import { locales, defaultLocale } from '../../src/i18n/config';
+import { locales, defaultLocale, localeNames, localeFlags } from '../../src/i18n/config';
 
 describe('i18n Configuration', () => {
   describe('locales', () => {
@@ -8,13 +8,22 @@ describe('i18n Configuration', () => {
       expect(locales).to.be.an('array');
     });
 
-    it('should contain en and es', () => {
+    it('should contain en, es, tl, and zh', () => {
       expect(locales).to.include('en');
       expect(locales).to.include('es');
+      expect(locales).to.include('tl');
+      expect(locales).to.include('zh');
     });
 
-    it('should have exactly 2 locales', () => {
-      expect(locales).to.have.lengthOf(2);
+    it('should have exactly 4 locales', () => {
+      expect(locales).to.have.lengthOf(4);
+    });
+
+    it('should have a name and flag for every locale', () => {
+      for (const locale of locales) {
+        expect(localeNames[locale]).to.be.a('string').that.is.not.empty;
+        expect(localeFlags[locale]).to.be.a('string').that.is.not.empty;
+      }
     });
   });
 
