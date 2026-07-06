@@ -56,12 +56,14 @@ export default function Events({ igPosts }: { igPosts: IgPost[] | null }) {
           <h1 className="page-width flex-col h-[10vh] items-center justify-center items-center text-2xl font-bold">
             {t("events.title")}
           </h1>
-          <div className="page-width flex-col w-full py-8 items-center justify-center">
-            <h2 className="text-xl font-semibold mb-4 text-center">
+          {/* Google Calendars demoted: Sweatpals is the primary calendar.
+              Kept collapsed here in case some events only live on Google. */}
+          <details className="page-width mx-auto w-full max-w-4xl py-8">
+            <summary className="cursor-pointer py-2 text-center text-xl font-semibold text-cream hover:text-white">
               {t("events.ourCalendar")}
-            </h2>
+            </summary>
             <PublicCalendar />
-          </div>
+          </details>
         </motion.section>
 
         <Container size="wide">

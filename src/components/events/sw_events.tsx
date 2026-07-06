@@ -5,6 +5,7 @@ import SweatPalsLogo from "@/assets/vendors/sweatpals-logo.svg";
 import Image from "next/image";
 import React, { useCallback, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import "./sw_events.css";
 
 const SWEATPALS_ORIGIN = "https://sweatpals.com";
@@ -20,10 +21,11 @@ const SWEATPALS_EMBED_CONFIG = {
   showDescription: true,
   directToCheckout: false,
   enableAutoEmbed: true,
-  primaryColorHex: "c10202",
-  secondaryColorHex: "776060",
+  // Brand palette: maroon primary/buttons, cream secondary, black background.
+  primaryColorHex: "7B1113",
+  secondaryColorHex: "F2EDE9",
   backgroundColorHex: "000000",
-  buttonColorHex: "ff0000",
+  buttonColorHex: "7B1113",
   fontFamily: "Poppins",
 };
 
@@ -90,24 +92,54 @@ function normalizeEmbedLayout(root: HTMLElement) {
 }
 
 export default function SweatpalEvents() {
+  const t = useTranslations();
   const embedHostRef = useRef<HTMLDivElement>(null);
-  const [containerHeight, setContainerHeight] = React.useState(
-    getResponsiveMinHeight,
-  );
+  // Server renders a fixed height; the responsive value applies after mount
+  // (window-dependent initial state caused a hydration mismatch).
+  const [containerHeight, setContainerHeight] = React.useState(500);
+  const [nearViewport, setNearViewport] = React.useState(false);
 
   const measureEmbedHeight = useCallback((embedWrapper: HTMLElement) => {
     const height = Math.max(
       embedWrapper.scrollHeight,
       embedWrapper.getBoundingClientRect().height,
     );
-    if (height > 0) {
-      setContainerHeight(height);
-    }
+    // Ignore sub-8px deltas: the ResizeObserver watches the element whose
+    // min-height we set, so unfiltered updates feed back into themselves.
+    setContainerHeight((previous) =>
+      height > 0 && Math.abs(height - previous) > 8 ? height : previous,
+    );
   }, []);
 
-  useEffect(() => injectSweatpalsHeadLinks(), []);
+  useEffect(() => {
+    setContainerHeight(getResponsiveMinHeight());
+  }, []);
+
+  // Defer all embed work until the section approaches the viewport —
+  // on the landing page it sits below the fold.
+  useEffect(() => {
+    const host = embedHostRef.current;
+    if (!host) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setNearViewport(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "400px 0px" },
+    );
+    observer.observe(host);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
+    if (!nearViewport) return;
+    return injectSweatpalsHeadLinks();
+  }, [nearViewport]);
+
+  useEffect(() => {
+    if (!nearViewport) return;
     const targetContainer = embedHostRef.current;
     if (!targetContainer) return;
 
@@ -129,7 +161,7 @@ export default function SweatpalEvents() {
       mutationTimeout = setTimeout(() => {
         normalizeEmbedLayout(embedWrapper);
         measureEmbedHeight(embedWrapper);
-      }, 100);
+      }, 150);
     };
 
     const resizeObserver = new ResizeObserver(() => {
@@ -164,7 +196,7 @@ export default function SweatpalEvents() {
         targetContainer.removeChild(embedWrapper);
       }
     };
-  }, [measureEmbedHeight]);
+  }, [nearViewport, measureEmbedHeight]);
 
   return (
     <section className="sweatpals-events-section w-full box-border bg-black">
@@ -176,9 +208,9 @@ export default function SweatpalEvents() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="sweatpals-events-header flex flex-col items-center justify-center w-full min-w-0"
         >
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 text-center px-2">
-            Events
-          </h1>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 text-center px-2">
+            {t("nav.events")}
+          </h2>
           <Image
             src={SweatPalsLogo}
             alt="SweatPals Logo"
