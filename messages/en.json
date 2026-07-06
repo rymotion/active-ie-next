@@ -275,5 +275,17 @@
   "meta": {
     "siteTitle": "Active Inland Empire",
     "siteDescription": "Active Inland Empire is the nonprofit building community through sport, lowering financial barriers to participate in sports, health, and wellness activities."
+  },
+  "fundingDashboard": {
+    "title": "Funding Dashboard",
+    "lastUpdated": "Updated {date} from our project ledger",
+    "lineItems": "See every source",
+    "categories": {
+      "government_grant": "Government grants",
+      "public_org_grant": "Public organization grants",
+      "individual_contribution": "Individual contributions",
+      "general_fund_allocation": "Active IE General Fund allocation",
+      "other": "Other"
+    }
   }
 }

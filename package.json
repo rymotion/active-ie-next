@@ -9,7 +9,8 @@
     "lint": "next lint",
     "test": "mocha",
     "test:watch": "mocha --watch",
-    "test:coverage": "c8 mocha"
+    "test:coverage": "c8 mocha",
+    "translations:check": "node scripts/check-messages.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.1",

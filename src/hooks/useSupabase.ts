@@ -92,9 +92,10 @@ export function useSupabaseInsert<T = unknown>(tableName: string) {
       setLoading(true);
       setError(null);
 
+      // Cast: table name is dynamic, so postgrest can't type the payload.
       const { data: result, error: insertError } = await supabase
         .from(tableName)
-        .insert(data)
+        .insert(data as never)
         .select();
 
       if (insertError) throw insertError;
@@ -130,7 +131,7 @@ export function useSupabaseUpdate<T = unknown>(tableName: string) {
       setLoading(true);
       setError(null);
 
-      let query = supabase.from(tableName).update(data);
+      let query = supabase.from(tableName).update(data as never);
 
       // Apply filters
       Object.entries(filter).forEach(([key, value]) => {

@@ -275,5 +275,17 @@
   "meta": {
     "siteTitle": "Active Inland Empire",
     "siteDescription": "Active Inland Empire es la organización sin fines de lucro que construye comunidad a través del deporte, reduciendo las barreras económicas para participar en actividades deportivas, de salud y bienestar."
+  },
+  "fundingDashboard": {
+    "title": "Panel de Financiamiento",
+    "lastUpdated": "Actualizado el {date} desde nuestro libro del proyecto",
+    "lineItems": "Ver cada fuente",
+    "categories": {
+      "government_grant": "Subvenciones gubernamentales",
+      "public_org_grant": "Subvenciones de organizaciones públicas",
+      "individual_contribution": "Contribuciones individuales",
+      "general_fund_allocation": "Asignación del Fondo General de Active IE",
+      "other": "Otros"
+    }
   }
 }

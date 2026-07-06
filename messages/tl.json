@@ -275,5 +275,17 @@
   "meta": {
     "siteTitle": "Active Inland Empire",
     "siteDescription": "Ang Active Inland Empire ay ang nonprofit na bumubuo ng komunidad sa pamamagitan ng isports, na nagpapababa ng mga hadlang sa pananalapi para makalahok sa isports, kalusugan, at wellness."
+  },
+  "fundingDashboard": {
+    "title": "Funding Dashboard",
+    "lastUpdated": "Na-update noong {date} mula sa aming project ledger",
+    "lineItems": "Tingnan ang bawat pinagmulan",
+    "categories": {
+      "government_grant": "Mga grant ng gobyerno",
+      "public_org_grant": "Mga grant ng pampublikong organisasyon",
+      "individual_contribution": "Mga indibidwal na kontribusyon",
+      "general_fund_allocation": "Alokasyon ng Active IE General Fund",
+      "other": "Iba pa"
+    }
   }
 }

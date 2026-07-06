@@ -11,11 +11,15 @@ import EmbedOnDemand from "@/components/projects/embed-on-demand";
 import GivebutterEmbed from "@/components/projects/givebutter-embed";
 import { projects } from "@/content/projects";
 import type { FundingNumbers } from "@/services/funding";
+import type { FundingDashboardData } from "@/services/funding-dashboard";
+import FundingDashboard from "@/components/projects/funding-dashboard";
 
 export default function ProjectsContent({
   funding,
+  dashboards = {},
 }: {
   funding: Record<string, FundingNumbers>;
+  dashboards?: Record<string, FundingDashboardData | null>;
 }) {
   const t = useTranslations();
   const bikeRamps = projects.find((p) => p.slug === "bike-ramps")!;
@@ -37,6 +41,9 @@ export default function ProjectsContent({
         <ProjectDetail project={bikeRamps} funding={funding["bike-ramps"]}>
           {/* Connection-stage evidence: build updates + a zero-cost way to participate */}
           <div className="flex flex-col gap-10">
+            {dashboards["bike-ramps"] ? (
+              <FundingDashboard data={dashboards["bike-ramps"]} />
+            ) : null}
             <BikeProjectWindow />
             <div>
               <h3 className="mb-2 font-display text-title uppercase tracking-wide">
