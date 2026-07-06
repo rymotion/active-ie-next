@@ -1,32 +1,37 @@
-"use client";
-import Screen from "@/components/screen/screen";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
+import Screen from "@/components/screen/screen";
+import Container from "@/components/layout/container";
+import ProductGrid from "@/components/shop/product-grid";
+import { shopifyService } from "@/services/shopify";
 
-import BuyButton from "./products/buybutton";
+export default async function Products({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations();
 
-export default function Products() {
-  const t = useTranslations();
-  
+  const { products } = shopifyService.isConfigured()
+    ? await shopifyService.getProducts(20)
+    : { products: [] };
+
   return (
     <Screen>
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("products.title")}</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      <Analytics />
+      <Container size="wide" className="py-12">
+        <div className="mb-12 text-center">
+          <h1 className="mb-4 font-display text-display uppercase tracking-wide">
+            {t("products.title")}
+          </h1>
+          <p className="mx-auto max-w-2xl text-lg text-cream/80">
             {t("products.description")}
           </p>
         </div>
-      </div>
-      <BuyButton
-        componentId="product-component-1754935153925"
-        productId="7900658729014"
-      />
-      <BuyButton
-        componentId="product-component-1754937482467"
-        productId="7813628297270"
-      />
-      <Analytics />
+        <ProductGrid products={products} />
+      </Container>
     </Screen>
   );
 }

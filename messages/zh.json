@@ -34,7 +34,11 @@
   },
   "products": {
     "title": "我们的产品",
-    "description": "支持 Active Inland Empire，助力我们通过运动、健康和身心福祉建设社区的使命。"
+    "description": "支持 Active Inland Empire，助力我们通过运动、健康和身心福祉建设社区的使命。",
+    "soldOut": "已售罄",
+    "shopAll": "查看全部周边",
+    "unavailable": "商店正在短暂休整。",
+    "visitStore": "访问我们的 Shopify 商店"
   },
   "events": {
     "title": "参加我们的活动",

@@ -34,7 +34,11 @@
   },
   "products": {
     "title": "Aming Mga Produkto",
-    "description": "Tumulong na suportahan ang Active Inland Empire at ang aming misyon na bumuo ng komunidad sa pamamagitan ng palakasan, kalusugan, at wellness."
+    "description": "Tumulong na suportahan ang Active Inland Empire at ang aming misyon na bumuo ng komunidad sa pamamagitan ng palakasan, kalusugan, at wellness.",
+    "soldOut": "Ubos na",
+    "shopAll": "Tingnan ang lahat ng merch",
+    "unavailable": "Pansamantalang nagpapahinga ang aming tindahan.",
+    "visitStore": "Bisitahin ang aming Shopify store"
   },
   "events": {
     "title": "Sumali sa Aming Mga Kaganapan",

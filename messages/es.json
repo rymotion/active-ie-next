@@ -34,7 +34,11 @@
   },
   "products": {
     "title": "Nuestros Productos",
-    "description": "Ayuda a apoyar Active Inland Empire y nuestra misión de construir comunidad a través del deporte, la salud y el bienestar."
+    "description": "Ayuda a apoyar Active Inland Empire y nuestra misión de construir comunidad a través del deporte, la salud y el bienestar.",
+    "soldOut": "Agotado",
+    "shopAll": "Ver toda la tienda",
+    "unavailable": "Nuestra tienda está tomando un descanso.",
+    "visitStore": "Visita nuestra tienda Shopify"
   },
   "events": {
     "title": "Únete a Nuestros Eventos",

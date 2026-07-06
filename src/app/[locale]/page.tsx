@@ -1,5 +1,2 @@
-import Home from "./landing/page";
-
-export default function Page() {
-  return <Home />;
-}
+// The home route renders the landing page (params pass through untouched).
+export { default } from "./landing/page";
