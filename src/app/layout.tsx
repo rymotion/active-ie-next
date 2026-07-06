@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { bebe } from "./fonts";
 import { CartProvider } from "@/contexts/cart-context";
 import { TranslationProvider } from "@/hooks/useTranslation";
 import { translations } from "@/i18n/translations";
@@ -36,7 +37,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bebe.variable} antialiased`}
       >
         <TranslationProvider translations={translations}>
           <CartProvider>{children}</CartProvider>
