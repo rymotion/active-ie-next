@@ -275,5 +275,17 @@
   "meta": {
     "siteTitle": "Active Inland Empire",
     "siteDescription": "Active Inland Empire 是一个通过运动建设社区的非营利组织，致力于降低参与运动、健康和身心保健活动的经济门槛。"
+  },
+  "fundingDashboard": {
+    "title": "资金看板",
+    "lastUpdated": "{date} 更新自项目账目",
+    "lineItems": "查看每项来源",
+    "categories": {
+      "government_grant": "政府拨款",
+      "public_org_grant": "公共组织资助",
+      "individual_contribution": "个人捐款",
+      "general_fund_allocation": "Active IE 普通基金拨款",
+      "other": "其他"
+    }
   }
 }
