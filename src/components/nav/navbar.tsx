@@ -75,21 +75,14 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         </Link>
 
         {/* Desktop links */}
-        <nav
-          aria-label={t("nav.organizationName")}
-          className="hidden lg:block"
-        >
+        <nav aria-label={t("nav.organizationName")} className="hidden lg:block">
           <ul className="flex items-center gap-6 xl:gap-8">
             {navRoutes.map((route) => (
               <li key={route.path} className="relative">
                 <Link
                   href={route.path}
                   aria-current={isActive(route.path) ? "page" : undefined}
-                  className={`py-2 text-sm font-semibold uppercase tracking-wider transition-colors xl:text-base ${
-                    isActive(route.path)
-                      ? "text-white"
-                      : "text-cream/80 hover:text-white"
-                  }`}
+                  className="py-2 text-sm font-semibold uppercase tracking-wider text-white transition-colors xl:text-base"
                 >
                   {t(route.labelKey)}
                 </Link>
@@ -116,7 +109,11 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         </div>
       </motion.div>
 
-      <MobileMenu id={menuId} open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <MobileMenu
+        id={menuId}
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+      />
     </header>
   );
 }
