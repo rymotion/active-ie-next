@@ -10,7 +10,8 @@
     "test": "mocha",
     "test:watch": "mocha --watch",
     "test:coverage": "c8 mocha",
-    "translations:check": "node scripts/check-messages.mjs"
+    "translations:check": "node scripts/check-messages.mjs",
+    "sync:funding": "tsx scripts/sync-funding-sheets.ts"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.1",
