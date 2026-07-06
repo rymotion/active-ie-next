@@ -4,7 +4,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 import PublicCalendar from "./calender";
 import ScheduleSurvey from "./suvey";
 import { Analytics } from "@vercel/analytics/react";
-import ACTVDialog from "@/components/dialog/dialog";
+import Dialog from "@/components/dialog/dialog";
 import SweatpalEvents from "@/components/events/sw_events";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -34,26 +34,15 @@ export default function Events() {
           </button>
         </motion.section>
 
-        {/* Modal Dialog */}
-        <ACTVDialog open={open} setOpen={setOpen}>
-          <div className=" inset-0 z-50 items-center justify-center bg-black p-20">
-            <div className="w-full flex-col min-h-screen flex items-center justify-center">
-              <button
-                className="text-2xl font-bold text-gray-400 hover:text-white bg-black hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
-                onClick={() => setOpen(false)}
-                aria-label="Close"
-              >
-                {t("events.close")}
-              </button>
-              <div className="relative bg-black rounded-lg shadow-lg w-[95vw] max-w-4xl max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
-                <h2 className="text-lg md:text-2xl font-semibold mb-4 text-center">
-                  {t("events.surveyTitle")}
-                </h2>
-                <ScheduleSurvey />
-              </div>
-            </div>
-          </div>
-        </ACTVDialog>
+        <Dialog
+          open={open}
+          onClose={() => setOpen(false)}
+          title={t("events.surveyTitle")}
+          closeLabel={t("events.close")}
+          size="lg"
+        >
+          <ScheduleSurvey />
+        </Dialog>
 
         <motion.section
           initial={{ opacity: 0, y: 20 }}

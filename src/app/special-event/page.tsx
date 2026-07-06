@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import PublicCalendar from "../events/calender";
 import NewsletterWidget from "../contact/newsletter_subscribe";
 import React, { useState } from "react";
-import ACTVDialog from "@/components/dialog/dialog";
+import Dialog from "@/components/dialog/dialog";
 import VolunteerInterestWidget from "../volunteer/volunteer_interest";
 import GofundmeWidget from "@/components/gofundme";
 import { motion } from "framer-motion";
@@ -97,26 +97,15 @@ export default function SpecialEvent() {
             <PublicCalendar />
           </div>
 
-          {/* Modal Dialog */}
-          <ACTVDialog open={open} setOpen={setOpen}>
-            <div className=" inset-0 z-50 items-center justify-center bg-black p-4 md:p-20">
-              <div className="w-full flex-col min-h-screen flex items-center justify-center">
-                <button
-                  className="text-2xl font-bold text-gray-400 hover:text-white bg-black hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
-                  onClick={() => setOpen(false)}
-                  aria-label="Close"
-                >
-                  {t("common.close")}
-                </button>
-                <div className="relative bg-black rounded-lg shadow-lg w-full max-w-4xl mx-4 max-h-[95vh] p-4 md:p-8 overflow-auto flex flex-col">
-                  <h2 className="text-lg md:text-2xl font-semibold mb-4 text-center">
-                    {t("specialEvent.newsletterSubscribe")}
-                  </h2>
-                  <NewsletterWidget />
-                </div>
-              </div>
-            </div>
-          </ACTVDialog>
+          <Dialog
+            open={open}
+            onClose={() => setOpen(false)}
+            title={t("specialEvent.newsletterSubscribe")}
+            closeLabel={t("common.close")}
+            size="lg"
+          >
+            <NewsletterWidget />
+          </Dialog>
         </main>
       </Screen>
     </>
