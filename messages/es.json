@@ -27,7 +27,10 @@
     "readBlog": "Lee Nuestro Blog",
     "contrastTherapyTitle": "Pop-Ups de Terapia de Contraste",
     "contrastTherapyTeaser": "Llevamos eventos pop-up móviles de inmersión en frío y terapia de contraste a gimnasios, equipos y eventos privados en todo el Inland Empire — equipo, energía, hielo y operación en el sitio, todo a nuestro cargo.",
-    "contrastTherapyCta": "Ver paquetes y consultar"
+    "contrastTherapyCta": "Ver paquetes y consultar",
+    "heroTagline": "Construyendo comunidad a través del deporte, la salud y el bienestar en todo el Inland Empire.",
+    "missionLabel": "Nuestra Misión",
+    "sectionsAria": "Secciones de la página"
   },
   "products": {
     "title": "Nuestros Productos",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -24,7 +24,9 @@ export default function Navbar({ transparent = false }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [focusWithin, setFocusWithin] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
-  const menuId = useId();
+  // Stable literal (not useId): there is exactly one navbar per page, and
+  // useId is sensitive to tree-position drift between server and client.
+  const menuId = "primary-mobile-menu";
   const { hidden, scrolled } = useScrollDirection(80);
 
   useScrollLock(menuOpen);

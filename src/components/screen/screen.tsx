@@ -18,7 +18,11 @@ const Screen: React.FC<ScreenProps> = ({
   transparentHeader = false,
 }) => {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-black">
+    // Transparent when a fixed video backdrop sits behind the page
+    // (body is black anyway, so opaque pages are unaffected).
+    <div
+      className={`flex flex-col min-h-[100dvh] ${transparentHeader ? "" : "bg-black"}`}
+    >
       <Navbar transparent={transparentHeader} />
 
       <main
