@@ -8,6 +8,39 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import "./sw_events.css";
 
+/**
+ * Sweatpals hands out a plain HTML snippet from their dashboard:
+ *
+ *   <script src="https://sweatpals.com/static/embed/community/events/script.js?communityUsername=actv_ie&…"></script>
+ *
+ * plus an optional head block:
+ *
+ *   <link rel="preconnect" href="https://sweatpals.com">
+ *   <link rel="preload" href="…same script URL…" as="script">
+ *
+ * That snippet can't be pasted into the App Router as-is: a <script> tag in
+ * JSX is inert (React never executes it), and the widget writes into whatever
+ * DOM node it finds at execution time, so it needs a real host element that
+ * exists before the script runs. This file is that snippet decomposed into
+ * three pieces:
+ *
+ *   1. SWEATPALS_EMBED_CONFIG      — the query string, parsed back into a
+ *      typed object so options are readable and diffable instead of buried in
+ *      URL encoding. Every key here maps 1:1 to a `?key=value` pair, and the
+ *      `*Json` params are stored as real arrays/objects that the builder
+ *      re-serializes.
+ *   2. buildSweatpalsEmbedScriptUrl — re-encodes the config back into the exact
+ *      URL Sweatpals gave us. URLSearchParams handles the percent-encoding, so
+ *      the source stays legible.
+ *   3. The effects in SweatpalEvents — inject the <link> head tags and the
+ *      <script> element imperatively once the section nears the viewport, then
+ *      tear them down on unmount so React Strict Mode's double-invoke and
+ *      client-side navigation don't stack duplicate widgets.
+ *
+ * To adopt a new snippet: paste its query string into a URLSearchParams in a
+ * scratch file, mirror the pairs into SWEATPALS_EMBED_CONFIG below (decoding
+ * the JSON params into arrays/objects), and add any new key to the builder.
+ */
 const SWEATPALS_ORIGIN = "https://sweatpals.com";
 const SWEATPALS_EMBED_SCRIPT_PATH =
   "/static/embed/community/events/script.js";
@@ -16,18 +49,48 @@ const SWEATPALS_EMBED_SCRIPT_PATH =
 const SWEATPALS_EMBED_CONFIG = {
   communityUsername: "actv_ie",
   defaultView: "tile",
-  views: ["tile"] as const,
-  filters: ["date-picker", "Location"] as const,
-  showDescription: true,
+  views: ["tile", "list", "calendar"],
+  filters: [
+    "fitness-type",
+    "Location",
+    "type",
+    "date-picker",
+    "price-range",
+  ],
+  showDescription: false,
   directToCheckout: false,
   enableAutoEmbed: true,
-  // Brand palette: maroon primary/buttons, cream secondary, black background.
-  primaryColorHex: "7B1113",
-  secondaryColorHex: "F2EDE9",
-  backgroundColorHex: "000000",
-  buttonColorHex: "7B1113",
-  fontFamily: "Poppins",
-};
+  brandColorHex: "F13939",
+  fontFamily: "Anuphan",
+  cardStyle: "modern",
+  displayTimeMode: "in-the-middle",
+  /** Per-field toggles for what each event card shows. */
+  contentVisibility: {
+    startTime: true,
+    duration: true,
+    coverImage: true,
+    address: true,
+    price: true,
+    priceWithMembership: true,
+    tags: true,
+    shareButton: true,
+    rsvps: true,
+    capacity: true,
+    host: true,
+    coHost: true,
+    instructor: true,
+  },
+  bookingBehavior: "open-experience-details",
+  buttonText: "DETAILS",
+  animationsEnabled: true,
+  // "auto" lets the widget size itself; the ResizeObserver below mirrors that
+  // height onto the host element so the section doesn't clip or leave a gap.
+  heightMode: "auto",
+  spacingsMode: "tight",
+  maxWidth: 1120,
+  cornerRadius: 24,
+  showWidgetTitle: true,
+} as const;
 
 function buildSweatpalsEmbedScriptUrl(
   config: typeof SWEATPALS_EMBED_CONFIG = SWEATPALS_EMBED_CONFIG,
@@ -40,11 +103,19 @@ function buildSweatpalsEmbedScriptUrl(
     showDescription: String(config.showDescription),
     directToCheckout: String(config.directToCheckout),
     enableAutoEmbed: String(config.enableAutoEmbed),
-    primaryColorHex: config.primaryColorHex,
-    secondaryColorHex: config.secondaryColorHex,
-    backgroundColorHex: config.backgroundColorHex,
-    buttonColorHex: config.buttonColorHex,
+    brandColorHex: config.brandColorHex,
     fontFamily: config.fontFamily,
+    cardStyle: config.cardStyle,
+    displayTimeMode: config.displayTimeMode,
+    contentVisibilityJson: JSON.stringify(config.contentVisibility),
+    bookingBehavior: config.bookingBehavior,
+    buttonText: config.buttonText,
+    animationsEnabled: String(config.animationsEnabled),
+    heightMode: config.heightMode,
+    spacingsMode: config.spacingsMode,
+    maxWidth: String(config.maxWidth),
+    cornerRadius: String(config.cornerRadius),
+    showWidgetTitle: String(config.showWidgetTitle),
   });
 
   return `${SWEATPALS_ORIGIN}${SWEATPALS_EMBED_SCRIPT_PATH}?${params.toString()}`;

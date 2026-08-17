@@ -1,13 +1,7 @@
 // This marquee widget has the event poster on one side and the information and
 // registration on the other side of the event
-// import StreetHockeyPoster from "@/assets/events/street-hockey.png";
-// import BreathePoster from "@/assets/events/breathe-ig.png";
-// import SweatPalsLogo from "@/assets/vendors/sweatpals-logo.svg";
-// import Image from "next/image";
 
 import React, { useState, useEffect, useRef } from "react";
-// import { Link } from "@/i18n/navigation";
-// import { useRouter } from "next/router";
 
 export default function MarqueeWidget({
   marquee,

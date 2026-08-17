@@ -4,9 +4,6 @@
     "blog": "Blog",
     "events": "Eventos",
     "projects": "Proyectos",
-    "merch": "Mercancía",
-    "contactUs": "Contáctenos",
-    "supportUs": "Apóyenos",
     "organizationName": "Active Inland Empire",
     "products": "Tienda",
     "contact": "Contáctanos",
@@ -42,10 +39,6 @@
     "visitStore": "Visita nuestra tienda Shopify"
   },
   "events": {
-    "title": "Únete a Nuestros Eventos",
-    "ourCalendar": "Nuestro Calendario de Eventos",
-    "sweatpalsCalendar": "Nuestro Calendario de Eventos SweatPals",
-    "surveyPrompt": "Queremos escuchar de ti, la comunidad, sobre cómo podemos servirte mejor y realizar nuestros eventos en persona. Al hacer clic en el botón a continuación, podemos aprender cómo servirte mejor para apoyarte en tu viaje de salud.",
     "takeSurvey": "Tomar la Encuesta de Horario del Programa",
     "surveyTitle": "Encuesta de Horario del Programa",
     "close": "Cerrar"
@@ -75,19 +68,11 @@
       }
     }
   },
-  "ritual": {
-    "title": "Ritual Wellness",
-    "description": "Obtén más información sobre Ritual Wellness"
-  },
   "donation": {
-    "yourProceeds": "Tus Contribuciones",
     "proceedsDescription": "Mientras continuamos nuestros esfuerzos de capacidad y programa, tu contribución ayuda a apoyar nuestros esfuerzos, probar, construir y sostener estos programas de \"tercer lugar\". Cada contribución realizada también preguntamos a los contribuyentes si desean actualizaciones regulares sobre el impacto que tuvieron sus contribuciones.",
-    "partnerDescription": "Si quieres asociarte con nosotros para ayudar a construir un Inland Empire mejor, más saludable y más seguro, puedes contribuir a nuestro Fondo de Contribución General. Mensualmente buscamos asignar el 10% de las contribuciones dadas para ser utilizadas en los otros esfuerzos enumerados a continuación.",
-    "additionalBenefits": "Beneficios Adicionales al Configurar Contribuciones Mensuales, Trimestrales o Anuales",
-    "directImpact": "Si estás buscando tener un impacto directo con un esfuerzo específico que estamos apoyando, aquí están los proyectos con los que estamos ayudando."
+    "partnerDescription": "Si quieres asociarte con nosotros para ayudar a construir un Inland Empire mejor, más saludable y más seguro, puedes contribuir a nuestro Fondo de Contribución General. Mensualmente buscamos asignar el 10% de las contribuciones dadas para ser utilizadas en los otros esfuerzos enumerados a continuación."
   },
   "contact": {
-    "inquiries": "Consultas:",
     "email": "organization@activeie.org"
   },
   "support": {
@@ -110,11 +95,6 @@
     "guidestarAlt": "Sello de Transparencia Guidestar"
   },
   "common": {
-    "scrollToContinue": "Desplázate para continuar",
-    "loading": "Cargando...",
-    "loadingInstagram": "Cargando publicación de Instagram...",
-    "loadingFundraiser": "Cargando recaudación de fondos...",
-    "ourBlog": "Nuestro Blog",
     "activeInlandEmpire": "Active Inland Empire",
     "viewOnGofundme": "Ver en GoFundMe",
     "close": "Cerrar",
@@ -123,26 +103,12 @@
     "notFound": "No se pudo encontrar esta página.",
     "menu": "Menú"
   },
-  "burnchart": {
-    "bikeParkFunding": "Financiamiento del Parque de Bicicletas",
-    "goalCappedAt20k": "Meta (Limitada a $20k)",
-    "amountRaised": "Cantidad Recaudada",
-    "currentTotal": "Total Actual",
-    "goal": "Meta",
-    "fundingSourcesBreakdown": "Desglose de Fuentes de Financiamiento",
-    "government": "Gobierno",
-    "grants": "Subvenciones",
-    "fundraising": "Recaudación de Fondos",
-    "sponsors": "Patrocinadores",
-    "dashboardNote": "Nota: Este panel se actualiza regularmente cada 12-24 horas."
-  },
   "specialEvent": {
     "joinOurCommunity": "Únete a Nuestra Comunidad",
     "wantToWorkEvents": "¿Quieres trabajar en nuestros eventos o ser parte de nuestra organización?",
     "clickToSubscribe": "Haz clic aquí para suscribirte a nuestro boletín.",
     "newsletterSubscribe": "Suscribirse al Boletín",
-    "ourEventCalendar": "Nuestro Calendario de Eventos",
-    "popOutWindowDescription": "Al seleccionar la opción de ventana emergente de la imagen a continuación, serás llevado al archivo alojado en Google Drive para proporcionar comentarios sobre el proyecto de rampa para bicicletas. Ten voz en la planificación del proyecto. Debes iniciar sesión en una cuenta de Google registrada para participar."
+    "ourEventCalendar": "Nuestro Calendario de Eventos"
   },
   "privacy": {
     "title": "Política de Privacidad",
@@ -194,8 +160,6 @@
     "depositRowPartyOnSite": "Inmersión para Fiestas — agua en el sitio",
     "depositRowPartyBring": "Inmersión para Fiestas — nosotros llevamos el agua",
     "finePrint": "El millaje fuera del área de servicio local puede agregar $0.29 por milla.",
-    "videoComingSoon": "Video próximamente",
-    "photoComingSoon": "Foto próximamente",
     "form": {
       "heading": "Reserva tu evento / Consulta",
       "intro": "Cuéntanos sobre tu evento y te responderemos con disponibilidad y una cotización.",

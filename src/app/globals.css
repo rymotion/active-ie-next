@@ -46,18 +46,6 @@ h1 {
   margin-right: -50vw;
 }
 
-/* Make sure video in logo is not affected by the main container constraints */
-#logo-container video,
-#logo-container .fullscreen-video {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-  z-index: -1;
-}
-
 /* Visible keyboard focus everywhere (WCAG 2.4.7) */
 :focus-visible {
   outline: 2px solid #f2ede9;

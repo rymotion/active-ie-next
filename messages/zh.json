@@ -4,9 +4,6 @@
     "blog": "博客",
     "events": "活动",
     "projects": "项目",
-    "merch": "周边商品",
-    "contactUs": "联系我们",
-    "supportUs": "支持我们",
     "organizationName": "Active Inland Empire",
     "products": "周边商店",
     "contact": "联系我们",
@@ -42,10 +39,6 @@
     "visitStore": "访问我们的 Shopify 商店"
   },
   "events": {
-    "title": "参加我们的活动",
-    "ourCalendar": "我们的活动日历",
-    "sweatpalsCalendar": "我们的 SweatPals 活动日历",
-    "surveyPrompt": "我们希望听到你——社区成员——的声音，了解我们如何更好地为你服务、如何举办线下活动。点击下方按钮，帮助我们了解怎样更好地支持你的健康之旅。",
     "takeSurvey": "填写课程时间安排问卷",
     "surveyTitle": "课程时间安排问卷",
     "close": "关闭"
@@ -75,19 +68,11 @@
       }
     }
   },
-  "ritual": {
-    "title": "Ritual Wellness",
-    "description": "了解更多关于 Ritual Wellness 的信息"
-  },
   "donation": {
-    "yourProceeds": "你的捐款去向",
     "proceedsDescription": "在我们持续拓展能力和项目的过程中，你的捐助帮助我们开展工作，测试、建设并维持这些\"第三空间\"项目。每次收到捐助时，我们也会询问捐助者是否希望定期了解他们的捐款所产生的影响。",
-    "partnerDescription": "如果你想与我们携手，共同建设一个更美好、更健康、更安全的内陆帝国地区，可以向我们的一般捐助基金捐款。我们计划每月将所收捐款的 10% 用于下方列出的其他项目。",
-    "additionalBenefits": "设置每月、每季度或每年定期捐助的额外福利",
-    "directImpact": "如果你想为我们支持的某个具体项目做出直接贡献，以下是我们正在协助的项目。"
+    "partnerDescription": "如果你想与我们携手，共同建设一个更美好、更健康、更安全的内陆帝国地区，可以向我们的一般捐助基金捐款。我们计划每月将所收捐款的 10% 用于下方列出的其他项目。"
   },
   "contact": {
-    "inquiries": "咨询：",
     "email": "organization@activeie.org"
   },
   "support": {
@@ -110,11 +95,6 @@
     "guidestarAlt": "Guidestar 透明度认证"
   },
   "common": {
-    "scrollToContinue": "向下滚动继续",
-    "loading": "加载中...",
-    "loadingInstagram": "正在加载 Instagram 帖子...",
-    "loadingFundraiser": "正在加载筹款活动...",
-    "ourBlog": "我们的博客",
     "activeInlandEmpire": "Active Inland Empire",
     "viewOnGofundme": "在 GoFundMe 上查看",
     "close": "关闭",
@@ -123,26 +103,12 @@
     "notFound": "找不到此页面。",
     "menu": "菜单"
   },
-  "burnchart": {
-    "bikeParkFunding": "自行车公园筹款",
-    "goalCappedAt20k": "目标（上限 $20k）",
-    "amountRaised": "已筹金额",
-    "currentTotal": "当前总额",
-    "goal": "目标",
-    "fundingSourcesBreakdown": "资金来源明细",
-    "government": "政府",
-    "grants": "拨款",
-    "fundraising": "募捐",
-    "sponsors": "赞助商",
-    "dashboardNote": "注：此看板每 12-24 小时定期更新。"
-  },
   "specialEvent": {
     "joinOurCommunity": "加入我们的社区",
     "wantToWorkEvents": "想在我们的活动中出力，或成为我们组织的一员？",
     "clickToSubscribe": "点击这里订阅我们的通讯。",
     "newsletterSubscribe": "订阅通讯",
-    "ourEventCalendar": "我们的活动日历",
-    "popOutWindowDescription": "点击下方图片中的弹出窗口选项，你将进入托管在 Google Drive 上的文件，为自行车坡道项目提供反馈。在项目规划中发出你的声音。参与前须登录已注册的 Google 账号。"
+    "ourEventCalendar": "我们的活动日历"
   },
   "privacy": {
     "title": "隐私政策",
@@ -194,8 +160,6 @@
     "depositRowPartyOnSite": "派对浸泡 — 现场水源",
     "depositRowPartyBring": "派对浸泡 — 我们送水",
     "finePrint": "超出本地服务范围的里程可能加收 $0.29/英里。",
-    "videoComingSoon": "视频即将上线",
-    "photoComingSoon": "照片即将上线",
     "form": {
       "heading": "预订活动 / 咨询",
       "intro": "告诉我们你的活动情况，我们会尽快回复档期和报价。",

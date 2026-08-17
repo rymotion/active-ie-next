@@ -4,9 +4,6 @@
     "blog": "Blog",
     "events": "Events",
     "projects": "Projects",
-    "merch": "Merch",
-    "contactUs": "Contact Us",
-    "supportUs": "Support Us",
     "organizationName": "Active Inland Empire",
     "products": "Merch",
     "contact": "Contact Us",
@@ -42,10 +39,6 @@
     "visitStore": "Visit our Shopify store"
   },
   "events": {
-    "title": "Join Our Events",
-    "ourCalendar": "Our Event Calendar",
-    "sweatpalsCalendar": "Our SweatPals Events Calendar",
-    "surveyPrompt": "We want to hear from you, the community, on how we can best serve you and have our in-person events. By clicking the button below, we can learn how to better serve you to support you on your health journey.",
     "takeSurvey": "Take the Program Schedule Survey",
     "surveyTitle": "Program Schedule Survey",
     "close": "Close"
@@ -75,19 +68,11 @@
       }
     }
   },
-  "ritual": {
-    "title": "Ritual Wellness",
-    "description": "Get more information about Ritual Wellness"
-  },
   "donation": {
-    "yourProceeds": "Your Proceeds",
     "proceedsDescription": "While we continue our capacity and program efforts, your contribution helps support our efforts, test, build, and sustain these \"third-place\" program. Every contribution made we also ask contributors if they want regular updates on the impact their proceeds made.",
-    "partnerDescription": "If you want to partner with us to help build a better, healthier, and safer Inland Empire you can contribute to our General Contribution Fund. Monthly we look to allocate 10% of the proceeds given to be used on the other efforts listed below.",
-    "additionalBenefits": "Additional Benefits to Setting up Monthly, Quarterly, or Annual Contributions",
-    "directImpact": "If you are looking to make a direct impact with a specific effort we are supporting here are the projects we are assisting with."
+    "partnerDescription": "If you want to partner with us to help build a better, healthier, and safer Inland Empire you can contribute to our General Contribution Fund. Monthly we look to allocate 10% of the proceeds given to be used on the other efforts listed below."
   },
   "contact": {
-    "inquiries": "Inquiries:",
     "email": "organization@activeie.org"
   },
   "support": {
@@ -110,11 +95,6 @@
     "guidestarAlt": "Guidestar Transparency Seal"
   },
   "common": {
-    "scrollToContinue": "Scroll to continue",
-    "loading": "Loading...",
-    "loadingInstagram": "Loading Instagram post...",
-    "loadingFundraiser": "Loading fundraiser...",
-    "ourBlog": "Our Blog",
     "activeInlandEmpire": "Active Inland Empire",
     "viewOnGofundme": "View on GoFundMe",
     "close": "Close",
@@ -123,26 +103,12 @@
     "notFound": "This page could not be found.",
     "menu": "Menu"
   },
-  "burnchart": {
-    "bikeParkFunding": "Bike Park Funding",
-    "goalCappedAt20k": "Goal (Capped at $20k)",
-    "amountRaised": "Amount Raised",
-    "currentTotal": "Current Total",
-    "goal": "Goal",
-    "fundingSourcesBreakdown": "Funding Sources Breakdown",
-    "government": "Government",
-    "grants": "Grants",
-    "fundraising": "Fundraising",
-    "sponsors": "Sponsors",
-    "dashboardNote": "Note: This dashboard gets regular updates every 12-24 hours."
-  },
   "specialEvent": {
     "joinOurCommunity": "Join Our Community",
     "wantToWorkEvents": "Want to work our events or be a part of our organization?",
     "clickToSubscribe": "Click here to subscribe to our newsletter.",
     "newsletterSubscribe": "Newsletter Subscribe",
-    "ourEventCalendar": "Our Event Calendar",
-    "popOutWindowDescription": "By selecting the pup-out window option from the image below you will be taken to the file hosted on Google Drive to provide feedback on the bike ramp project. Have a voice in the planning of the project. You must be signed in to a registered Google account to participate."
+    "ourEventCalendar": "Our Event Calendar"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -198,8 +164,6 @@
     "depositRowPartyOnSiteSameDay": "Party Plunge — on-site water (same day) + Ice servicing $200",
     "depositRowPartyBringSameDay": "Party Plunge — we bring water (same day) + Ice servicing $200",
     "finePrint": "Mileage beyond the local service area may add $0.29/mile.",
-    "videoComingSoon": "Video coming soon",
-    "photoComingSoon": "Photo coming soon",
     "sameDayBookingHeading": "Same day booking",
     "sameDayBookingTerms": "Same day bookings are subject to availability and may require a higher deposit. And additional ice servicing fees may apply.",
     "form": {
