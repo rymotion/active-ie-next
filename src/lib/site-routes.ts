@@ -38,7 +38,7 @@ export const siteRoutes: SiteRoute[] = [
   { path: "/contact", labelKey: "nav.contact", section: "main", inNav: true, includeInSitemap: true, changeFrequency: "monthly", priority: 0.5 },
   { path: "/support", labelKey: "nav.support", section: "getInvolved", inNav: true, includeInSitemap: true, changeFrequency: "monthly", priority: 0.8 },
   { path: "/volunteer", labelKey: "nav.volunteer", section: "getInvolved", inNav: false, includeInSitemap: true, changeFrequency: "monthly", priority: 0.6 },
-  { path: "/addc", labelKey: "nav.addc", section: "programs", inNav: false, includeInSitemap: true, changeFrequency: "monthly", priority: 0.4 },
+  { path: "/ritual", labelKey: "nav.ritual", section: "programs", inNav: false, includeInSitemap: true, changeFrequency: "monthly", priority: 0.4 },
   { path: "/special-event", labelKey: "nav.specialEvent", section: "programs", inNav: false, includeInSitemap: false },
   { path: "/privacy", labelKey: "nav.privacy", section: "legal", inNav: false, includeInSitemap: true, changeFrequency: "yearly", priority: 0.3 },
   { path: "/data-policy", labelKey: "nav.dataPolicy", section: "legal", inNav: false, includeInSitemap: true, changeFrequency: "yearly", priority: 0.3 },

@@ -121,10 +121,10 @@ export default function MobileMenu({ id, open, onClose }: MobileMenuProps) {
             className="mt-auto flex flex-col gap-6 px-8 pt-10"
           >
             <LanguageSwitcher />
-            <Link href="/addc" onClick={onClose} className="w-fit">
+            <Link href="/ritual" onClick={onClose} className="w-fit">
               <Image
                 src="https://cdn.shopify.com/s/files/1/0638/5536/2102/files/be-wave-sticker-band-aid-brand.png?v=1754035334"
-                alt={t("nav.addc")}
+                alt={t("nav.ritual")}
                 width={160}
                 height={160}
               />

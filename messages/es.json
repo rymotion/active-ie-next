@@ -13,7 +13,7 @@
     "support": "Apóyanos",
     "contrastTherapy": "Terapia de Contraste",
     "volunteer": "Voluntariado",
-    "addc": "ADDC",
+    "ritual": "Ritual",
     "specialEvent": "Evento Especial",
     "privacy": "Política de Privacidad",
     "dataPolicy": "Política de Datos",
@@ -75,7 +75,7 @@
       }
     }
   },
-  "addc": {
+  "ritual": {
     "title": "Ritual Wellness",
     "description": "Obtén más información sobre Ritual Wellness"
   },

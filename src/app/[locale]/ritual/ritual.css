@@ -1,0 +1,75 @@
+/* Ritual design tokens — scoped under .ritual. Fonts: swap for next/font if preferred. */
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+.ritual {
+  --ink: #14120f;
+  --bone: #f4efe6;
+  --paper: #fbf8f1;
+  --ash-300: #dcc8a8;
+  --cedar-500: #b07b4f;
+  --indigo: #22375a;
+  --indigo-700: #182741;
+  --ember: #bf3f26;
+  --ember-700: #8e2e1b;
+  --accent: var(--indigo);
+  --accent-deep: var(--indigo-700);
+  --text-muted: #57534b;
+  --border-hairline: 1.5px solid var(--ink);
+  --font-display: 'Familjen Grotesk', 'Noto Sans JP', sans-serif;
+  --font-body: 'Familjen Grotesk', 'Noto Sans JP', sans-serif;
+  --font-jp: 'Noto Sans JP', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --text-sm: 13px;
+  --text-md: 16px;
+  --text-lg: 21px;
+  --text-xl: 28px;
+  --text-2xl: 40px;
+  --text-3xl: 64px;
+  --tracking-caps: 0.14em;
+  --tracking-kana: 0.3em;
+
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bone);
+  -webkit-font-smoothing: antialiased;
+}
+.ritual h1, .ritual h2, .ritual h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin: 0;
+}
+.ritual a { color: var(--ink); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.ritual a:hover { color: var(--accent); }
+.ritual ::selection { background: var(--ink); color: var(--bone); }
+.ritual input::placeholder { color: #9a938a; }
+.ritual :is(input, select, button, a):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Dark tokens: explicit toggle, or system preference when data-theme="auto" */
+.ritual[data-theme='dark'] { --dark: 1; }
+.ritual[data-theme='dark'],
+.ritual[data-theme='auto'].ritual-sys-dark {
+  --ink: #f4efe6;
+  --bone: #14120f;
+  --paper: #1c1813;
+  --text-muted: #a8a093;
+  --ash-300: #57534b;
+  --accent: #4a6fa5;
+  --accent-deep: #22375a;
+  --border-hairline: 1.5px solid var(--ink);
+}
+
+/* Hover states that inline styles can't express */
+.ritual .r-hub-card { text-decoration: none; color: var(--ink); transition: background 150ms, color 150ms; }
+.ritual .r-hub-card:hover { background: var(--ink); color: var(--bone); }
+.ritual .r-back { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-decoration: none; color: var(--text-muted); }
+.ritual .r-back:hover { color: var(--accent); }
+.ritual .r-theme-btn:hover { background: var(--ink); color: var(--bone); }
+.ritual .r-seal-dark { display: none; }
+.ritual[data-theme='dark'] .r-seal-ink,
+.ritual[data-theme='auto'].ritual-sys-dark .r-seal-ink { display: none; }
+.ritual[data-theme='dark'] .r-seal-dark,
+.ritual[data-theme='auto'].ritual-sys-dark .r-seal-dark { display: block; }

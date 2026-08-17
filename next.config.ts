@@ -26,6 +26,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // The ADDC page was rebranded to Ritual — keep old links working.
+  async redirects() {
+    return [
+      { source: "/addc", destination: "/ritual", permanent: true },
+      { source: "/:locale(es|tl|zh)/addc", destination: "/:locale/ritual", permanent: true },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

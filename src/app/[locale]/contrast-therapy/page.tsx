@@ -16,6 +16,12 @@ const sectionHeadingClass =
 const headerCellClass =
   "px-3 py-2 font-sans text-xs font-bold uppercase tracking-wider sm:text-sm";
 
+const heroVideoUrl =
+  "https://cdn.shopify.com/videos/c/o/v/bafe408dc75145d8a4538bacfd679a10.mov";
+
+const sideVideoUrl =
+  "https://cdn.shopify.com/videos/c/o/v/f3d9fe2a49d94fb08a7d8502cb7cbdf2.mp4";
+
 function MediaPlaceholder({
   label,
   kind,
@@ -53,6 +59,33 @@ export default function ContrastTherapyPage() {
     [t("contrastTherapy.depositRowSingleBring"), "$365", "$182.50", "$182.50"],
     [t("contrastTherapy.depositRowPartyOnSite"), "$300", "$150.00", "$150.00"],
     [t("contrastTherapy.depositRowPartyBring"), "$500", "$250.00", "$250.00"],
+  ];
+
+  const sameDayDepositRows: [string, string, string, string][] = [
+    [
+      t("contrastTherapy.depositRowSingleOnSiteSameDay"),
+      "$165",
+      "$82.50",
+      "$82.50",
+    ],
+    [
+      t("contrastTherapy.depositRowSingleBringSameDay"),
+      "$365",
+      "$182.50",
+      "$182.50",
+    ],
+    [
+      t("contrastTherapy.depositRowPartyOnSiteSameDay"),
+      "$300",
+      "$150.00",
+      "$150.00",
+    ],
+    [
+      t("contrastTherapy.depositRowPartyBringSameDay"),
+      "$500",
+      "$250.00",
+      "$250.00",
+    ],
   ];
 
   return (
@@ -100,10 +133,7 @@ export default function ContrastTherapyPage() {
 
           {/* Multimedia placeholder: video */}
           <div className="mt-6">
-            <MediaPlaceholder
-              label={t("contrastTherapy.videoComingSoon")}
-              kind="video"
-            />
+            <video src={heroVideoUrl} controls className="w-full" />
           </div>
 
           {/* Packages */}
@@ -210,14 +240,9 @@ export default function ContrastTherapyPage() {
 
           {/* Multimedia placeholders: photos */}
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <MediaPlaceholder
-              label={t("contrastTherapy.photoComingSoon")}
-              kind="photo"
-            />
-            <MediaPlaceholder
-              label={t("contrastTherapy.photoComingSoon")}
-              kind="photo"
-            />
+            <video src={sideVideoUrl} controls className="w-full rounded-md" />
+
+            <video src={sideVideoUrl} controls className="w-full rounded-md" />
           </div>
 
           {/* Water options */}
@@ -301,24 +326,81 @@ export default function ContrastTherapyPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {depositRows.map(([label, total, deposit, balance], index) => (
-                    <tr
-                      key={label}
-                      className={index % 2 === 0 ? "bg-white" : "bg-cream"}
-                    >
-                      <th
-                        scope="row"
-                        className="px-3 py-2 text-left font-semibold text-gray-900"
+                  {depositRows.map(
+                    ([label, total, deposit, balance], index) => (
+                      <tr
+                        key={label}
+                        className={index % 2 === 0 ? "bg-white" : "bg-cream"}
                       >
-                        {label}
-                      </th>
-                      <td className="px-3 py-2 font-semibold text-maroon">
-                        {total}
-                      </td>
-                      <td className="px-3 py-2 text-gray-800">{deposit}</td>
-                      <td className="px-3 py-2 text-gray-800">{balance}</td>
-                    </tr>
-                  ))}
+                        <th
+                          scope="row"
+                          className="px-3 py-2 text-left font-semibold text-gray-900"
+                        >
+                          {label}
+                        </th>
+                        <td className="px-3 py-2 font-semibold text-maroon">
+                          {total}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800">{deposit}</td>
+                        <td className="px-3 py-2 text-gray-800">{balance}</td>
+                      </tr>
+                    ),
+                  )}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3 text-xs text-gray-500">
+              {t("contrastTherapy.finePrint")}
+            </p>
+          </section>
+
+          {/* Same day booking */}
+          <section className="mt-8">
+            <h2 className={sectionHeadingClass}>
+              {t("contrastTherapy.sameDayBookingHeading")}
+            </h2>
+            <p className="text-sm leading-6 text-gray-800">
+              {t("contrastTherapy.sameDayBookingTerms")}
+            </p>
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full min-w-[520px] border-collapse text-left text-sm">
+                <thead>
+                  <tr className="bg-maroon text-white">
+                    <th scope="col" className={`${headerCellClass} text-left`}>
+                      {t("contrastTherapy.depositColPackage")}
+                    </th>
+                    <th scope="col" className={`${headerCellClass} text-left`}>
+                      {t("contrastTherapy.depositColTotal")}
+                    </th>
+                    <th scope="col" className={`${headerCellClass} text-left`}>
+                      {t("contrastTherapy.depositColDeposit")}
+                    </th>
+                    <th scope="col" className={`${headerCellClass} text-left`}>
+                      {t("contrastTherapy.depositColBalance")}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sameDayDepositRows.map(
+                    ([label, total, deposit, balance], index) => (
+                      <tr
+                        key={label}
+                        className={index % 2 === 0 ? "bg-white" : "bg-cream"}
+                      >
+                        <th
+                          scope="row"
+                          className="px-3 py-2 text-left font-semibold text-gray-900"
+                        >
+                          {label}
+                        </th>
+                        <td className="px-3 py-2 font-semibold text-maroon">
+                          {total}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800">{deposit}</td>
+                        <td className="px-3 py-2 text-gray-800">{balance}</td>
+                      </tr>
+                    ),
+                  )}
                 </tbody>
               </table>
             </div>

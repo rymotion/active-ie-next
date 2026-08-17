@@ -13,7 +13,7 @@
     "support": "支持我们",
     "contrastTherapy": "冷热交替疗法",
     "volunteer": "志愿服务",
-    "addc": "ADDC",
+    "ritual": "Ritual",
     "specialEvent": "特别活动",
     "privacy": "隐私政策",
     "dataPolicy": "数据政策",
@@ -75,7 +75,7 @@
       }
     }
   },
-  "addc": {
+  "ritual": {
     "title": "Ritual Wellness",
     "description": "了解更多关于 Ritual Wellness 的信息"
   },

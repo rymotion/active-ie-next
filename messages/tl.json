@@ -13,7 +13,7 @@
     "support": "Suportahan Kami",
     "contrastTherapy": "Contrast Therapy",
     "volunteer": "Magboluntaryo",
-    "addc": "ADDC",
+    "ritual": "Ritual",
     "specialEvent": "Espesyal na Kaganapan",
     "privacy": "Patakaran sa Privacy",
     "dataPolicy": "Patakaran sa Datos",
@@ -75,7 +75,7 @@
       }
     }
   },
-  "addc": {
+  "ritual": {
     "title": "Ritual Wellness",
     "description": "Kumuha ng higit pang impormasyon tungkol sa Ritual Wellness"
   },

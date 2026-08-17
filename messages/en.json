@@ -13,7 +13,7 @@
     "support": "Support Us",
     "contrastTherapy": "Contrast Therapy",
     "volunteer": "Volunteer",
-    "addc": "ADDC",
+    "ritual": "Ritual",
     "specialEvent": "Special Event",
     "privacy": "Privacy Policy",
     "dataPolicy": "Data Policy",
@@ -75,7 +75,7 @@
       }
     }
   },
-  "addc": {
+  "ritual": {
     "title": "Ritual Wellness",
     "description": "Get more information about Ritual Wellness"
   },
@@ -193,9 +193,15 @@
     "depositRowSingleBring": "Single Plunge — we bring water",
     "depositRowPartyOnSite": "Party Plunge — on-site water",
     "depositRowPartyBring": "Party Plunge — we bring water",
+    "depositRowSingleOnSiteSameDay": "Single Plunge — on-site water (same day) + Ice servicing $200",
+    "depositRowSingleBringSameDay": "Single Plunge — we bring water (same day) + Ice servicing $200",
+    "depositRowPartyOnSiteSameDay": "Party Plunge — on-site water (same day) + Ice servicing $200",
+    "depositRowPartyBringSameDay": "Party Plunge — we bring water (same day) + Ice servicing $200",
     "finePrint": "Mileage beyond the local service area may add $0.29/mile.",
     "videoComingSoon": "Video coming soon",
     "photoComingSoon": "Photo coming soon",
+    "sameDayBookingHeading": "Same day booking",
+    "sameDayBookingTerms": "Same day bookings are subject to availability and may require a higher deposit. And additional ice servicing fees may apply.",
     "form": {
       "heading": "Book your event / Inquire",
       "intro": "Tell us about your event and we'll get back to you with availability and a quote.",
