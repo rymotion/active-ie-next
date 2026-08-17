@@ -22,26 +22,6 @@ const heroVideoUrl =
 const sideVideoUrl =
   "https://cdn.shopify.com/videos/c/o/v/f3d9fe2a49d94fb08a7d8502cb7cbdf2.mp4";
 
-function MediaPlaceholder({
-  label,
-  kind,
-}: {
-  label: string;
-  kind: "video" | "photo";
-}) {
-  return (
-    <div
-      className={`flex w-full items-center justify-center rounded-md border border-gray-300 bg-cream ${
-        kind === "video" ? "aspect-video" : "aspect-[4/3]"
-      }`}
-    >
-      <span className="px-4 text-center text-sm font-medium text-gray-500">
-        {label}
-      </span>
-    </div>
-  );
-}
-
 export default function ContrastTherapyPage() {
   const t = useTranslations();
 
